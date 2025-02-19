@@ -1,0 +1,25 @@
+{{#each skills as |skill|}}
+<li class="browser-item" id="{{skill._id}}"
+    data-name="{{skill.name}}" data-tier="{{skill.system.tier}}" data-school="{{skill.system.school}}">
+    <label class="name">{{skill.name}}</label>
+    <label class="thin">
+        {{lookup ../celestus.skillLevels skill.system.tier}}
+    </label>
+    <label>
+        {{lookup ../celestus.skillTiers skill.system.tier}}
+    </label>
+    <label class="school">
+    {{#if (eq skill.system.type "civil")}}
+    {{#with (lookup ../celestus.civilSkills skill.system.school)}}
+        <i class="{{glyph}}"></i>
+        {{label}}
+    {{/with}}
+    {{else}}
+    {{#with (lookup ../celestus.combatSkills skill.system.school)}}
+        <i class="{{glyph}}"></i>
+        {{label}}
+    {{/with}}
+    {{/if}}
+    </label>
+</li>
+{{/each}}

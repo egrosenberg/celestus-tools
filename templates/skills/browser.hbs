@@ -1,0 +1,16 @@
+<header>
+    <input type="text" class="list-input" id="list-input"></input>
+    <div class="list-header">
+        <label class="name" data-sort="name">Name</label>
+        <label class="thin" data-sort="tier">lvl</label>
+        <label data-sort="tier">
+            Tier
+        </label>
+        <label class="school" data-sort="school">
+            School
+        </label>
+    </div>
+</header>
+<ul class="list" id="item-list">
+    {{> "templates/skills/list.hbs"}}
+</ul>

@@ -2,6 +2,9 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/description.css">
     <link rel="stylesheet" type="text/css" href="/css/glyphter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/helpers.js"></script> 
+    <script src="/js/skill-browser.js"></script> 
 </head>
 
 <body>
@@ -12,50 +15,11 @@
     </div>
 
     <div class="content">
-        <div class="description">
-            <div class="dice-flavor celestus roll description ">
-                <header class="summary">
-                    <div class="name-stacked">
-                        <div class="title">Tar Ball</div>
-                        <div class="subtitle">Magic (combat)</div>
-                    </div>
-                </header>
-                <i class="fa-solid fa-circle ap-icon"></i><i class="fa-solid fa-circle ap-icon"></i>
-                <div class="roll-tags">
-                    <span class="roll-tag">
-                        Apprentice
-                    </span>
-                    <span class="roll-tag">
-                        <i class="icon-stone-sphere"></i>Duneshaper
-                    </span>
-                    <span class="roll-tag">
-                        Range: 60 ft.
-                    </span>
-                    <span class="roll-tag">
-                        5 ft. Sphere
-                    </span>
-                    <span class="roll-tag">
-                        CD: 3 rounds
-                    </span>
-                    <div class="roll-tag">
-                        Components:
-                        V
-                        S
-
-                    </div>
-
-                    <div class="roll-tag earth-dark">
-                        <i class="icon-rock"></i>
-                        85% Earth
-                    </div>
-                </div>
-                <p>You launch a giant boulder covered in viscous oil at a point you can see within range. Each creature
-                    within a 5-foot radius of the point takes 85% Earth Damage.</p>
-                <p>★ Sets <a class="content-link" draggable="true" data-link=""
-                        data-uuid="Compendium.celestus.rules.Item.YGJz1dn22aKAq9ZA" data-id="YGJz1dn22aKAq9ZA"
-                        data-type="Item" data-pack="celestus.rules" data-tooltip="Item"><i
-                            class="fas fa-suitcase"></i>Oily</a>.</p>
-            </div>
+        <div class="browser" id="skill-list">
+            {{{ skillsList }}}
+        </div>
+        <div class="description" id="description">
+            {{{description}}}
         </div>
     </div>
 </body>

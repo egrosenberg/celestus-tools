@@ -1,9 +1,10 @@
 /* Font Face */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Monomakh&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Monomakh&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-    font-family: "Monomakh", serif;
+    margin: 0px;
+    padding: 0px;
+    font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: normal;
     background-color: rgb(17, 17, 17);
@@ -25,6 +26,64 @@ body {
     --font-size-48: 3rem;
     --font-size-64: 4rem;
     --font-size-80: 5rem;
+
+
+    --color-warm-1: #ee9b3a;
+    --color-warm-2: #c9593f;
+    --color-warm-3: #5d142b;
+    --color-cool-3: #584a75;
+    --color-cool-4: #302831;
+    --color-cool-5: #0b0a13;
+    --color-cool-5-25: rgba(11, 10, 19, 0.25);
+    --color-cool-5-50: rgba(11, 10, 19, 0.5);
+    --color-cool-5-75: rgba(11, 10, 19, 0.75);
+    --color-cool-5-90: rgba(11, 10, 19, 0.9);
+    --color-light-1: #f7f3e8;
+    --color-light-2: #efe6d8;
+    --color-light-3: #e7d1b1;
+    --color-light-4: #d0b8a3;
+    --color-light-5: #9f8475;
+    --color-light-6: #816b66;
+    --color-dark-1: #111;
+    --color-dark-2: #222;
+    --color-dark-3: #444;
+    --color-dark-4: #555;
+    --color-dark-5: #666;
+    --color-dark-6: #777;
+
+    --color-physical-bg: rgb(179, 192, 204);
+    --color-fire-bg: rgb(219, 139, 112);
+    --color-water-bg: rgb(134, 192, 223);
+    --color-air-bg: rgb(156, 134, 223);
+    --color-earth-bg: rgb(219, 166, 112);
+    --color-poison-bg: rgb(201, 223, 134);
+    --color-psychic-bg: rgb(223, 134, 223);
+    --color-piercing-bg: rgb(223, 134, 134);
+    --color-shadow-bg: rgb(144, 161, 213);
+    --color-healing-bg: rgb(146, 226, 152);
+    --color-phys_armor-bg: rgb(235, 204, 173);
+    --color-mag_armor-bg: rgb(134, 223, 223);
+
+    --color-physical-dark-bg: rgb(17, 18, 19);
+    --color-fire-dark-bg: rgb(107, 0, 0);
+    --color-water-dark-bg: rgb(0, 53, 82);
+    --color-air-dark-bg: rgb(63, 36, 143);
+    --color-earth-dark-bg: rgb(94, 69, 46);
+    --color-poison-dark-bg: rgb(116, 150, 16);
+    --color-psychic-dark-bg: rgb(121, 0, 121);
+    --color-piercing-dark-bg: rgb(138, 32, 55);
+    --color-shadow-dark-bg: rgb(34, 42, 68);
+    --color-healing-dark-bg: rgb(51, 175, 61);
+    --color-phys_armor-dark-bg: rgb(46, 24, 1);
+    --color-mag_armor-dark-bg: rgb(0, 100, 100);
+
+    --color-cream-50: rgba(250, 246, 239, 0.5);
+    --color-tan: rgba(255, 231, 195);
+
+    --shadow-bevel: inset 0.1em 0.1em 0.1em 0 rgba(255, 255, 255, 0.3), inset -0.1em -0.1em 0.1em 0 rgba(0, 0, 0, 0.3);
+    --shadow-inset: inset 0.1em 0.1em 0.1em 0 rgba(0, 0, 0, 0.3), inset -0.1em -0.1em 0.1em 0 rgba(0, 0, 0, 0.3);
+
+    --text-outline-1: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 /* Navigation Bar */
@@ -33,9 +92,9 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
 
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100vw;
+    width: calc(70vw - 5px);
     padding: 5px;
     padding-left: 30vw;
     padding-bottom: 5px;
@@ -61,13 +120,117 @@ body {
 
 /* Main content */
 .content {
-    margin-top: 100px;
+    top: 100px;
+    bottom: 10px;
+    position: fixed;
+    left: calc(50vw - 1050px / 2);
+    width: 615px;
+    padding: 3px;
+    border: thin solid var(--color-dark-6);
+    border-radius: 5px;
+    overflow: hidden;
+    border-left: thin solid var(--color-dark-6);
 }
 
 /* Description */
 .description {
     position: fixed;
-    right: 30vw;
+    right: calc(50vw - 1050px / 2);
     top: 100;
     width: 400px;
+}
+
+/* Browser List */
+.browser { 
+    cursor: pointer;
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.list {
+    flex: 1;
+    pointer-events: all;
+    overflow: scroll;
+    scrollbar-width: none;
+    background-color: var(--color-dark-2);
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    border-left: thin solid var(--color-dark-6);
+    border-right: thin solid var(--color-dark-6);
+}
+
+.list-input {
+    width: 100%;
+    color: white;
+    background-color: var(--color-dark-3);
+    border: none;
+    padding: 3px;
+    margin-bottom: 10px;
+    font-size: var(--font-size-14);
+    border-bottom: thin white solid;
+}
+
+.list-header {
+    width: 100%;
+    color: white;
+    background-color: var(--color-dark-3);
+    border: none;
+    font-size: var(--font-size-14);
+    display: flex;
+    flex-direction: row;
+    border: thin solid var(--color-dark-6);
+}
+
+.list-header label {
+    padding: 2px;
+}
+
+.list-header label:hover {
+    box-shadow: var(--shadow-inset);
+    outline: thin solid var(--color-dark-6);
+}
+
+.list-header label[data-selected="true"] {
+    background-color: var(--color-dark-2);
+}
+
+.browser label {
+    flex: 1;
+    padding-right: 2px;
+    padding-left: 4px;
+}
+
+.browser label.thin {
+    flex: 0 0 20px;
+}
+
+.browser-item {
+    pointer-events: all;
+    font-family: "Comfortaa", serif;
+    font-weight: lighter;
+    font-size: var(--font-size-12);
+    background-color: var(--color-dark-2);
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+}
+
+.browser-item:nth-child(odd) {
+    background: var(--color-dark-3);
+}
+
+.browser-item:hover {
+    font-weight: normal;
+    background-color: var(--color-dark-1);
+}
+
+.browser-item label {
+    cursor: pointer;
+}
+.browser .name {
+    font-weight: bold;
+    flex: 2;
 }
