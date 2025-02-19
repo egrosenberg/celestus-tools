@@ -8,6 +8,9 @@ const app = express();
 
 const PORT = 7777;
 
+// allow access to public files
+app.use(express.static('public'));
+
 // listen on port
 app.listen(PORT, () => {
     console.log(`Server is running on Port ${PORT}`)

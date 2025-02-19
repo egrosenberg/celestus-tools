@@ -1,0 +1,73 @@
+/* Font Face */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Monomakh&display=swap');
+
+body {
+    font-family: "Monomakh", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(17, 17, 17);
+    color: white;
+
+    --font-size-10: 0.625rem;
+    --font-size-11: 0.6875rem;
+    --font-size-12: 0.75rem;
+    --font-size-13: 0.8125rem;
+    --font-size-14: 0.875rem;
+    --font-size-15: 0.9375rem;
+    --font-size-16: 1rem;
+    --font-size-18: 1.125rem;
+    --font-size-20: 1.25rem;
+    --font-size-24: 1.5rem;
+    --font-size-28: 1.75rem;
+    --font-size-32: 2rem;
+    --font-size-36: 2.25rem;
+    --font-size-48: 3rem;
+    --font-size-64: 4rem;
+    --font-size-80: 5rem;
+}
+
+/* Navigation Bar */
+.navigation {
+    font-family: "Comfortaa", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    padding: 5px;
+    padding-left: 30vw;
+    padding-bottom: 5px;
+
+    background-color: rgb(56, 56, 56);
+}
+
+.navigation .logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+.navigation .title {
+    font-size: 2em;
+}
+
+.navigation .subtitle {
+    font-size: 1em;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+/* Main content */
+.content {
+    margin-top: 100px;
+}
+
+/* Description */
+.description {
+    position: fixed;
+    right: 30vw;
+    top: 100;
+    width: 400px;
+}
