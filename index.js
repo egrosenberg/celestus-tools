@@ -21,8 +21,8 @@ hbs.registerHelpers();
 
 // load handlebars partials
 hbs.loadPartials([
-    "templates/skills/list.hbs",
-    "templates/skills/browser.hbs",
+    "./templates/skills/list.hbs",
+    "./templates/skills/browser.hbs",
 ]);
 
 const app = express();
@@ -61,19 +61,21 @@ app.get('/skills', async (req, res) => {
     });
     res.locals.skillsList = skills.list;
     res.send(msg);
+    return;
 });
 // fetch skills list
 app.get('/resources/skill-data', (req, res) => {
     res.send(skills.list);
+    return;
 });
 // fetch skill description
-app.get('/resources/descriptions', (req, res) => {
+app.get('/resources/descriptions', async (req, res) => {
     if (req.query.type === "skill") {
-        const html = skills.list.find(s => s._id === req.query.id)?.html;
+        const html = await skills.description(req.query.id);
         if (html) res.send(html);
-        res.status(STATUS.BadRequest).send("Invalid Skill ID!");
     }
     else {
         res.status(STATUS.BadRequest).send("Invalid description type!");
     }
+    return;
 });
