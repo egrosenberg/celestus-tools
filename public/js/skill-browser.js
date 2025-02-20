@@ -1,16 +1,20 @@
+/*global $, byString*/
+
 var skillsList;
 var skillItems;
 var skills = new Map();
 
 $(document).ready(async () => {
     if (!localStorage.getItem("searchFilters")) {
-        localStorage.setItem("searchFilters", JSON.stringify({ data: [
-            {
-                id: "inherited",
-                mode: "and",
-                values: [false]
-            }
-        ]}));
+        localStorage.setItem("searchFilters", JSON.stringify({
+            data: [
+                {
+                    id: "inherited",
+                    mode: "and",
+                    values: [false]
+                }
+            ]
+        }));
     }
     if (!localStorage.getItem("skillsOrderKey")) localStorage.setItem("skillsOrderKey", "name");
     if (!localStorage.getItem("skillsOrderAscending")) localStorage.setItem("skillsOrderAscending", true);
@@ -35,6 +39,7 @@ $(document).ready(async () => {
     $(".list-header label").each((index, e) => {
         if ($(e).data("sort") === localStorage.getItem("skillsOrderKey")) {
             $(e).attr("data-selected", "true");
+            $(e).attr("data-direction", localStorage.getItem("skillsOrderAscending") === "true" ? "up" : "down");
         }
     });
     // filter list
@@ -50,6 +55,12 @@ $(document).ready(async () => {
             }
             const html = await response.text();
             document.getElementById("description").innerHTML = html;
+
+            // update url
+            const name = $(ev.currentTarget).data("name");
+            document.title = name;
+            window.history.pushState(`Celestus | Skills | ${name}`, name, `${window.location.pathname}?item=${$(ev.currentTarget).attr("id")}`);
+
         } catch (error) {
             console.error(error);
         }
@@ -62,15 +73,40 @@ $(document).ready(async () => {
 
     // set sorting attribute
     $(document).on("click", ".list-header label", (ev) => {
+        // if already selected, change direction, otherwise set to up
+        if ($(ev.currentTarget).attr("data-sort") === localStorage.getItem("skillsOrderKey")) {
+            if (localStorage.getItem("skillsOrderAscending") === "true") {
+                localStorage.setItem("skillsOrderAscending", "false");
+            }
+            else {
+                localStorage.setItem("skillsOrderAscending", "true");
+            }
+        }
+        else {
+            localStorage.setItem("skillsOrderAscending", "true");
+        }
+
         // set element as selected
         $(".list-header label").each((index, e) => {
             $(e).attr("data-selected", "");
+            $(e).attr("data-direction", "");
         });
         $(ev.currentTarget).attr("data-selected", "true");
+        $(ev.currentTarget).attr("data-direction", localStorage.getItem("skillsOrderAscending") === "true" ? "up" : "down");
 
         // set localStorage var and repopulate
         localStorage.setItem("skillsOrderKey", $(ev.currentTarget).data("sort"));
         populateList();
+
+        //window.history.pushState(
+        //    {
+        //        "html": document.html,
+        //        "pageTitle": name
+        //    },
+        //    `${window.location.pathname}?item=${$(ev.currentTarget).data("id")}`,
+        //    "",
+        //    `${window.location.hostname}${window.location.pathname}?item=${$(ev.currentTarget).data("id")}`
+        //);
     })
 });
 

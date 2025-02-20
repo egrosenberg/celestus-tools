@@ -16,6 +16,12 @@ const STATUS = {
     InternalServerError: 500,
 };
 
+const HOSTS = [
+    "rules.crowsnest.me",
+    "127.0.0.1",
+    "192.168.1.39"
+];
+
 // register helpers
 hbs.registerHelpers();
 
@@ -29,11 +35,19 @@ const app = express();
 
 const PORT = 7777;
 
+// enable server to be proxied
+app.set('trust proxy', [
+    'loopback',
+    'linklocal',
+    'uniquelocal',
+    '192.168.1.55'
+]);
+
 // allow access to public files
 app.use(express.static('public'));
 
 // listen on port
-app.listen(PORT, () => {
+app.listen(PORT, HOSTS, () => {
     console.log(`Server is running on Port ${PORT}`)
 })
 
@@ -42,9 +56,15 @@ app.listen(PORT, () => {
  */
 app.get('/', async (req, res) => {
     const skillsList = await skills.render();
-    const msg = await hbs.renderFromTemplate('templates/index.hbs', { name: "Celestus", skillsList: skillsList });
+    const description = await skills.description(req.query.item);
+    const msg = await hbs.renderFromTemplate('templates/index.hbs', {
+        name: "Celestus",
+        skillsList: skillsList,
+        description
+    });
     res.locals.skillsList = skills.list;
     res.send(msg);
+    return;
 });
 
 /**

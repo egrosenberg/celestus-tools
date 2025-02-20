@@ -166,4 +166,10 @@ export default {
         "Angelic": "Angelic",
         "Custom": "Custom",
     },
+    // categories of skills
+    skillTypes: {
+        weapon: "Weapon (combat)",
+        magic: "Magic (combat)",
+        civil: "Civil",
+    },
 }

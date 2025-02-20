@@ -1,0 +1,94 @@
+<div class="dice-flavor celestus roll description {{ifThen (eq usedResources false) " no-resources" "" }}">
+    <header class="summary">
+        <div class="name-stacked">
+            <div class="title">{{name}}</div>
+            <div class="subtitle">{{lookup config.skillTypes item.system.type}}</div>
+        </div>
+        {{#if (eq item.system.type "civil")}}
+        {{#with (lookup config.civilSkills item.system.school) as |school|}}
+        <i class="{{school.glyph}}"></i>
+        {{/with}}
+        {{else}}
+        {{#with (lookup config.combatSkills item.system.school) as |school|}}
+        <i class="{{school.glyph}}"></i>
+        {{/with}}
+        {{/if}}
+    </header>
+    {{!-- action and focus points costs --}}
+    {{#repeat item.system.ap}}<i class="fa-solid fa-circle ap-icon"></i>{{/repeat}}
+    {{#repeat item.system.fp}}<i class="fa-solid fa-diamond fp-icon"></i>{{/repeat}}
+    <div class="roll-tags">
+        {{!-- skill tier --}}
+        <div class="roll-tag">
+            <span class="name">
+                Tier:
+            </span>
+            {{lookup config.skillTiers item.system.tier}} (Req. level {{lookup config.skillLevels item.system.tier}})
+        </div>
+        {{!-- skill school --}}
+        <div class="roll-tag">
+            <span class="name">
+                School:
+            </span>
+            {{#if (eq item.system.type "civil")}}
+            {{#with (lookup config.civilSkills item.system.school) as |school|}}
+            {{school.label}}
+            {{/with}}
+            {{else}}
+            {{#with (lookup config.combatSkills item.system.school) as |school|}}
+            {{school.label}}
+            {{/with}}
+            {{/if}}
+        </div>
+        {{!-- target type --}}
+        {{#if item.system.range}}
+        <div class="roll-tag">
+            <span class="name">
+                Range:
+            </span>
+            {{item.system.range}} ft.
+        </div>
+        {{/if}}
+        {{#if item.system.targetMode}}
+        <div class="roll-tag">
+            <span class="name">
+                Targets:
+            </span>
+            {{item.system.targetMode}}
+        </div>
+        {{/if}}
+        {{!-- cooldown --}}
+        {{#if (gt item.system.cooldown.max 0)}}
+        <div class="roll-tag">
+            <span class="name">
+                Cooldown:
+            </span>
+            {{item.system.cooldown.max}} rounds
+        </div>
+        {{/if}}
+        {{!-- Channeling --}}
+        {{#if item.system.channelDuration}}
+        <div class="roll-tag">
+            <span class="name">
+                Channels for:
+            </span>
+            {{item.system.channelDuration}} turns.
+        </div>
+        {{/if}}
+        {{!-- components --}}
+        <div class="roll-tag">
+            <span class="name">
+                Components:
+            </span>
+            {{ifThen item.system.components.verbal "V " ""}}
+            {{ifThen item.system.components.somatic "S " ""}}
+            {{ifThen item.system.components.material "M " ""}}
+            {{#if item.system.components.materialFull}}
+            ({{item.system.components.materialFull}})
+            {{/if}}
+        </div>
+    </div>
+    <div class="flavor">
+        {{{flavor}}}
+    </div>
+</div>

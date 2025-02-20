@@ -110,16 +110,12 @@
     padding: 0.4em;
 }
 
-.roll.description .message-header {
-    margin-top: -1.25em;
-    margin-bottom: 0.3em;
-}
-
 .roll.description .summary {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    border-bottom: thin solid var(--color-light-1)
 }
 
 .roll.description .roll-icon {
@@ -128,37 +124,34 @@
     display: inline;
 }
 
+.roll.description header {
+    position: relative;
+}
+
+.roll.description header i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
 .roll.description .name-stacked {
+    font-family: "PT Serif", serif;
     vertical-align: top;
-    padding-right: 0.5rem;
 }
 
 .roll.description .title {
-    font-size: var(--font-size-18);
+    font-size: var(--font-size-32);
     font-weight: bold;
+    color: var(--color-light-3);
 }
 
-.roll.description .actor-img {
-    width: 45px;
-    height: 45px;
-    display: inline;
-    background: none;
-    border: none;
-}
-
-.roll.description .speaker-info {
-    vertical-align: top;
-    display: inline-block;
-}
-
-.roll.description .author {
-    color: black;
+.roll.description .subtitle {
     font-size: var(--font-size-20);
-    font-weight: bold;
-}
-
-.roll.description .author {
-    font-size: var(--font-size-16);
+    font-style: italic;
+    margin-top: -5px;
 }
 
 .roll.description .roll-tags {
@@ -167,12 +160,34 @@
 }
 
 .roll-tag {
-    display: inline-block;
-    background-color: var(--color-warm-3);
     color: white;
     border-radius: 6px;
     font-size: var(--font-size-14);
-    padding: 0.2em 0.4em;
-    margin: 0.1em;
-    font-family: "Comfortaa", serif;
+}
+
+.roll-tag .name {
+    padding-right: 0.1em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+a.content-link {
+    font-weight: bold;
+}
+
+.roll.description .flavor {
+    font-size: var(--font-size-14);
+}
+
+/* AP and FP icons*/
+.ap-icon {
+    color: green;
+    text-shadow: var(--text-outline-1);
+    margin-right: 1px;
+}
+
+.fp-icon {
+    color: gold;
+    text-shadow: var(--text-outline-1);
+    margin-right: 1px;
 }

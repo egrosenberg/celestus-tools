@@ -2,9 +2,6 @@
 <li class="browser-item" id="{{skill._id}}"
     data-name="{{skill.name}}" data-tier="{{skill.system.tier}}" data-school="{{skill.system.school}}">
     <label class="name">{{skill.name}}</label>
-    <label class="thin">
-        {{lookup ../celestus.skillLevels skill.system.tier}}
-    </label>
     <label>
         {{lookup ../celestus.skillTiers skill.system.tier}}
     </label>
