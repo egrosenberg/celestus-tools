@@ -4,7 +4,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    font-family: Arial,sans-serif;
+    font-family: Arial, sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -423,4 +423,42 @@ input[type=checkbox]:checked+label:hover {
     left: 0px;
     background-color: var(--color-dark-6);
     opacity: 0.3;
+}
+
+/* Mobile Overrides */
+@media screen and (max-width:1100px) {
+
+    .content {
+        position: fixed;
+        left: 5vw;
+        width: 90vw;
+        overflow: auto;
+        scrollbar-width: thin;
+        overscroll-behavior: contain;
+        background-color: var(--color-dark-2);
+    }
+
+    .description {
+        position: static;
+        width: auto;
+        margin-bottom: 70vh;
+    }
+
+    .browser {
+        height: 60vh;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .list-input,.filter-button {
+        font-size: var(--font-size-24);
+    }
+
+    .popup-form {
+        width: auto;
+        margin: 20px;
+        left: 0;
+        top: 0;
+    }
+
 }
