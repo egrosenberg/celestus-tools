@@ -151,7 +151,6 @@ $(document).ready(async () => {
             }
 
             localStorage.setItem("searchFilters", JSON.stringify({ data: filters }));
-            console.log(filters);
             populateList();
         });
     });
