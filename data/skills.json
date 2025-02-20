@@ -2958,20 +2958,20 @@
             "img": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp",
             "system": {
                 "description": "<p>You perform a 1 hour ritual and touch a creature that has been dead for no more than a century and died for any reason other than old age. The creature returns to life with all resources.</p><p>The ritual heals all wounds and cures/neutralizes any poisons or diseases afflicting the creature. It also lifts any curses or other harmful magical effects affecting the creature. It replaces / regrows any missing limbs, organs, or bones. If the creature was undead, it is no longer.</p><p>Additionally, the ritual can create a new body if the creature's original body no longer exists. If the creatures body no longer exists, you must speak the creature's name aloud and their new body will appear in an unoccupied space within 30 feet of you.</p>",
-                "ap": 0,
+                "ap": 4,
                 "fp": 0,
                 "cooldown": {
                     "value": 0,
-                    "max": 0
+                    "max": 1
                 },
                 "components": {
-                    "verbal": false,
-                    "somatic": false,
-                    "material": false,
-                    "materialFull": ""
+                    "verbal": true,
+                    "somatic": true,
+                    "material": true,
+                    "materialFull": "A diamond worth at least 2500 GP"
                 },
                 "memorized": "false",
-                "type": "magic",
+                "type": "civil",
                 "memSlots": 1,
                 "prereqs": {
                     "flamespeaker": 0,
@@ -2988,14 +2988,14 @@
                     "lore": 0,
                     "nature": 0,
                     "influence": 0,
-                    "religion": 0
+                    "religion": 5
                 },
                 "damage": [],
                 "ability": "none",
                 "attack": false,
                 "targets": {
-                    "count": 0,
-                    "type": "self",
+                    "count": 1,
+                    "type": "creature",
                     "size": 0
                 },
                 "range": 0,
@@ -3006,8 +3006,8 @@
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
                 "itemizeDamage": false,
-                "school": "onehand",
-                "tier": 0,
+                "school": "religion",
+                "tier": 4,
                 "hasScript": false,
                 "scriptId": "",
                 "aoeLinger": false,
@@ -3023,8 +3023,8 @@
                     "texture": null
                 },
                 "channelDuration": 0,
-                "targetMode": false,
-                "finalRange": "Self"
+                "targetMode": "1 Creatures",
+                "finalRange": "Touch"
             },
             "effects": [],
             "sort": 0,
@@ -3040,7 +3040,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1739907130329,
-                "modifiedTime": 1739907427676,
+                "modifiedTime": 1740017503767,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -3101,7 +3101,7 @@
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
                 "overridesWeaponRange": false,
-                "school": "onehand",
+                "school": "voidcantor",
                 "tier": 2,
                 "overridesWeaponType": false,
                 "itemizeDamage": false,
@@ -3137,7 +3137,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736215758630,
-                "modifiedTime": 1736276718583,
+                "modifiedTime": 1740017387778,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -11073,7 +11073,7 @@
             "_id": "QpA6hDTEMUrplC0R",
             "img": "icons/magic/symbols/runes-triangle-blue.webp",
             "system": {
-                "description": "<p>You create a magical zone of truthfulness in a 10-foot radius centered on a point you can see within range. Each creature within the radius is unable to lie.</p>",
+                "description": "<p>You create a magical zone of truthfulness in a 10-foot radius centered on a point you can see within range. The zone persists for 10 minutes and creatures within the radius are unable to lie as long as the zone persists.</p>",
                 "ap": 4,
                 "fp": 0,
                 "cooldown": {
@@ -11156,7 +11156,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736294508480,
-                "modifiedTime": 1736294600598,
+                "modifiedTime": 1740028874918,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -13588,7 +13588,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1738375519957,
-                "modifiedTime": 1738375876337,
+                "modifiedTime": 1740006873565,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -16702,7 +16702,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736279479969,
-                "modifiedTime": 1736286756985,
+                "modifiedTime": 1740008146590,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -17015,7 +17015,7 @@
             "img": "icons/magic/perception/third-eye-blue-red.webp",
             "system": {
                 "description": "<p>You temporarily raise the senses of target creature you can see within range, Increasing their attributes and removing mental ailments.</p><p>★ Sets @UUID[Compendium.celestus.rules.dSnYGySx1wSrLHMn]{Clear Minded}</p>",
-                "ap": 0,
+                "ap": 1,
                 "fp": 0,
                 "cooldown": {
                     "value": 0,
@@ -17099,7 +17099,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735962971913,
-                "modifiedTime": 1739739841215,
+                "modifiedTime": 1740073193066,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -20920,7 +20920,7 @@
                     "type": "creature",
                     "size": 0
                 },
-                "range": 14,
+                "range": 15,
                 "statusEffects": [],
                 "lifesteal": 0,
                 "weaponEfficiency": 1,
@@ -20928,8 +20928,8 @@
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
                 "itemizeDamage": false,
-                "school": "scoundrel",
-                "tier": 0,
+                "school": "lore",
+                "tier": 3,
                 "hasScript": false,
                 "scriptId": "",
                 "aoeLinger": false,
@@ -20946,7 +20946,7 @@
                 },
                 "channelDuration": 0,
                 "targetMode": "9 Creatures",
-                "finalRange": "14 ft."
+                "finalRange": "15 ft."
             },
             "effects": [],
             "sort": 0,
@@ -20962,7 +20962,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1739810419425,
-                "modifiedTime": 1739813263759,
+                "modifiedTime": 1740017604003,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -21512,8 +21512,8 @@
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
                 "itemizeDamage": false,
-                "school": "onehand",
-                "tier": 0,
+                "school": "deathbringer",
+                "tier": 4,
                 "hasScript": false,
                 "scriptId": "",
                 "aoeLinger": false,
@@ -21546,7 +21546,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1739484537892,
-                "modifiedTime": 1739488485367,
+                "modifiedTime": 1740017523543,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -21653,8 +21653,8 @@
             "_id": "pvQfbgnVidcGTf8C",
             "img": "icons/magic/perception/eye-slit-pink.webp",
             "system": {
-                "description": "<p>You attempt to peer in on a creature you know of or a place you have seen.</p><p>If you are attempting to scry on a creature, roll a [[/r 1d100]] to determine your success. You need to roll a 50 or higher, but the roll can be modified (see attached tables) by your familiarity with the target or any physical connection you have. If the skill fails, the target is unaware that you tried to spy on them, but they feel a general sense of unease wash over them.</p><p></p><h3>Your knowledge of the target:</h3><table><tbody><tr><td data-colwidth=\"366\"><p>You have heard of the target</p></td><td data-colwidth=\"147\"><p>-20</p></td></tr><tr><td data-colwidth=\"366\"><p>You have personally met the target</p></td><td data-colwidth=\"147\"><p>+0</p></td></tr><tr><td data-colwidth=\"366\"><p>You know the target well</p></td><td data-colwidth=\"147\"><p>+20</p></td></tr></tbody></table><h3>Your physical connection to the target:</h3><table><tbody><tr><td data-colwidth=\"366\"><p>A picture or other likeness</p></td><td data-colwidth=\"147\"><p>+10</p></td></tr><tr><td data-colwidth=\"366\"><p>A garment or possession</p></td><td data-colwidth=\"147\"><p>+15</p></td></tr><tr><td data-colwidth=\"366\"><p>A body part (lock of hair, a nail, blood, etc.)</p></td><td data-colwidth=\"147\"><p>+40</p></td></tr></tbody></table><p></p><p>If you succeed, you create an invisible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor follows the target, remaining within 10 feet of it for 1 hour, after which it disappears. If something can see the sensor, it appears as a white sphere.</p><p>If you targeted a location, the sensor does not move.</p>",
-                "ap": 0,
+                "description": "<p>You perform a 10 minute ritual that can allow you to peer in on a creature or place.</p><p>If you are attempting to scry on a creature, roll a [[/r 1d100]] to determine your success. You need to roll a 50 or higher, but the roll can be modified (see attached tables) by your familiarity with the target or any physical connection you have. If the skill fails, the target is unaware that you tried to spy on them, but they feel a general sense of unease wash over them.</p><p></p><h3>Your knowledge of the target:</h3><table><tbody><tr><td data-colwidth=\"366\"><p>You have heard of the target</p></td><td data-colwidth=\"147\"><p>-20</p></td></tr><tr><td data-colwidth=\"366\"><p>You have personally met the target</p></td><td data-colwidth=\"147\"><p>+0</p></td></tr><tr><td data-colwidth=\"366\"><p>You know the target well</p></td><td data-colwidth=\"147\"><p>+20</p></td></tr></tbody></table><h3>Your physical connection to the target:</h3><table><tbody><tr><td data-colwidth=\"366\"><p>A picture or other likeness</p></td><td data-colwidth=\"147\"><p>+10</p></td></tr><tr><td data-colwidth=\"366\"><p>A garment or possession</p></td><td data-colwidth=\"147\"><p>+15</p></td></tr><tr><td data-colwidth=\"366\"><p>A body part (lock of hair, a nail, blood, etc.)</p></td><td data-colwidth=\"147\"><p>+40</p></td></tr></tbody></table><p></p><p>If you succeed, you create an invisible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor follows the target, remaining within 10 feet of it for 1 hour, after which it disappears. If something can see the sensor, it appears as a white sphere.</p><p>If you targeted a location, the sensor does not move.</p>",
+                "ap": 4,
                 "fp": 0,
                 "cooldown": {
                     "value": 0,
@@ -21736,7 +21736,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736288376395,
-                "modifiedTime": 1736289550568,
+                "modifiedTime": 1740073239897,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false

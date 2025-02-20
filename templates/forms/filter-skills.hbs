@@ -1,0 +1,65 @@
+<header>
+    <h1>Filter</h1>
+    <button><i class="fa-solid fa-check"></i></button>
+</header>
+<div class="form-content">
+    <div class="form-section">
+        <h1>Skill Type</h1>
+        {{#each config.skillTypes as |type text|}}
+        <input name="system.type.{{text}}" type="checkbox" id="system.type.{{text}}" class="hidden-check"
+            data-value="{{text}}" data-field="system.type"></input>
+        <label for="system.type.{{text}}" class="form-toggle">
+            {{type}}
+        </label>
+        {{/each}}
+    </div>
+    <div class="form-section">
+        <h1>Skill School</h1>
+        {{#each config.combatSkills}}
+        <input name="system.school.{{text}}" type="checkbox" id="system.school.{{text}}" class="hidden-check"
+            data-value="{{text}}" data-field="system.school"></input>
+        <label for="system.school.{{text}}" class="form-toggle">
+            <i class="{{glyph}}"></i> {{label}}
+        </label>
+        {{/each}}
+        <br/>
+        {{#each config.civilSkills}}
+        <input name="system.school.{{text}}" type="checkbox" id="system.school.{{text}}" class="hidden-check"
+            data-value="{{text}}" data-field="system.school"></input>
+        <label for="system.school.{{text}}" class="form-toggle">
+            <i class="{{glyph}}"></i> {{label}}
+        </label>
+        {{/each}}
+    </div>
+    <div class="form-section">
+        <h1>Skill Tier</h1>
+        {{#each config.skillTiers as |name tier|}}
+        <input name="system.tier.{{tier}}" type="checkbox" id="system.tier.{{tier}}" class="hidden-check"
+            data-value="{{tier}}" data-field="system.tier"></input>
+        <label for="system.tier.{{tier}}" class="form-toggle">
+            {{name}} ({{lookup ../config.skillLevels tier}})
+        </label>
+        {{/each}}
+    </div>
+    <div class="form-section">
+        <h1>Action Points</h1>
+        {{#for -1 4 1}}
+        <input name="system.ap.{{.}}" type="checkbox" id="system.ap.{{.}}" class="hidden-check"
+            data-value="{{.}}" data-field="system.ap"></input>
+        <label for="system.ap.{{.}}" class="form-toggle">
+            {{.}}
+        </label>
+        {{/for}}
+        <h1>Focus Points</h1>
+        {{#for 0 3 1}}
+        <input name="system.fp.{{.}}" type="checkbox" id="system.fp.{{.}}" class="hidden-check"
+            data-value="{{.}}" data-field="system.fp"></input>
+        <label for="system.fp.{{.}}" class="form-toggle">
+            {{.}}
+        </label>
+        {{/for}}
+    </div>
+</div>
+<footer class="form-submit">
+    <button>Submit</button>
+</footer>

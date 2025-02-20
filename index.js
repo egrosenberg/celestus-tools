@@ -4,6 +4,7 @@ import express from "express";
 
 import hbs from './modules/import/handlebars.mjs'
 import skills from "./modules/skills.mjs";
+import celestus from "./data/celestus.mjs";
 
 const STATUS = {
     Ok: 200,
@@ -88,7 +89,7 @@ app.get('/resources/skill-data', (req, res) => {
     res.send(skills.list);
     return;
 });
-// fetch skill description
+// fetch description
 app.get('/resources/descriptions', async (req, res) => {
     if (req.query.type === "skill") {
         const html = await skills.description(req.query.id);
@@ -97,5 +98,11 @@ app.get('/resources/descriptions', async (req, res) => {
     else {
         res.status(STATUS.BadRequest).send("Invalid description type!");
     }
+    return;
+});
+// fetch form
+app.get('/resources/forms/:templateName', async (req, res) => {
+    const html = await hbs.renderFromTemplate(`templates/forms/${req.params.templateName}`, { config: celestus });
+    res.send(html);
     return;
 });

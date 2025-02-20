@@ -146,7 +146,7 @@ body {
 }
 
 /* Browser List */
-.browser { 
+.browser {
     cursor: pointer;
     pointer-events: all;
     display: flex;
@@ -176,7 +176,6 @@ body {
 
 .list-input {
     width: 100%;
-    color: white;
     background-color: var(--color-dark-3);
     border: none;
     padding: 3px;
@@ -185,10 +184,32 @@ body {
     border-bottom: thin white solid;
 }
 
+.input {
+    position: relative;
+    margin: 0px;
+}
+
+.input .filter-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    color: white;
+    border: none;
+
+    text-shadow: black 0px 0px 8px;
+    cursor: pointer;
+}
+
+.input .filter-button:hover {
+    text-shadow: white 0px 0px 8px;
+}
+
 .list-header {
     font-family: "PT Serif", serif;
     width: 100%;
-    color: white;
     background-color: var(--color-dark-3);
     border: none;
     font-size: var(--font-size-14);
@@ -225,7 +246,8 @@ body {
 }
 
 .browser label.thin {
-    flex: 0 0 20px;
+    flex: 0 0 35px;
+    text-align: center;
 }
 
 .browser-item {
@@ -242,6 +264,19 @@ body {
     background: var(--color-dark-3);
 }
 
+.browser-item.selected {
+    font-weight: bold;
+    background-color: var(--color-dark-1);
+    border: thin solid var(--color-light-1);
+}
+
+.browser-item.selected {
+    font-weight: bold;
+    background-color: var(--color-dark-1);
+    border: thin solid var(--color-light-1);
+}
+
+
 .browser-item:hover {
     font-weight: normal;
     background-color: var(--color-dark-1);
@@ -250,7 +285,148 @@ body {
 .browser-item label {
     cursor: pointer;
 }
+
 .browser .name {
     font-weight: bold;
     flex: 2;
+}
+
+.popup-form {
+    position: fixed;
+    z-index: 1000;
+    width: 1200px;
+    height: 90vh;
+    left: calc(50vw - 600px - 15px/2);
+    top: 5vh;
+    padding: 15px;
+    background-color: var(--color-dark-2);
+    overflow-x: hidden;
+    margin: 0px;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    border-radius: 10px;
+    border: double medium var(--color-light-1);
+
+    scrollbar-width: thin;
+    overflow-x: hidden;
+
+    /* Make text not selectable */
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popup-form header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: thin solid var(--color-light-1);
+}
+
+.popup-form header * {
+    flex: 1;
+}
+
+.popup-form header h1 {
+    font-size: var(--font-size-28);
+    font-family: "PT Serif", serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.popup-form header button {
+    flex: 0 0 25px;
+    height: 25px;
+    vertical-align: center;
+}
+
+.popup-form .form-submit {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    padding: bottom;
+}
+
+.popup-form .form-submit button {
+    cursor: pointer;
+    font-size: var(--font-size-20);
+    padding: 5px 20px;
+    font-family: inherit;
+    border: thin solid white;
+    border-radius: 5px;
+}
+
+.popup-form .form-submit button:hover {
+    background-color: var(--color-cool-3);
+    border-color: var(--color-dark-3);
+    border-radius: 5px;
+    color: white;
+}
+
+.popup-form .form-content {
+    padding-bottom: 40px;
+}
+
+.popup-form .form-content h1 {
+    margin-bottom: 10px;
+    padding: 0px;
+    font-size: var(--font-size-18);
+    font-family: "PT Serif", serif;
+}
+
+.popup-form .form-section {
+    border-bottom: thin solid var(--color-dark-6);
+}
+
+.popup-form .form-toggle {
+    display: inline-block;
+    background-color: var(--color-dark-3);
+    margin: 3px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    min-width: 30px;
+    text-align: center;
+    border: thin solid var(--color-dark-6);
+    cursor: pointer;
+}
+
+.popup-form .form-toggle:hover {
+    background-color: var(--color-dark-4);
+}
+
+input[type=checkbox]:checked+label {
+    background-color: var(--color-cool-3);
+}
+
+input[type=checkbox]:checked+label:hover {
+    background-color: var(--color-cool-3);
+}
+
+.popup-form .hidden-check {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.form-overlay {
+    z-index: 900;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--color-dark-6);
+    opacity: 0.3;
 }

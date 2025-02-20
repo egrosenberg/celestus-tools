@@ -1,7 +1,22 @@
 {{#each skills as |skill|}}
 <li class="browser-item" id="{{skill._id}}"
-    data-name="{{skill.name}}" data-tier="{{skill.system.tier}}" data-school="{{skill.system.school}}">
+    data-name="{{skill.name}}" data-tier="{{skill.system.tier}}" data-school="{{skill.system.school}}"
+    data-ap="{{skill.system.ap}}" data-fp="{{skill.system.fp}}">
     <label class="name">{{skill.name}}</label>
+    <label class="thin">
+        {{#if skill.system.ap}}
+        {{skill.system.ap}}
+        {{else}}
+        -
+        {{/if}}
+    </label>
+    <label class="thin">
+        {{#if skill.system.fp}}
+        {{skill.system.fp}}
+        {{else}}
+        -
+        {{/if}}
+    </label>
     <label>
         {{lookup ../celestus.skillTiers skill.system.tier}}
     </label>

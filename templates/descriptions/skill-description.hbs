@@ -40,6 +40,16 @@
             {{/with}}
             {{/if}}
         </div>
+        <div class="roll-tag">
+            <span class="name">
+                Requires:
+            </span>
+            {{#each item.system.prereqs as |value school|}}
+            {{#if value}}
+            {{capitalize school}} {{value}} 
+            {{/if}}
+            {{/each}}
+        </div>
         {{!-- target type --}}
         {{#if item.system.range}}
         <div class="roll-tag">

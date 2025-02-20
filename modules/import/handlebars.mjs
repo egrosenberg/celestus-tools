@@ -43,6 +43,12 @@ function registerHelpers() {
     /**
      * Other
      */
+    Handlebars.registerHelper("for", function(from, to, incr, block) {
+        var accum = "";
+        for(var i = from; i <= to; i += incr)
+            accum += block.fn(i);
+        return accum;
+    });
     Handlebars.registerHelper("repeat", (n, options) => {
         let output = ""
         let offset = parseInt(options.hash.offset);
@@ -76,6 +82,9 @@ function registerHelpers() {
             return "";
         }
         return a + b;
+    });
+    Handlebars.registerHelper("capitalize", (a) => {
+        return String(a).charAt(0).toUpperCase() + String(a).slice(1);
     });
 }
 

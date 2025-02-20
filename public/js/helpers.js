@@ -1,4 +1,71 @@
 /* eslint-disable no-unused-vars */
+/* global $ */
+
+
+/**
+ * Activates listeners like button toggles on form
+ * @param {Object} html dom element form
+ */
+function activateFormListeners(html) {
+}
+
+/**
+ * Creates a form and awaits it's submission
+ * @param {String} url to template
+ * @param {Object?} options
+ * @param {Function(Button, Object)} callback
+ * @returns {Promise | Boolean} FormData
+ */
+async function createForm(url, options = {}, callback = () => { }) {
+    try {
+        if ($(".popup-form").length) return false;
+        // get html
+        const request = await fetch(url);
+        if (!request.ok) throw new Error(request.status);
+        const html = await request.text();
+
+        // create element
+        const form = document.createElement("form");
+        form.classList.add("popup-form");
+        form.innerHTML = html;
+        const overlay = document.createElement('div');
+        overlay.classList.add("form-overlay");
+
+        // add form to document
+        document.body.appendChild(overlay);
+        document.body.appendChild(form);
+
+        activateFormListeners(form);
+        if (typeof options.listeners === "function") {
+            options.listeners(form);
+        }
+
+        return new Promise((resolve, reject) => {
+            $(form).on("submit", (ev) => {
+                ev.preventDefault();
+                const data = new FormData(form);
+
+                // process data for callback
+                const fields = {};
+                const controls = form.elements;
+                for (let i = 0; i < controls.length; i++) {
+                    if (controls[i].nodeName === "INPUT") {
+                        fields[controls[i].name] = controls[i];
+                    }
+                }
+                callback($(document.activeElement)[0], controls);
+
+                form.remove();
+                overlay.remove();
+                resolve(data);
+            });
+        });
+    } catch (error) {
+        console.error(error);
+        return {};
+    }
+}
+
 /**
  * Access nested object variable from string
  * by Ray Bellis 
@@ -20,4 +87,23 @@ function byString(o, s) {
         }
     }
     return o;
+}
+
+/**
+ * Visit all descendants and execute callback function
+ * Snippet by T.J. Crowder @ https://web.archive.org/web/20250220052958/https://stackoverflow.com/questions/66281903/iterate-through-all-children-and-children-children-of-an-object/66282012#66282012
+ * @param {Object} obj 
+ * @param {Function} callback 
+ * @param {String} path
+ */
+function visitDescendants(obj, callback, path = "") {
+    for (const [key, value] of Object.entries(obj)) {
+        if (value && typeof value === "object") {
+            // Recurse
+            path = (path === "") ? key : path + '.' + key
+            visitDescendants(value, callback, path);
+        } else {
+            callback(key, value, path);
+        }
+    }
 }

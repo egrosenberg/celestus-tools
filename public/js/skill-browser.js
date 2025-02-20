@@ -1,4 +1,4 @@
-/*global $, byString*/
+/*global $, byString, createForm */
 
 var skillsList;
 var skillItems;
@@ -61,6 +61,9 @@ $(document).ready(async () => {
             document.title = name;
             window.history.pushState(`Celestus | Skills | ${name}`, name, `${window.location.pathname}?item=${$(ev.currentTarget).attr("id")}`);
 
+            // mark item as selected
+            $.each(skillItems, function (idx, itm) { itm.classList.remove("selected"); });
+            ev.currentTarget.classList.add("selected");
         } catch (error) {
             console.error(error);
         }
@@ -97,17 +100,61 @@ $(document).ready(async () => {
         // set localStorage var and repopulate
         localStorage.setItem("skillsOrderKey", $(ev.currentTarget).data("sort"));
         populateList();
+    });
 
-        //window.history.pushState(
-        //    {
-        //        "html": document.html,
-        //        "pageTitle": name
-        //    },
-        //    `${window.location.pathname}?item=${$(ev.currentTarget).data("id")}`,
-        //    "",
-        //    `${window.location.hostname}${window.location.pathname}?item=${$(ev.currentTarget).data("id")}`
-        //);
-    })
+    /**
+     * Open up filter form and turn form input into filter data
+     */
+    $(document).on("click", ".filter-button", async () => {
+        await createForm("/resources/forms/filter-skills.hbs", {
+            listeners: (form) => {
+                const controls = form.elements;
+                const filters = JSON.parse(localStorage.getItem("searchFilters")).data;
+                for (const control of controls) {
+                    const filter = filters.find(f => f.id === control.dataset.field);
+                    if (filter?.values.find(v => v === control.dataset.value)) {
+                        control.checked = true;
+                    }
+                }
+            }
+        }, (b, f) => {
+            const filters = [
+                {
+                    id: "inherited",
+                    mode: "and",
+                    values: [false]
+                }
+            ];
+
+            // merge fields
+            for (const field of f) {
+                const name = field.dataset.field;
+                if (!name) continue;
+                // check value
+                let value = null;
+                if (field.type === "checkbox") {
+                    if (!field.checked) continue;
+                    value = field.dataset.value;
+                }
+                if (!value) continue;
+                const filter = filters.find(f => f.id === name);
+                if (filter) {
+                    filter.values.push(value);
+                }
+                else {
+                    filters.push({
+                        id: name,
+                        mode: "or",
+                        values: [value]
+                    });
+                }
+            }
+
+            localStorage.setItem("searchFilters", JSON.stringify({ data: filters }));
+            console.log(filters);
+            populateList();
+        });
+    });
 });
 
 /**
@@ -161,21 +208,21 @@ function filterByParams(filters) {
         let valid = true;
         const item = skills.get($(itm).attr("id"))
         for (const filter of filters) {
-            if (filter.values?.length) {
+            if (filter.values?.length && filter.id) {
                 let currentValid = true;
-                for (const value of filter.values) {
-                    currentValid = byString(item, filter.id) === value;
-                    if (filter.mode === "and" && !currentValid) break;
-                    else if (filter.mode === "or" && currentValid) break;
+                if (filter.mode === "and") {
+                    for (const value of filter.values) {
+                        currentValid = byString(item, filter.id) == value;
+                        if (!currentValid) break;
+                    }
                 }
-                if (filter.mode === "and" && !currentValid) {
+                else if (filter.mode === "or") {
+                    currentValid = Boolean(filter.values.find(f => f == byString(item, filter.id)));
+                }
+                if (!currentValid) {
                     valid = false;
                     break;
-                }
-                else if (filter.mode === "or" && currentValid) {
-                    valid = true;
-                    break;
-                }
+                };
             }
         }
         if (!valid) {
