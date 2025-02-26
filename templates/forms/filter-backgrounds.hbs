@@ -1,0 +1,17 @@
+<header>
+    <h1>Filter</h1>
+    <button><i class="fa-solid fa-check"></i></button>
+</header>
+<div class="form-content">
+    <h1>Civil Ability Bonus</h1>
+    {{#each config.civilSkills}}
+    <input name="system.bonuses.civil.{{text}}" type="checkbox" id="system.bonuses.civil.{{text}}" class="hidden-check"
+        data-value="1" data-field="system.bonuses.civil.{{text}}"></input>
+    <label for="system.bonuses.civil.{{text}}" class="form-toggle">
+        <i class="{{glyph}}"></i> {{label}}
+    </label>
+    {{/each}}
+</div>
+<footer class="form-submit">
+    <button>Submit</button>
+</footer>

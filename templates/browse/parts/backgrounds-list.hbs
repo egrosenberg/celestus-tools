@@ -1,0 +1,17 @@
+{{#each data as |item|}}
+<li class="browser-item" id="{{item._id}}" data-name="{{item.name}}"
+    data-ability="{{#each item.system.bonuses.civil as |value ability|}}
+        {{#if value}}
+        {{capitalize ability}}
+        {{/if}}
+        {{/each}}">
+    <label class="name">{{item.name}}</label>
+    <label>
+        {{#each item.system.bonuses.civil as |value ability|}}
+        {{#if value}}
+        {{capitalize ability}}
+        {{/if}}
+        {{/each}}
+    </label>
+</li>
+{{/each}}

@@ -468,6 +468,7 @@ h6 {
 }
 
 .list-input {
+    color: white;
     width: 100%;
     background-color: var(--color-dark-3);
     border: none;

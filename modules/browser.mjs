@@ -4,13 +4,12 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
 const defaultPaths = {
-    browser: "templates/browse/parts/%ID%-browser.hbs",
-    list: "templates/browse/parts/%ID%-list.hbs",
-    description: "templates/descriptions/%ID%-description.hbs"
+    browser: "templates/browse/parts/_KEY_-browser.hbs",
+    list: "templates/browse/parts/_KEY_-list.hbs",
+    description: "templates/descriptions/_KEY_-description.hbs"
 }
 
 export default class Browser {
-    paths = defaultPaths;
     /**
      * @param {String} key for use in generating paths
      * @param {String} jsonPath path to JSON file containing list data
@@ -36,8 +35,9 @@ export default class Browser {
             return 0;
         });
         // create paths
-        for (const [key, path] of Object.entries(this.paths)) {
-            this.paths[key] = path.replace('%ID%', this.key);
+        this.paths = structuredClone(defaultPaths);
+        for (const [k, path] of Object.entries(this.paths)) {
+            this.paths[k] = path.replace('_KEY_', this.key);
         }
     }
 

@@ -8,7 +8,8 @@ import celestus from "./data/celestus.mjs";
 
 // create skills browser
 const browsers = new Map([
-    ['skills', new Browser("skills", "../data/skills.json")]
+    ['skills', new Browser("skills", "../data/skills.json")],
+    ['backgrounds', new Browser("backgrounds", "../data/backgrounds.json")]
 ]);
 
 const STATUS = {
@@ -35,6 +36,8 @@ hbs.registerHelpers();
 hbs.loadPartials([
     "./templates/browse/parts/skills-list.hbs",
     "./templates/browse/parts/skills-browser.hbs",
+    "./templates/browse/parts/backgrounds-list.hbs",
+    "./templates/browse/parts/backgrounds-browser.hbs",
     "./templates/parts/navigation.hbs",
 ]);
 
@@ -79,7 +82,7 @@ app.get('/content/:templateName', async (req, res) => {
 });
 
 /**
- * Skills Browser
+ * Browsers
  */
 app.get('/browse/:browser', async (req, res) => {
     const browser = browsers.get(req.params.browser);
@@ -91,7 +94,6 @@ app.get('/browse/:browser', async (req, res) => {
             list: list,
             description
         });
-        res.locals.skillsList = browser.list;
         return res.send(msg);
     }
     return res.redirect('/404/');

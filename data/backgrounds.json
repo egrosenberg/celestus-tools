@@ -1,0 +1,1941 @@
+{
+    "data": [
+        {
+            "name": "Charlatan",
+            "type": "feature",
+            "_id": "41wjhp9NoVVMYgQ5",
+            "img": "icons/commodities/currency/coin-embossed-ruby-gold.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Persuasive: </strong>You gain +1 Influence</p><p><strong>You can always…</strong></p><ul><li><p>Tell a little white lie</p></li><li><p>Say something you're not supposed to.</p></li><li><p>Change the subject abruptly.</p></li><li><p>Ask: \"Are you sure about that?\"</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 1,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Tell a little white lie.",
+                    "Say something you're not supposed to.",
+                    "Change the subject abruptly.",
+                    "Ask: \"Are you sure about that?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736303214265,
+                "modifiedTime": 1740175931003,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Sailor",
+            "type": "feature",
+            "_id": "4rJ22rndzUKE8gCs",
+            "img": "icons/tools/navigation/map-marked-green.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Seafarer: </strong>You gain +1 Nature</p><p><strong>You can always…</strong></p><ul><li><p>Tell which way is north.</p></li><li><p>Tend to a ship.</p></li><li><p>Say: \"I have just the story for this.\"</p></li><li><p>Ask: \"What's your story?\"</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 1,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Tell which way is north.",
+                    "Tend to a ship.",
+                    "Say: \"I have just the story for this.\"",
+                    "Ask: \"What's your story?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736302185211,
+                "modifiedTime": 1740175931030,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Noble",
+            "type": "feature",
+            "_id": "73Eajei4UEu5O3zx",
+            "img": "icons/commodities/currency/coins-plain-stack-gold.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Civil:</strong> You gain +1 Influence</p><p><strong>You can always…</strong></p><ul><li><p>Make it about you</p></li><li><p>Find audience with local nobility</p></li><li><p>Say: \"I'm above this.\"</p></li><li><p>Ask: \"Who's in charge here?\"</p></li></ul>",
+                "type": "feature",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 1,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Make it about you.",
+                    "Find audience with local nobility.",
+                    "Say: \"I'm above this.\"",
+                    "Ask: \"Who's in charge here?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736302714081,
+                "modifiedTime": 1740541184864,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Outlaw",
+            "type": "feature",
+            "_id": "K3oGDRIJw2yp2Mrv",
+            "img": "icons/sundries/survival/rope-coiled-wrapped-brown.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Criminal:</strong> You gain +1 Scoundrel</p><p><strong>You can always…</strong></p><ul><li><p>Find a way out from between a rock and a hard place</p></li><li><p>Spill the beans</p></li><li><p>Find a way in somewhere you shouldn't be</p></li><li><p>Have something you're not supposed to.</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0
+                    },
+                    "civil": {
+                        "scoundrel": 1,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0,
+                        "piercing": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Find a way out from between a rock and a hard place.",
+                    "Spill the beans.",
+                    "Find a way in somewhere you shouldn't be.",
+                    "Have something you're not supposed to."
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736301393558,
+                "modifiedTime": 1740175931121,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Guard",
+            "type": "feature",
+            "_id": "QZz6O12qkEM5U4QI",
+            "img": "icons/equipment/head/cap-steel.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Civil:</strong> You gain +1 Influence</p><p><strong>You can always…</strong></p><ul><li><p>Stand up for your allies</p></li><li><p>Keep both eyes on someone</p></li><li><p>Stomp your foot and get everyone's attention.</p></li><li><p>Ask: \"What aren't you telling me?\"</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 1,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0,
+                        "piercing": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Stand up for your allies.",
+                    "Keep both eyes on someone.",
+                    "Stomp your foot and get everyone's attention.",
+                    "Ask: \"What aren't you telling me?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736301636722,
+                "modifiedTime": 1740175931232,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Sage",
+            "type": "feature",
+            "_id": "RFhzhWRZjKEfrksC",
+            "img": "icons/sundries/books/book-embossed-gold-red.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Knowledgeable: </strong>You gain +1 Lore</p><p><strong>You can always…</strong></p><ul><li><p>Cite your sources, hoping they help your case.</p></li><li><p>Locate something in a library, if it’s there.</p></li><li><p>Jot something important down.</p></li><li><p>Ask: “Could you explain?”</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 1,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0,
+                        "piercing": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Cite your sources, hoping they help your case.",
+                    "Locate something in a library, if it’s there.",
+                    "Jot something important down.",
+                    "Ask: “Could you explain?”."
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736300568701,
+                "modifiedTime": 1740175931248,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Merchant",
+            "type": "feature",
+            "_id": "Rh3QItSa6ZyzPZ1v",
+            "img": "icons/commodities/currency/coins-assorted-mix-copper.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Civil: </strong>You gain +1 Influence</p><p><strong>You can always…</strong></p><ul><li><p>Find something worth buying.</p></li><li><p>Appraise a ware.</p></li><li><p>Offer someone a deal</p></li><li><p>Ask: \"How can I help?\"</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 1,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Find something worth buying.",
+                    "Appraise a ware.",
+                    "Offer someone a deal.",
+                    "Ask: \"How can I help?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736302932665,
+                "modifiedTime": 1740175931265,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Minstrel",
+            "type": "feature",
+            "_id": "UN8owc65gFEi7BeB",
+            "img": "icons/tools/instruments/harp-lap-brown.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Musician:</strong> You gain +1 Influence</p><p><strong>You can always...</strong></p><ul><li><p>Play a tune.</p></li><li><p>Make an audience from a crowd.</p></li><li><p>Say: “You remind me of someone.”</p></li><li><p>Ask: “Can I stay here?”</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 1,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0,
+                        "piercing": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Play a tune.",
+                    "Make an audience from a crowd.",
+                    "Say: “You remind me of someone.”.",
+                    "Ask: “Can I stay here?”."
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736301086783,
+                "modifiedTime": 1740175931348,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Tinkerer",
+            "type": "feature",
+            "_id": "Wo1PlDTlglDfxXXy",
+            "img": "icons/tools/smithing/hammer-sledge-steel-grey.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Knowledgeable: </strong>You gain +1 Lore</p><p><strong>You can always…</strong></p><ul><li><p>Make a small and harmless contraption.</p></li><li><p>Have the right tool for the job.</p></li><li><p>Marvel at someone's creation.</p></li><li><p>Ask: \"Can I get a hand?\"</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 1,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Make a small and harmless contraption.",
+                    "Have the right tool for the job.",
+                    "Marvel at someone's creation.",
+                    "Ask: \"Can I get a hand?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736302778813,
+                "modifiedTime": 1740175931362,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Acolyte",
+            "type": "feature",
+            "_id": "cpv1B5NkiusDVCJB",
+            "img": "icons/equipment/hand/glove-ringed-leather-yellow.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Religious: </strong>You gain +1 Religion</p><p><strong>You can always…</strong></p><ul><li><p>Offer a small prayer.</p></li><li><p>Place your faith in those around you.</p></li><li><p>Give someone the benefit of the doubt.</p></li><li><p>Tell someone about your faith.</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 1
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Offer a small prayer.",
+                    "Place your faith in those around you.",
+                    "Give someone the benefit of the doubt.",
+                    "Tell someone about your faith."
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736302465381,
+                "modifiedTime": 1740175931372,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Wayfarer",
+            "type": "feature",
+            "_id": "dcH3Q0uCpTIbHxLX",
+            "img": "icons/environment/traps/trap-jaw-green.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Naturalist: </strong>You gain +1 Nature</p><p><strong>You can always…</strong></p><ul><li><p>Find enough food for you and your party in the wilderness</p></li><li><p>Protect yourself from harsh weather</p></li><li><p>Continue onward</p></li><li><p>Ask: \"Do you need a hand?\"</p></li></ul><p></p>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 1,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0,
+                        "piercing": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Find enough food for you and your party in the wilderness.",
+                    "Protect yourself from harsh weather.",
+                    "Continue onward.",
+                    "Ask: \"Do you need a hand?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736301442702,
+                "modifiedTime": 1740175931380,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Hermit",
+            "type": "feature",
+            "_id": "kob2FNWy4jRxy6jr",
+            "img": "icons/commodities/flowers/lily-yellow.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Naturalist: </strong>You gain +1 Nature</p><p><strong>You can always…</strong></p><ul><li><p>Stare off into the distance</p></li><li><p>Say the quiet part out loud</p></li><li><p>Do something out of the ordinary</p></li><li><p>Ask: \"Can you explain?\"</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 1,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Stare off into the distance.",
+                    "Say the quiet part out loud.",
+                    "Do something out of the ordinary.",
+                    "Ask: \"Can you explain?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736302401900,
+                "modifiedTime": 1740175931397,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "name": "Physician",
+            "type": "feature",
+            "_id": "xUkA4edPo9inKNMk",
+            "img": "icons/commodities/biological/organ-heart-red.webp",
+            "system": {
+                "equipped": false,
+                "description": "<p><strong>Knowledgeable: </strong>You gain +1 Lore</p><p><strong>You can always…</strong></p><ul><li><p>Tend to someone's wounds</p></li><li><p>Scribble something down illegibly</p></li><li><p>Say: \"Everything's gonna be ok.\"</p></li><li><p>Ask: \"Can you explain what's wrong?\"</p></li></ul>",
+                "type": "origin",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 1,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "shadow": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "canAlways": [
+                    "Tend to someone's wounds.",
+                    "Scribble something down illegibly.",
+                    "Say: \"Everything's gonna be ok.\"",
+                    "Ask: \"Can you explain what's wrong?\""
+                ],
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": []
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1736303010646,
+                "modifiedTime": 1740175931468,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        }
+    ]
+}

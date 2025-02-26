@@ -13,33 +13,19 @@ function registerHelpers() {
     /**
      * Logical
      */
-    Handlebars.registerHelper('eq', function(arg1, arg2) {
-        return (arg1 === arg2);
-    });
-    Handlebars.registerHelper('neq', function(arg1, arg2) {
-        return (arg1 !== arg2);
-    });
-    Handlebars.registerHelper('lt', function(arg1, arg2) {
-        return (arg1 < arg2);
-    });
-    Handlebars.registerHelper('gt', function(arg1, arg2) {
-        return (arg1 > arg2);
-    });
-    Handlebars.registerHelper('leq', function(arg1, arg2) {
-        return (arg1 <= arg2);
-    });
-    Handlebars.registerHelper('geq', function(arg1, arg2) {
-        return (arg1 >= arg2);
-    });
-    Handlebars.registerHelper('or', function(arg1, arg2) {
-        return (arg1 || arg2);
-    });
-    Handlebars.registerHelper('and', function(arg1, arg2) {
-        return (arg1 && arg2);
-    });
+    Handlebars.registerHelper('eq', ( a, b) => a === b);
+    Handlebars.registerHelper('neq', (a, b) => a !== b);
+    Handlebars.registerHelper('lt',  (a, b) => a < b);
+    Handlebars.registerHelper('gt',  (a, b) => a > b);
+    Handlebars.registerHelper('leq', (a, b) => a <= b);
+    Handlebars.registerHelper('geq', (a, b) => a >= b);
+    Handlebars.registerHelper('or',  (a, b) => a || b);
+    Handlebars.registerHelper('and', (a, b) => a && b);
+    Handlebars.registerHelper('not', (a) => !a);
     Handlebars.registerHelper('ifThen', function(arg1, arg2) {
         return (arg1 ? arg2 : "");
     });
+    Handlebars.registerHelper('not', (a) => !a);
     /**
      * Other
      */
@@ -67,6 +53,17 @@ function registerHelpers() {
         const signStr = options.hash.sign ? (number >= 0 ? "+" : "") : "";
         return `${signStr}${number}${options.hash.symbol ? "%" : ""}`;
     });
+    Handlebars.registerHelper("numberFormat", (n, options) => {
+        let number = parseFloat(n);
+        if (isNaN(number)) {
+            return "";
+        }
+        if (options.hash.decimals && !isNaN(parseFloat(options.hash.decimals))) {
+            number = number.toFixed(parseFloat(options.hash.decimals));
+        }
+        const signStr = options.hash.sign ? (number >= 0 ? "+" : "") : "";
+        return `${signStr}${number}${options.hash.symbol ? "%" : ""}`;
+    });
     Handlebars.registerHelper("diff", (a, b) => {
         a = parseFloat(a);
         b = parseFloat(b);
@@ -86,6 +83,18 @@ function registerHelpers() {
     Handlebars.registerHelper("capitalize", (a) => {
         return String(a).charAt(0).toUpperCase() + String(a).slice(1);
     });
+    // check if all object values are 0 or otherwise falsy
+    Handlebars.registerHelper("zeroedObject", (o) => {
+        if (typeof o !== "object") return false;
+        let empty = true;
+        for (const [, value] of Object.entries(o)) {
+            if (value) {
+                empty = false;
+                break;
+            }
+        }
+        return empty;
+    })
 }
 
 /**

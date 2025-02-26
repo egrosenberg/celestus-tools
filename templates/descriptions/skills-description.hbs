@@ -97,6 +97,13 @@
             ({{item.system.components.materialFull}})
             {{/if}}
         </div>
+        {{!-- source --}}
+        <div class="roll-tag">
+            <span class="name">
+                Source: 
+            </span>
+            {{ifThen item.inherited "Granted" "Leveling"}}
+        </div>
     </div>
     <div class="flavor">
         {{{flavor}}}
