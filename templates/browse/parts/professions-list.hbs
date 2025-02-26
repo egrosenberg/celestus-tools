@@ -1,0 +1,10 @@
+{{#each data as |item|}}
+{{log item}}
+<li class="browser-item" id="{{item._id}}" data-name="{{item.name}}"
+    data-ability="{{item.abilityBonuses}}">
+    <label class="name">{{item.name}}</label>
+    <label>
+        {{item.abilityBonuses}}
+    </label>
+</li>
+{{/each}}

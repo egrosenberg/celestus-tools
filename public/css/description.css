@@ -172,12 +172,25 @@
 }
 
 a.content-link {
+    cursor: pointer;
     font-weight: bold;
+}
+
+a.content-link:hover {
+    text-decoration: underline;
 }
 
 .roll.description .flavor {
     font-size: var(--font-size-14);
 }
+
+.roll.description table {
+    width: 100%;
+}
+
+.roll.description tbody tr:nth-child(even) {
+    background-color: var(--color-dark-3);
+  }
 
 /* AP and FP icons*/
 .ap-icon {

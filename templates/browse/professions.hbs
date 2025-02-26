@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/description.css">
+    <link rel="stylesheet" type="text/css" href="/css/glyphter.css">
+    <script src="https://kit.fontawesome.com/e546e56560.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/serializejson.js"></script>
+    <script src="/js/helpers.js"></script>
+    <script src="/js/browser.js"></script>
+    <script src="/js/navigation.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Celestus Professions</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Celestus Rules - Professions Compendium" />
+    <meta name="twitter:description" content="Celestus Rules / Reference Database" />
+    <meta property="og:url" content="https://rules.crowsnest.me/backgrounds" />
+    <meta property="og:image" content="https://rules.crowsnest.me/img/card.webp" />
+    <meta property="twitter:image" content="https://rules.crowsnest.me/img/card.webp" />
+</head>
+
+<body>
+    {{> "./templates/parts/navigation.hbs"}}
+
+    <div class="content thin">
+        <div class="browser" id="list">
+            {{{ list }}}
+        </div>
+        <div class="description" id="description">
+            {{{ description }}}
+        </div>
+    </div>
+</body>

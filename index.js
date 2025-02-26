@@ -9,7 +9,8 @@ import celestus from "./data/celestus.mjs";
 // create skills browser
 const browsers = new Map([
     ['skills', new Browser("skills", "../data/skills.json")],
-    ['backgrounds', new Browser("backgrounds", "../data/backgrounds.json")]
+    ['backgrounds', new Browser("backgrounds", "../data/backgrounds.json")],
+    ['professions', new Browser("professions", "../data/professions.json")]
 ]);
 
 const STATUS = {
@@ -38,6 +39,8 @@ hbs.loadPartials([
     "./templates/browse/parts/skills-browser.hbs",
     "./templates/browse/parts/backgrounds-list.hbs",
     "./templates/browse/parts/backgrounds-browser.hbs",
+    "./templates/browse/parts/professions-list.hbs",
+    "./templates/browse/parts/professions-browser.hbs",
     "./templates/parts/navigation.hbs",
 ]);
 
