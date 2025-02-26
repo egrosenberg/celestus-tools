@@ -149,6 +149,24 @@ $(document).ready(async () => {
             populateList();
         });
     });
+
+    /**
+     * Link to other browsers
+     */
+    $(document).on("click", ".content-link", async (ev) => {
+        ev.preventDefault();
+        // find which browser the item belongs to
+        const regex = /(?<=celestus.).+(?=\.)/;
+        const browse = regex.exec(ev.currentTarget.dataset.uuid)?.[0] ?? "";
+        // check if page is 404
+        const path = `/browse/${browse}/?item=${ev.currentTarget.dataset.id}`;
+        try {
+            await $.get(path);
+        } catch {
+            return console.error("Error: Linked Content does not exist on server.");
+        }
+        window.location.href = path;
+    })
 });
 
 /**
@@ -195,7 +213,7 @@ filterByParams([{ mode: "or", keys: [{ id: "system.tier", value: 1 }] }]);
  *      mode ("and","or")
  */
 function filterByParams(filters) {
-    if (!filters.length) return;
+    if (!filters?.length) return;
     // populate list
     $('#item-list').children('li').each(function (idx, itm) {
         // check filters
