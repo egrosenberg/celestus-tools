@@ -72,8 +72,7 @@ app.get('/:var(index|index.html)?', async (req, res) => {
     const msg = await hbs.renderFromTemplate('templates/index.hbs', {
         name: "Celestus",
     });
-    res.send(msg);
-    return;
+    return res.send(msg);
 });
 
 /**
