@@ -13,6 +13,33 @@ const filtersID = `${pageIndex}-searchFilters`;
 const orderKeyID = `${pageIndex}-orderKey`;
 const orderAscending = `${pageIndex}-orderAscending`;
 
+/**
+ * Selects an item from browser list and displays its description
+ * @param {Object} target DOM object
+ */
+async function selectItem(target) {
+        // fetch items data
+        try {
+            const response = await fetch(`/resources/descriptions?type=${pageIndex}&id=${$(target).attr("id")}`);
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+            const html = await response.text();
+            document.getElementById("description").innerHTML = html;
+
+            // update url
+            const name = $(target).data("name");
+            document.title = name;
+            window.history.pushState(`Celestus | ${pageIndex} | ${name}`, name, `${window.location.pathname}?item=${$(target).attr("id")}`);
+
+            // mark item as selected
+            $.each(listItems, function (idx, itm) { itm.classList.remove("selected"); });
+            target.classList.add("selected");
+        } catch (error) {
+            console.error(error);
+        }
+}
+
 $(document).ready(async () => {
     if (!localStorage.getItem(filtersID)) {
         localStorage.setItem(filtersID, "[]")
@@ -46,28 +73,19 @@ $(document).ready(async () => {
     // filter list
     populateList();
 
-    // show skill description when clicking on a skill
-    $(document).on("click", ".browser-item", async (ev) => {
-        // fetch items data
-        try {
-            const response = await fetch(`/resources/descriptions?type=${pageIndex}&id=${$(ev.currentTarget).attr("id")}`);
-            if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`);
-            }
-            const html = await response.text();
-            document.getElementById("description").innerHTML = html;
-
-            // update url
-            const name = $(ev.currentTarget).data("name");
-            document.title = name;
-            window.history.pushState(`Celestus | ${pageIndex} | ${name}`, name, `${window.location.pathname}?item=${$(ev.currentTarget).attr("id")}`);
-
-            // mark item as selected
-            $.each(listItems, function (idx, itm) { itm.classList.remove("selected"); });
-            ev.currentTarget.classList.add("selected");
-        } catch (error) {
-            console.error(error);
+    // select first item if not already selecting an item
+    const params = new URL(document.location.toString()).searchParams;
+    const ID = params.get("item");
+    if (!ID) {
+        const first = $(domList).children("li").get()[0];
+        if (first) {
+            selectItem(first);
         }
+    }
+    
+    // show skill description when clicking on a skill
+    $(document).on("click", ".browser-item", (ev) => {
+        selectItem(ev.currentTarget);
     });
 
     // filter items by search text
@@ -110,7 +128,7 @@ $(document).ready(async () => {
         await createForm(`/resources/forms/filter-${pageIndex}.hbs`, {
             listeners: (form) => {
                 const controls = form.elements;
-                const filters = JSON.parse(localStorage.getItem(filtersID)).data;
+                const filters = JSON.parse(localStorage.getItem(filtersID)).data ?? [];
                 for (const control of controls) {
                     const filter = filters.find(f => f.id === control.dataset.field);
                     if (filter?.values.find(v => v === control.dataset.value)) {
@@ -251,7 +269,7 @@ function filterByParams(filters) {
 function populateList(textFilter = null) {
     textFilter ??= document.getElementById("list-input").value
     orderSkills(localStorage.getItem(orderKeyID), localStorage.getItem(orderAscending) === 'true');
-    const filters = JSON.parse(localStorage.getItem(filtersID)).data;
+    const filters = JSON.parse(localStorage.getItem(filtersID)).data ?? [];;
     filterByParams(filters);
     filterByText(textFilter);
 }
