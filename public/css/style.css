@@ -57,6 +57,24 @@ body {
     --color-dark-5: #666;
     --color-dark-6: #777;
 
+    --color-aqua-1: #0D4142;
+    --color-aqua-2: #007375;
+    --color-aqua-3: #58D9DB;
+    --color-aqua-4: #99FDFF;
+    --color-aqua-5: #CCFEFF;
+
+    --color-amber-1: #47380E;
+    --color-amber-2: #7A5A00;
+    --color-amber-3: #E0BC5A;
+    --color-amber-4: #FFE499;
+    --color-amber-5: #FFF1CC;
+
+    --color-rose-1: #470E3F;
+    --color-rose-2: #7A0068;
+    --color-rose-3: #E05ACC;
+    --color-rose-4: #FF99F0;
+    --color-rose-5: #FFCCF7;
+
     --color-physical-bg: rgb(179, 192, 204);
     --color-fire-bg: rgb(219, 139, 112);
     --color-water-bg: rgb(134, 192, 223);
@@ -92,6 +110,72 @@ body {
     --text-outline-1: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Flex boxes */
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexrow * {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.flexrow *,.flexcol * {
+    flex: 1;
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.flex3 {
+    flex: 3;
+}
+
+.flex4 {
+    flex: 4;
+}
+
+.flex5 {
+    flex: 5;
+}
+
+
+.inline {
+    display: inline;
+}
+
+.ul-aqua {
+    text-decoration: underline;
+    text-decoration-color: var(--color-aqua-3);
+}
+
+.ul-amber {
+    text-decoration: underline;
+    text-decoration-color: var(--color-amber-3);
+}
+
+.ul-rose {
+    text-decoration: underline;
+    text-decoration-color: var(--color-rose-3);
+}
+
 /* Navigation Bar */
 .navigation {
     font-family: "Comfortaa", serif;
@@ -105,7 +189,9 @@ body {
     padding-left: 30vw;
     padding-bottom: 5px;
 
-    background-color: rgb(56, 56, 56);
+    background-color: var(--color-dark-3);
+
+    z-index: 500;
 }
 
 .navigation .logo {
@@ -124,18 +210,224 @@ body {
     font-style: italic;
 }
 
+/**
+ * Navigation tabs
+ */
+.navigation .tabs {
+    position: absolute;
+    top: 60px;
+    width: 1150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navigation .tabs .tab-container {
+    position: relative;
+}
+
+.navigation .tabs .tab {    
+    cursor: pointer;
+    color: white;
+    font-size: var(--font-size-16);
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-dark-2);
+    padding: 5px 15px 10px 15px;
+    border: solid var(--color-dark-3);
+    border-width: 0px 1px 1px 1px;
+    border-radius: 0px 0px 10px 10px;
+    pointer-events: all;
+}
+
+.navigation .tabs .tab:hover {
+    background-color: var(--color-aqua-2);
+}
+
+.navigation .tabs .tab.active {
+    background-color: var(--color-dark-3);
+}
+
+.navigation .tabs .tab.direct.active:hover {
+    cursor: default;
+    background-color: var(--color-dark-3);
+}
+
+/* Navigation Tab Dropdowns */
+.navigation .tabs .tab.dropdown::after {
+    content: '\25BC';
+}
+
+.navigation .tabs .tab.expanded {
+    border-color: var(--color-aqua-5);
+    border-width: 0px 1px 1px 1px;
+}
+
+.navigation .tabs .dropdown-menu {
+    position: absolute;
+    list-style: none;
+    padding: 0px;
+    background-color: var(--color-dark-2);
+    box-shadow: 0px 0px 10px black;
+}
+
+.navigation .tabs .dropdown-item {
+    white-space: nowrap;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
+}
+
+.navigation .tabs .dropdown-item:hover {
+    background-color: var(--color-aqua-1);
+}
+
+/* Buttons */
+
+.btn {
+    cursor: pointer;
+    background-color: var(--color-dark-1);
+    display: inline-block;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 5px gray;
+}
+
+.btn.aqua {
+    border-color: var(--color-aqua-3);
+    color: var(--color-aqua-3);
+}
+
+.btn.amber {
+    border-color: var(--color-amber-3);
+    color: var(--color-amber-3);
+}
+
+.btn.rose {
+    border-color: var(--color-rose-3);
+    color: var(--color-rose-3);
+}
+
+/* Home page */
+.home-nav {
+    margin-bottom: 30px;
+    border-bottom: thin solid var(--color-dark-6);
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.home-nav .btn {
+    border-style: solid;
+    border-width: 2px;
+    width: 134px;
+    height: 110px;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 6px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+    margin-right: 10px;
+}
+
+.home-nav .btn i {
+    font-size: var(--font-size-48);
+    height: var(--font-size-48);
+    width: 65px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.home-nav .btn label {
+    cursor: pointer;
+    height: 34px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: var(--font-size-20);
+    font-weight: 500;
+    flex: 0;
+}
+
+.home-nav .span-stripe {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
 /* Main content */
 .content {
+    top: 0px;
+    bottom: 10px;
+    position: fixed;
+    left: calc(50vw - 1150px / 2);
+    width: 1150px;
+    padding: 65px;
+    padding-top: 100px;
+    border-radius: 5px;
+    background-color: var(--color-dark-1);
+}
+
+.content.thin {
     top: 100px;
     bottom: 10px;
     position: fixed;
     left: calc(50vw - 1050px / 2);
     width: 615px;
-    padding: 3px;
+    padding: 5px;
     border: thin solid var(--color-dark-6);
     border-radius: 5px;
     overflow: hidden;
     border-left: thin solid var(--color-dark-6);
+}
+
+/* Titles */
+.content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+}
+
+.content h1 {
+    color: lightgray;
+    font-size: var(--font-size-36);
+    font-weight: bold;
+}
+
+.content h2 {
+    font-size: var(--font-size-32);
+    margin: 0px 0px 10px 00px;
+    font-weight: 100;
+}
+
+/* paragraphs */
+.content p {
+    font-size: var(--font-size-16);
+}
+
+/* hyperlinks */
+.content a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-aqua-3);
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+.content a:hover {
+    text-decoration: none;
 }
 
 /* Description */
@@ -450,7 +742,8 @@ input[type=checkbox]:checked+label:hover {
         overflow-x: hidden;
     }
 
-    .list-input,.filter-button {
+    .list-input,
+    .filter-button {
         font-size: var(--font-size-24);
     }
 

@@ -4,35 +4,71 @@
     <link rel="stylesheet" type="text/css" href="/css/glyphter.css">
     <script src="https://kit.fontawesome.com/e546e56560.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/js/serializejson.js"></script>
     <script src="/js/helpers.js"></script>
-    <script src="/js/skill-browser.js"></script>
+    <script src="/js/navigation.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Celestus Skills</title>
+    <title>Celestus vTTRPG</title>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Celestus Rules Compendium"/>
-    <meta name="twitter:description" content="Celestus Rules / Reference Database"/>
-    <meta property="og:url" content="https://rules.crowsnest.me/"/>
+    <meta name="twitter:title" content="Celestus Rules Compendium" />
+    <meta name="twitter:description" content="Celestus Rules / Reference Database" />
+    <meta property="og:url" content="https://rules.crowsnest.me/" />
     <meta property="og:image" content="https://rules.crowsnest.me/img/card.webp" />
     <meta property="twitter:image" content="https://rules.crowsnest.me/img/card.webp" />
 </head>
 
 <body>
-    <div class="navigation">
-        <img class="logo" src="https://rules.crowsnest.me/img/pillars.svg" alt="Celestus Logo" />
-        <span class="title">Celestus</span>
-        <span class="subtitle">Skills Compendium</span>
-    </div>
+    {{> "./templates/parts/navigation.hbs"}}
 
     <div class="content">
-        <div class="browser" id="skill-list">
-            {{{ skillsList }}}
+        <div class="home-nav">
+            <div class="span-stripe flexrow">
+                <h1 class="ul-aqua inline flex2">Rules</h1>
+                <h1 class="ul-amber inline flex4">Compendiums</h1>
+            </div>
+            <div class="span-content flexrow">
+                <a class="btn aqua" href="/content/quickstart/">
+                    <i class="fa-solid fa-book"></i>
+                    <label>Quick-Start</label>
+                </a>
+                <a class="btn aqua" href="/content/broken/">
+                    <i class="fa-solid fa-ban"></i>
+                    <label>Broken</label>
+                </a>
+                <a class="btn amber" href="/browse/ancestries/">
+                    <i class="fa-solid fa-tree"></i>
+                    <label>Ancestries</label>
+                </a>
+                <a class="btn amber" href="/browse/backgrounds/">
+                    <i class="fa-solid fa-address-card"></i>
+                    <label>Backgrounds</label>
+                </a>
+                <a class="btn amber" href="/browse/professions/">
+                    <i class="fa-solid fa-hat-wizard"></i>
+                    <label>Professions</label>
+                </a>
+                <a class="btn amber" href="/browse/skills/">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <label>Skills</label>
+                </a>
+            </div>
         </div>
-        <div class="description" id="description">
-            {{{description}}}
+        <div class="section">
+            <h2>What is Celestus?</h2>
+            <p>Celestus is a virtual Tabletop Role Playing Game (vTTRPG) designed to be played with Foundry VTT. It
+                takes inspiration from systems such as D&D5e, Pathfinder, Wanderhome, and CRPGs such as Divinity:
+                Original Sin. The combat system most closely matches that of Divinity: Original Sin 2, and the
+                roleplaying tools most closely match Wanderhome and Dungeons and Dragons. Celestus forgoes a traditional
+                “Class” system in order to offer dynamic and highly customizable gameplay, creating a Choose Your Own
+                Adventure out of character creation.</p>
+        </div>
+        <div class="section">
+            <h2>Discord</h2>
+            <p>If you have any questions, would like to speak with the creator, or would like to find games to play in,
+                head over to the discord at <a href="https://discord.gg/cKkBaxzv5e">discord/cKkBaxzv5e</a>.
+            </p>
         </div>
     </div>
 </body>

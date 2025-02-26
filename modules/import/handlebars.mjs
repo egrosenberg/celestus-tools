@@ -101,7 +101,8 @@ async function renderFromTemplate(url, data = {}) {
         const msg = template(data);
         return enrichHtml(msg);
     } catch (error) {
-        return console.error(error);
+        console.error(error);
+        return undefined;
     }
 }
 
