@@ -21,7 +21,7 @@ $(document).ready(async () => {
 
     // fetch skills data
     try {
-        const response = await fetch('/resources/skill-data');
+        const response = await fetch('/resources/browserdata/skills');
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
@@ -49,7 +49,7 @@ $(document).ready(async () => {
     $(document).on("click", ".browser-item", async (ev) => {
         // fetch skills data
         try {
-            const response = await fetch(`/resources/descriptions?type=skill&id=${$(ev.currentTarget).attr("id")}`);
+            const response = await fetch(`/resources/descriptions?type=skills&id=${$(ev.currentTarget).attr("id")}`);
             if (!response.ok) {
                 throw new Error(`Response status: ${response.status}`);
             }

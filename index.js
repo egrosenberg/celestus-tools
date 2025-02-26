@@ -3,8 +3,13 @@ import express from "express";
 //import Handlebars from "handlebars";
 
 import hbs from './modules/import/handlebars.mjs'
-import skills from "./modules/skills.mjs";
+import Browser from "./modules/browser.mjs";
 import celestus from "./data/celestus.mjs";
+
+// create skills browser
+const browsers = new Map([
+    ['skills', new Browser("skills", "../data/skills.json")]
+]);
 
 const STATUS = {
     Ok: 200,
@@ -57,14 +62,9 @@ app.listen(PORT, HOSTS, () => {
  * Home page of site
  */
 app.get('/', async (req, res) => {
-    const skillsList = await skills.render();
-    const description = await skills.description(req.query.item);
     const msg = await hbs.renderFromTemplate('templates/index.hbs', {
         name: "Celestus",
-        skillsList: skillsList,
-        description
     });
-    res.locals.skillsList = skills.list;
     res.send(msg);
     return;
 });
@@ -82,28 +82,31 @@ app.get('/content/:templateName', async (req, res) => {
  * Skills Browser
  */
 app.get('/browse/:browser', async (req, res) => {
-    if (req.params.browser === "skills") {
-        const skillsList = await skills.render();
-        const description = await skills.description(req.query.item);
-        const msg = await hbs.renderFromTemplate('templates/browse/skills.hbs', {
+    const browser = browsers.get(req.params.browser);
+    if (browser) {
+        const list = await browser.render();
+        const description = await browser.description(req.query.item);
+        const msg = await hbs.renderFromTemplate(`templates/browse/${browser.key}.hbs`, {
             name: "Celestus",
-            skillsList: skillsList,
+            list: list,
             description
         });
-        res.locals.skillsList = skills.list;
+        res.locals.skillsList = browser.list;
         return res.send(msg);
     }
     return res.redirect('/404/');
 });
 // fetch skills list
-app.get('/resources/skill-data', (req, res) => {
-    res.send(skills.list);
-    return;
+app.get('/resources/browserdata/:browser', (req, res) => {
+    const browser = browsers.get(req.params.browser);
+    if (browser) return res.send(browser.list);
+    return res.redirect('/404/');
 });
 // fetch description
 app.get('/resources/descriptions', async (req, res) => {
-    if (req.query.type === "skill") {
-        const html = await skills.description(req.query.id);
+    const browser = browsers.get(req.query.type);
+    if (browser) {
+        const html = await browser.description(req.query.id);
         if (html) return res.send(html);
         else return res.status(STATUS.BadRequest).send("Invalid description type!");
     }
