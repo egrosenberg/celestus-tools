@@ -3,7 +3,11 @@
     data-ability="{{item.abilityBonuses}}">
     <label class="name">{{item.name}}</label>
     <label>
-        {{item.abilityBonuses}}
+        {{#if item.abilityBonuses}}
+            {{item.abilityBonuses}}
+        {{else}}
+            None
+        {{/if}}
     </label>
 </li>
 {{/each}}

@@ -1,6 +1,4 @@
 import express from "express";
-//import $ from "jquery";
-//import Handlebars from "handlebars";
 
 import hbs from './modules/import/handlebars.mjs'
 import Browser from "./modules/browser.mjs";
@@ -10,7 +8,8 @@ import celestus from "./data/celestus.mjs";
 const browsers = new Map([
     ['skills', new Browser("skills", "../data/skills.json")],
     ['backgrounds', new Browser("backgrounds", "../data/backgrounds.json")],
-    ['professions', new Browser("professions", "../data/professions.json")]
+    ['professions', new Browser("professions", "../data/professions.json")],
+    ['ancestries', new Browser("ancestries", "../data/ancestries.json")]
 ]);
 
 const STATUS = {
@@ -41,6 +40,8 @@ hbs.loadPartials([
     "./templates/browse/parts/backgrounds-browser.hbs",
     "./templates/browse/parts/professions-list.hbs",
     "./templates/browse/parts/professions-browser.hbs",
+    "./templates/browse/parts/ancestries-list.hbs",
+    "./templates/browse/parts/ancestries-browser.hbs",
     "./templates/parts/navigation.hbs",
 ]);
 
@@ -67,7 +68,7 @@ app.listen(PORT, HOSTS, () => {
 /**
  * Home page of site
  */
-app.get('/', async (req, res) => {
+app.get('/:var(index|index.html)?', async (req, res) => {
     const msg = await hbs.renderFromTemplate('templates/index.hbs', {
         name: "Celestus",
     });

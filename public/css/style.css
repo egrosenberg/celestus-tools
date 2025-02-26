@@ -115,7 +115,7 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* Flex boxes */
@@ -216,7 +216,7 @@ a:hover {
 .navigation .tabs {
     position: absolute;
     top: 60px;
-    width: 1150px;
+    width: calc(100vw - 2*768px);
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -241,10 +241,12 @@ a:hover {
     border-width: 0px 1px 1px 1px;
     border-radius: 0px 0px 10px 10px;
     pointer-events: all;
+    -webkit-user-drag: element;
 }
 
 .navigation .tabs .tab:hover {
     background-color: var(--color-aqua-2);
+    text-decoration: none;
 }
 
 .navigation .tabs .tab.active {
@@ -278,6 +280,7 @@ a:hover {
     white-space: nowrap;
     padding: 10px 20px 10px 10px;
     cursor: pointer;
+    user-select: none;
 }
 
 .navigation .tabs .dropdown-item:hover {
@@ -294,6 +297,7 @@ a:hover {
 
 .btn:hover {
     box-shadow: 1px 1px 5px gray;
+    text-decoration: none;
 }
 
 .btn.aqua {
@@ -417,17 +421,8 @@ h6 {
 
 /* hyperlinks */
 .content a {
-    text-decoration: none;
     font-weight: 600;
     color: var(--color-aqua-3);
-}
-
-.content a:hover {
-    text-decoration: underline;
-}
-
-.content a:hover {
-    text-decoration: none;
 }
 
 /* Description */
