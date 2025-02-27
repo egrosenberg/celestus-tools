@@ -9,7 +9,8 @@ const browsers = new Map([
     ['skills', new Browser("skills", "../data/skills.json")],
     ['backgrounds', new Browser("backgrounds", "../data/backgrounds.json")],
     ['professions', new Browser("professions", "../data/professions.json")],
-    ['ancestries', new Browser("ancestries", "../data/ancestries.json")]
+    ['ancestries', new Browser("ancestries", "../data/ancestries.json")],
+    ['talents', new Browser("talents", "../data/talents.json")]
 ]);
 
 const STATUS = {
@@ -35,13 +36,10 @@ hbs.registerHelpers();
 // load handlebars partials
 hbs.loadPartials([
     "./templates/browse/parts/skills-list.hbs",
-    "./templates/browse/parts/skills-browser.hbs",
     "./templates/browse/parts/backgrounds-list.hbs",
-    "./templates/browse/parts/backgrounds-browser.hbs",
     "./templates/browse/parts/professions-list.hbs",
-    "./templates/browse/parts/professions-browser.hbs",
     "./templates/browse/parts/ancestries-list.hbs",
-    "./templates/browse/parts/ancestries-browser.hbs",
+    "./templates/browse/parts/talents-list.hbs",
     "./templates/parts/navigation.hbs",
 ]);
 
