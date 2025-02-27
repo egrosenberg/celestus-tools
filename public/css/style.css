@@ -426,7 +426,7 @@ h6 {
 }
 
 /* Description */
-.description {
+.item-display {
     position: fixed;
     right: calc(50vw - 1050px / 2);
     top: 100;
@@ -713,6 +713,16 @@ input[type=checkbox]:checked+label:hover {
     opacity: 0.3;
 }
 
+/* Tooltips */
+.ui-tooltip {
+    width: 400px;
+    z-index: 9999;
+}
+
+body .ui-tooltip {
+    border-width: 2px;
+}
+
 /* Mobile Overrides */
 @media screen and (max-width:1100px) {
 
@@ -726,7 +736,7 @@ input[type=checkbox]:checked+label:hover {
         background-color: var(--color-dark-2);
     }
 
-    .description {
+    .item-display {
         position: static;
         width: auto;
         margin-bottom: 70vh;

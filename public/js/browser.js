@@ -13,31 +13,59 @@ const filtersID = `${pageIndex}-searchFilters`;
 const orderKeyID = `${pageIndex}-orderKey`;
 const orderAscending = `${pageIndex}-orderAscending`;
 
+function linkTooltips() {
+    $(function () {
+        $("a.content-link").tooltip({
+            items: "*",
+            content: function (callback) {
+                const e = $(this);
+                // find which browser the item belongs to
+                const regex = /(?<=celestus.).+(?=\.)/;
+                const browse = regex.exec(e.data("uuid"))?.[0] ?? "";
+                // check if page is 404
+                const path = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
+                $.get(path, {}, (data) => {
+                    callback(
+                        $(data).addClass("ui-tooltip")
+                            .css("left", e.offset().left)
+                            .css("top", e.offset().top)
+                    );
+                });
+                return;
+            }
+        });
+        $(".ui-helper-hidden-accessible").hide();
+    });
+}
+
 /**
  * Selects an item from browser list and displays its description
  * @param {Object} target DOM object
  */
 async function selectItem(target) {
-        // fetch items data
-        try {
-            const response = await fetch(`/resources/descriptions?type=${pageIndex}&id=${$(target).attr("id")}`);
-            if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`);
-            }
-            const html = await response.text();
-            document.getElementById("description").innerHTML = html;
-
-            // update url
-            const name = $(target).data("name");
-            document.title = name;
-            window.history.pushState(`Celestus | ${pageIndex} | ${name}`, name, `${window.location.pathname}?item=${$(target).attr("id")}`);
-
-            // mark item as selected
-            $.each(listItems, function (idx, itm) { itm.classList.remove("selected"); });
-            target.classList.add("selected");
-        } catch (error) {
-            console.error(error);
+    // fetch items data
+    try {
+        const response = await fetch(`/resources/descriptions?type=${pageIndex}&id=${$(target).attr("id")}`);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
         }
+        const html = await response.text();
+        document.getElementById("description").innerHTML = html;
+
+        // update url
+        const name = $(target).data("name");
+        document.title = name;
+        window.history.pushState(`Celestus | ${pageIndex} | ${name}`, name, `${window.location.pathname}?item=${$(target).attr("id")}`);
+
+        // mark item as selected
+        $.each(listItems, function (idx, itm) { itm.classList.remove("selected"); });
+        target.classList.add("selected");
+
+        // link tooltips
+        linkTooltips();
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 $(document).ready(async () => {
@@ -82,7 +110,10 @@ $(document).ready(async () => {
             selectItem(first);
         }
     }
-    
+
+    // link tooltips
+    linkTooltips();
+
     // show skill description when clicking on a skill
     $(document).on("click", ".browser-item", (ev) => {
         selectItem(ev.currentTarget);
@@ -185,6 +216,29 @@ $(document).ready(async () => {
         }
         window.location.href = path;
     })
+    /**
+     * Display descriptions of linked content when hoevered
+     */
+    //$(document).on("click", ".content-link", async (ev) => {
+    //    ev.preventDefault();
+    //    // find which browser the item belongs to
+    //    const regex = /(?<=celestus.).+(?=\.)/;
+    //    const browse = regex.exec(ev.currentTarget.dataset.uuid)?.[0] ?? "";
+    //    // check if page is 404
+    //    const path = `/resources/descriptions?type=${browse}&id=${ev.currentTarget.dataset.id}`;
+    //    try {
+    //        const response = await fetch(path);
+    //        if (!response.ok) {
+    //            throw new Error(`Response status: ${response.status}`);
+    //        }
+    //        const html = await response.text();
+    //        document.getElementById("description").innerHTML = html;
+    //        
+    //    } catch (error) {
+    //        console.error(error);
+    //    }
+    //    window.location.href = path;
+    //})
 });
 
 /**

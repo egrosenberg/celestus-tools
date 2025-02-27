@@ -110,6 +110,12 @@
     padding: 0.4em;
 }
 
+.dice-flavor.ui-tooltip {
+    border: thick solid var(--color-dark-6);
+    background-color: var(--color-dark-2);
+    padding: 0.4em;
+}
+
 .roll.description .summary {
     display: flex;
     align-items: center;
@@ -190,7 +196,7 @@ a.content-link:hover {
 
 .roll.description tbody tr:nth-child(even) {
     background-color: var(--color-dark-3);
-  }
+}
 
 /* AP and FP icons*/
 .ap-icon {
