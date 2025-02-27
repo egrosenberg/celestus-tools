@@ -1,0 +1,6 @@
+{{#each data as |item|}}
+<li class="browser-item" id="{{item._id}}" data-name="{{item.name}}" data-type="{{item.type}}">
+    <label class="name">{{item.name}}</label>
+    <label>{{item.type}}</label>
+</li>
+{{/each}}

@@ -1,0 +1,492 @@
+{
+    "data": [
+        {
+            "_id": "0rJCQrvNUPq3scYd",
+            "name": "Mad",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Removes: </strong>Charmed, Terrified</p><p><strong>Description: </strong>A mad creature must spend its turn attacking the nearest creature(s).</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "1CbPWoPQr2EW4pzF",
+            "name": "Blinded",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Changes:</strong></p><ul><li><p>-35% Accuracy</p></li><li><p>-50% Evasion</p></li></ul><p><strong>Description: </strong>You cannot see and can only target creatures or surfaces within melee range of you.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "5WnOnUhH4LYfPLlZ",
+            "name": "Burning",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Removes: </strong>Warm, Wet, Chilled, Oily</p><p><strong>Blocks: </strong>Warm</p><p><strong>Changes:</strong></p><ul><li><p>+10% Water resistance</p></li><li><p>-15% Fire resistance</p></li></ul><p><strong>Damage:</strong> 100% Fire damage per turn.</p><p></p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "7wfkn72lnRhuwnk4",
+            "name": "Suffocating",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>None</p><p><strong>Damage:</strong> Destroys 100% Magic Armor per turn.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "8LxL22YMGHnMZ8MW",
+            "name": "Types of Skills",
+            "system": {
+                "description": "<h3>Civil</h3><ul><li>Civil skills can only be used outside of combat and may require multiple minutes to hours to execute.</li><li>Civil skills either have no cooldown, or require taking a rest to recharge.</li><li><p>Prerequisites for civil skills are based on Civil abilities.</p></li></ul><h3>Magic (Combat)</h3><ul><li>Magic skills are combat skills that are inherently magical.</li><li>These skills often will not have any sort of material component.</li><li>If a magic skill has a damage component, the base damage will be a value based on your level</li><li><p>If a magic skill's damage component scales off an attribute it will have a different base damage value than if it didn't</p></li></ul><h3>Weapon (Combat)</h3><ul><li>Weapon skills are combat skills that aren't inherently magical (though they can still be).</li><li>All weapon skills require an equipped weapon to be able to be used.</li><li>Some weapon skills may specify a type of weapon to be equipped to be used (e.g. many shroudstalker skills require a dagger)</li><li>Weapon skills' damage component is based on your equipped weapon damage.</li><li>Some weapon skills do only a certain percent of your weapon damage.</li><li><p>Some weapon skills may override the range of your weapon.</p></li></ul>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "9qo7qdEF3hIuvsXr",
+            "name": "Slowed",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>None</p><p><strong>Removes: </strong>Hasted</p><p><strong>Changes:</strong></p><ul><li><p>-30% Evasion</p></li><li><p>-50% Movement</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "AOX1crEpU3tbBybY",
+            "name": "Charmed",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Description: </strong>A charmed creature regards its charmer as an ally and fights alongside it. A charmed creature must spend its turn in combat healing its charmer and/or attacking its charmer's enemies.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "ApravHaqi2H9tSn2",
+            "name": "Atrophied",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 rounds.</p><p><strong>Resisted by: </strong>Physical Armor</p><p><strong>Description: </strong>An atrophied creature cannot make weapon attacks or use weapon skills.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "AwXMsQK5LQUAmsV2",
+            "name": "Terrified",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Removes: </strong>Charmed, Mad</p><p><strong>Description: </strong>A terrified creature mist spend its turn moving away from its source of fear until it is out of line of sight or until the creature can no longer move.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "HfaarOuXPXXlNvg5",
+            "name": "Languages",
+            "system": {
+                "description": "<table><tbody><tr><td><p><strong>Language Name</strong></p></td><td><p><strong>Spoken By / Origin</strong></p></td></tr><tr><td><p>Abyssal</p></td><td><p>The Deep</p></td></tr><tr><td><p>Celestial</p></td><td><p>Angels / The Sky</p></td></tr><tr><td><p>Derelict</p></td><td><p>The Void</p></td></tr><tr><td><p>Draconic</p></td><td><p>Dragons</p></td></tr><tr><td><p>Infernal</p></td><td><p>Fiends / Naraka</p></td></tr><tr><td><p>Primal</p></td><td><p>Elementals</p></td></tr><tr><td><p>Snaketongue</p></td><td><p>Thieves / Criminals</p></td></tr><tr><td><p>Verdant</p></td><td><p>Fey / The Wilds</p></td></tr></tbody></table>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "I9RkvpW5qGPRkeuv",
+            "name": "Silenced",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Description: </strong>A silenced creature cannot use skills with a verbal component.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "LLH4JH8ymefXRf9R",
+            "name": "Flying",
+            "system": {
+                "description": "<p><strong>Duration: </strong>4 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Notes: </strong>You are able to fly with your movement rather than walk. You are immune to special surfaces and effects that target the ground.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "MUCGaqaP8I8nsgeO",
+            "name": "Fortified",
+            "system": {
+                "description": "<p><strong>Duration: </strong>Instantaneous.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Removes: </strong>Poisoned, Bleeding, Burning, Spiritfire, Acid, Decaying</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "N9voJFJQBeHBzvF2",
+            "name": "Soothed",
+            "system": {
+                "description": "<p><strong>Duration: </strong>Instantaneous.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Removes: </strong>Burning, Frozen, Poisoned, Stunned, Suffocating, Petrified, Oily, Shocked</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "NwtfEYxqaHPYil8K",
+            "name": "Patched Up",
+            "system": {
+                "description": "<p><strong>Duration: </strong>Instantaneous.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Removes: </strong>Maimed, Atrophied, Blinded, Prone, Bleeding, Diseased, Silenced</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "OaOL5lw8fBtJDTz5",
+            "name": "Frozen",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Removes: </strong>Wet, Oily</p><p><strong>Blocks: </strong>Frozen, Burning, Spiritfire, Stunned, Poisoned, Afraid, Prone, Chilled, Warm, Bleeding, Taunted, Asleep</p><p><strong>Sets: </strong>Incapacitated</p><p><strong>Changes:</strong></p><ul><li><p>+10% Air resistance</p></li><li><p>+10% Fire resistance</p></li><li><p>-20% Earth resistance</p></li><li><p>-100% Evasion</p></li><li><p>Sets movement to 0</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "QlP35OSfHitNvMgK",
+            "name": "Raging",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Blocks: </strong>Charmed, Afraid, Asleep, Mad</p><p><strong>Sets: </strong>Silenced</p><p><strong>Changes:</strong></p><ul><li><p>+100% Crit Chance</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "UwkMa4msZkc59ObH",
+            "name": "Parts of a Skill",
+            "system": {
+                "description": "<ul><li><strong>Type:</strong> The type of skill (Civil/Magic/Weapon).</li><li><strong>School:</strong> Skill school that the skill belongs to (e.g. Flamespeaker).</li><li><strong>Tier:</strong> Skill tier (Apprentice/Novice/Adept/Expert/Master) determines required character level.</li><li><strong>Action Points:</strong> Amount of action points required to use the skill.</li><li><strong>Focus Points:</strong> Amount of focus points required to use the skill.</li><li><strong>Components:</strong> Components required to use a skill (Verbal, Somatic, Material). Skill may specify that the material component is consumed.</li><li><strong>Cooldown:</strong> Cooldown in rounds for a combat skill. Civil skills with any number in the cooldown field only recharge on rest.</li><li><strong>Memory Slots:</strong> How many memory slots the skill takes to memorize.</li><li><strong>Target Type:</strong> What type of target the skill affects (Self/Creatures/Shape).</li><li><strong>Range:</strong> How far the skill can target.</li><li><strong>Has Attack:</strong> If the skill has an attack component.</li><li><strong>Attribute:</strong> Primary attribute that the skill's damage scales off of.</li><li><strong>Memorization Status:</strong> If the skill is memorized (Always Memorized skills don't take up memory slots).</li><li><strong>Prerequisites:</strong> Required combat or civil abilities to memorize the skill.</li><li><strong>Damage:</strong> List of damage types and percentages (of skill base damage) the skill deals.</li><li><strong>Effects:</strong> Status effects inflicted by the skill.</li></ul>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "V9M5OZ1zmCrxnpk8",
+            "name": "Rooted",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Sets: </strong> Grounded</p><p><strong>Changes:</strong></p><ul><li><p>-50% Evasion</p></li><li><p>Sets movement to 0</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "X6IszAPOszReXljl",
+            "name": "Maimed",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Physical Armor</p><p><strong>Changes:</strong></p><ul><li><p>-30% Evasion</p></li><li><p>Sets movement to 0</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "X7VhbdyKmLC7jiN3",
+            "name": "Stunned",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Removes: </strong>Wet</p><p><strong>Blocks: </strong>Shocked, Frozen, Petrified, Asleep, Afraid, Charmed</p><p><strong>Sets: </strong>Incapacitated</p><p><strong>Changes:</strong></p><ul><li><p>+10% Earth resistance</p></li><li><p>-15% Air resistance</p></li><li><p>-100% Evasion</p></li><li><p>Sets movement to 0</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "Y7nT6W1vQGzOCVwm",
+            "name": "Shocked",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Combines With:</strong></p><ul><li><p>Wet =&gt; Stunned</p></li><li><p>Shocked =&gt; Stunned</p></li></ul><p><strong>Changes:</strong></p><ul><li><p>+10% Earth resist</p></li><li><p>-15% Air resist</p></li><li><p>-30% Evasion</p></li><li><p>-1 Starting Action Point</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "YGJz1dn22aKAq9ZA",
+            "name": "Oily",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Removes: </strong>Wet</p><p><strong>Blocks: </strong>Invisible</p><p><strong>Combines With:</strong></p><ul><li><p>Warm =&gt; Burning</p></li></ul><p><strong>Sets: </strong>Slowed, Flammable</p><p><strong>Changes:</strong></p><ul><li><p>+10% Water resistance</p></li><li><p>-10% Earth resistance</p></li><li><p>-20% Fire resistance</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "ZjEcaFbWahwfxTOi",
+            "name": "Regenerating",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 Rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Removes: </strong>Bleeding, Poison, Burning, Warm</p><p><strong>Damage: </strong>Restores 125% HP per turn</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "bW1XPBQBkzJsLeSU",
+            "name": "Acid",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>None</p><p><strong>Damage:</strong> Destroys 100% Physical Armor per turn.</p><p></p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "brQHLcMCTNNXxgGL",
+            "name": "Invisible",
+            "system": {
+                "description": "<p><strong>Duration: </strong>5 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Notes: </strong>You cannot be seen or targeted by enemies. Removed if you use a skill.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "c4XtON9HzTtFXuO7",
+            "name": "Petrified",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Removes: </strong>Wet, Oily</p><p><strong>Blocks: </strong>Frozen, Burning, Spiritfire, Stunned, Poisoned, Afraid, Prone, Chilled, Warm, Bleeding, Taunted, Asleep</p><p><strong>Sets: </strong>Incapacitated</p><p><strong>Changes:</strong></p><ul><li><p>+10% Air resistance</p></li><li><p>+10% Fire resistance</p></li><li><p>-20% Earth resistance</p></li><li><p>-100% Evasion</p></li><li><p>Sets movement to 0</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "ceeb9gugKrD3PqSI",
+            "name": "Hasted",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>None</p><p><strong>Removes: </strong>Slowed, Maimed</p><p><strong>Changes:</strong></p><ul><li><p>+1 Starting Action Point</p></li><li><p>+50% Movement</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "dEgPZYUDoDHpl72H",
+            "name": "Wet",
+            "system": {
+                "description": "<p><strong>Duration: </strong>3 rounds.</p><p><strong>Resisted by: </strong>None</p><p><strong>Removes: </strong>Warm, Burning, Invisible, Oily</p><p><strong>Combines With:</strong></p><ul><li><p>Chilled =&gt; Frozen</p></li><li><p>Shocked =&gt; Stun</p></li></ul><p><strong>Changes:</strong></p><ul><li><p>+10% Fire resistance</p></li><li><p>-10% Water resistance</p></li><li><p>-20% Air resistance</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "dMOHGrfHNh5qFgdh",
+            "name": "Inspired",
+            "system": {
+                "description": "<p><strong>Duration: </strong>3 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Notes: </strong>Increases Strength, Dexterity, Constitution and Intellect by 1. This effect is increased to 2 at level 7 and 3 at level 14.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "dSnYGySx1wSrLHMn",
+            "name": "Clear Minded",
+            "system": {
+                "description": "<p><strong>Duration: </strong>3 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Blocks: </strong>Raging, Charmed, Afraid, Asleep, Taunted, Mad, Dazed, Psychosis</p><p><strong>Sets: </strong>Enlightened</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "f9EgHLBdEVJ70oGg",
+            "name": "Bleeding",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Physical Armor</p><p><strong>Damage:</strong> 100% Piercing damage per turn.</p><p></p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "frCQo2l5BX8ljsNV",
+            "name": "Spiritfire",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Blocks: </strong>Warm, Wet, Chilled, Oily, Burning</p><p><strong>Changes:</strong></p><ul><li><p>-20% Fire resistance</p></li></ul><p><strong>Damage:</strong> 100% fire damage per turn.</p><p><strong>Notes:</strong> Can't be put out by water.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "gVlbuZ3CMlbP1qRN",
+            "name": "Psychosis",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Changes:</strong></p><ul><li><p>-15% Psychic resistance</p></li></ul><p><strong>Damage:</strong> 100% Psychic damage per turn.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "hzPIPV1YdkdkSBHS",
+            "name": "Decaying",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Physical Armor</p><p><strong>Description: </strong>Any healing you receive instead deals you damage.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "jZ7bYqFX2qfNWzwz",
+            "name": "Chilled",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Removes: </strong>Warm, Burning</p><p><strong>Combines With:</strong></p><ul><li><p>Wet =&gt; Frozen</p></li><li><p>Chilled =&gt; Frozen</p></li></ul><p><strong>Changes:</strong></p><ul><li><p>+10% Fire resistance</p></li><li><p>-10% Air resistance</p></li><li><p>-20% Water resistance</p></li><li><p>-30% Evasion</p></li><li><p>-35% Movement</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "m4Sd3wSukc9j0o3h",
+            "name": "Prone",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Physical Armor</p><p><strong>Description: </strong>A prone creature must spend their turn standing back up.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "oC1HaqlD9J7skg0B",
+            "name": "Warm",
+            "system": {
+                "description": "<p><strong>Duration: </strong>3 rounds.</p><p><strong>Resisted by: </strong>None</p><p><strong>Removes: </strong>Wet, Chilled</p><p><strong>Combines With:</strong></p><ul><li><p>Oily =&gt; Burning</p></li><li><p>Warm =&gt; Burning</p></li></ul><p><strong>Changes:</strong></p><ul><li><p>+10% Water resistance</p></li><li><p>-15% Fire resistance</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "oD1CwEHzs8lsejV7",
+            "name": "Marked",
+            "system": {
+                "description": "<p><strong>Duration: </strong>5 rounds.</p><p><strong>Resisted by: </strong>None</p><p><strong>Blocks: </strong>Invisible</p><p><strong>Description: </strong>A marked character takes 5% bonus damage from attacks for each level of Huntmaster the attacker has.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "pwMjhiGe1Q35osEy",
+            "name": "Poisoned",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Damage:</strong> 100% Poison damage per turn.</p><p></p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "qa7tpSXrh41xQzUx",
+            "name": "Healing",
+            "system": {
+                "description": "<p><strong>Duration: </strong>3 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Damage: </strong>Restores 100% HP per turn</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "tUIK3QRY3bhGjHsg",
+            "name": "Dazed",
+            "system": {
+                "description": "<p><strong>Duration: </strong>1 round.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Blocks: </strong>Afraid, Charmed, Taunted, Asleep</p><p><strong>Sets: </strong>Incapacitated</p><p><strong>Changes:</strong></p><ul><li><p>-20% Psychic resistance</p></li><li><p>-100% Evasion</p></li><li><p>Sets movement to 0</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "uTgAcAkST4Nrp87Y",
+            "name": "Taunted",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>None.</p><p><strong>Notes:</strong> A taunted creature must spend their turn attacking or moving towards the creature that taunted them. A creature that is taunted can still use area of effect skills, but the point they target must be the location of the taunter.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "wHJOjd5923zuwCZI",
+            "name": "Skill Tiers",
+            "system": {
+                "description": "<p><strong>Apprentice</strong> skills have no level requirement.</p><p><strong>Novice</strong> skills require character level 4.</p><p><strong>Adept</strong> skills require character level 9.</p><p><strong>Expert</strong> skills require character level 13.</p><p><strong>Master</strong>  skills require character level 16.</p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "zD4uj511KZiI0LRA",
+            "name": "Asleep",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Magic Armor</p><p><strong>Sets: </strong>Incapacitated</p><p><strong>Changes:</strong></p><ul><li><p>-100% Evasion</p></li><li><p>Sets movement to 0</p></li></ul><p><strong>Description: </strong>A sleeping creature is woken up if it takes damage or if another creature with melee range spends 1 Action Point to wake it up.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "znf7Y4pFLUGRvbO2",
+            "name": "Diseased",
+            "system": {
+                "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Physical Armor.</p><p><strong>Changes:</strong></p><ul><li><p>-2 Constitution</p></li><li><p>-35% Damage</p></li></ul>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "1K7OPa5ikLITwkPK",
+            "name": "Ancestries",
+            "system": {
+                "description": "<p><span style=\"font-family:'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif\"><a href=\"http://127.0.0.1:30012/browse/ancestries/\" title=\"Ancestries \">Ancestries</a> represent your character's heritage and their ties to their blood kin. Some examples include Human, Elf, and Dwarf. Ancestries may grant skills, ability bonuses, or other features.</span></p><p><span style=\"font-family:'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif\"><strong>Mixed Ancestries.</strong> You may have a character with parents of differing ancestries. If this is the case, choose a single ancestry of the two to gain benefits from, you can choose to flavor your character however you want beyond those mechanical benefits.</span></p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "5kaokmq8N0pTvdOL",
+            "name": "Backgrounds",
+            "system": {
+                "description": "<p><a href=\"/browse/backgrounds/\" title=\"Backgrounds\">Backgrounds</a> represent who your character was before they became an adventurer. These often have very little numerical benefit, merely granting a +1 bonus to one civil ability. The heart of backgrounds is in the @UUID[Compendium.celestus.rules.QbdFbQkWYH788N2x]{You Can Always...} section.</p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "QbdFbQkWYH788N2x",
+            "name": "You Can Always...",
+            "system": {
+                "description": "<p class=\"MsoNormal\">Some features (mainly backgrounds and professions) have a section titled \"You can always...\" This is a list of actions your character is considered capable of without needing to roll any dice. In order to push the limits of these or use them under extraneous circumstances your GM may require you to make an ability check.</p><p class=\"MsoNormal\">These are invitations, not instructions. If your character \"can always tell which direction is north,\" how can they do that? Do they have a handy compass they always carry with them? Or maybe they look towards the sun and stars for guidance. What if you're underground without your tools though? Maybe there's something about on the walls of the ruins that allows you to identify which direction they were facing. Get creative with it.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "kcJXtk5NcqeIWPf9",
+            "name": "Professions",
+            "system": {
+                "description": "<p><span style=\"font-family:'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif\"><a href=\"/browse/professions/\" title=\"Professions\">Professions</a> represent the skills your character maintains as they begin their adventure. These are the closest thing this system has to tradition \"character classes\". Are you a powerful Warrior who strikes down foes with their martial prowess? Or perhaps you are Pactbound, owing your magic to a powerful entity. Professions are an essential building block for your character's mechanical direction. Professions also have a @UUID[Compendium.celestus.rules.QbdFbQkWYH788N2x]{You Can Always...} section.</span></p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "kzohdS6QcsMQWF8h",
+            "name": "Talents",
+            "system": {
+                "description": "<p><a href=\"/browse/talents\" title=\"Talents\">Talents</a> are features that grant characters a variety of unique bonuses. Characters gain talents as they level up, starting with one at level 1, and learning new talents at levels 3, 8, 13, and 18.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "QhCJDKsdeRydXlrm",
+            "name": "Memorizing Skills",
+            "system": {
+                "description": "<p>In order to use a skill, you must memorize it first. Whenever you complete a rest you choose a number of skills equal to Level / 2 + Mind - 8 (rounded down). Those skills are memorized until you complete a rest.</p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "1c0sqIcabm0mMIpT",
+            "name": "Learning Skills",
+            "system": {
+                "description": "<p>At level 1 you know 4 skills. Whenever you level up, you may learn two new skills that you meet the level requirement for.</p>"
+            },
+            "type": "Status"
+        },
+        {
+            "_id": "CT3vGY7eiaSlCopQ",
+            "name": "Abilities",
+            "system": {
+                "description": "<p>Combat and Civil abilities determine your character's proficiency in different aspects of combat and civil encounters. Both types of abilities function as prerequisites for learning skills and provide bonuses to @UUID[Compendium.celestus.rules.RhLk5CMny3L5KM6w]{Ability Checks}.</p><p><strong>Civil Abilities</strong> are used solely to determine modifiers for @UUID[Compendium.celestus.rules.RhLk5CMny3L5KM6w]{Ability Checks} and skill prerequisites.<br /><strong>Combat Abilities</strong> provide unique bonuses to different aspects of combat based on your total ability score.</p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "iuH7zrOpg909VkOR",
+            "name": "Combat Abilities",
+            "system": {
+                "description": "<table><tbody><tr><td><h3>Ability</h3></td><td><h3>Bonus</h3></td></tr><tr><td><p><strong>Dueling</strong></p></td><td><p>When using a single one-handed weapon: +5% weapon damage , +5% accuracy</p></td></tr><tr><td><p><strong>Dual Wielding</strong></p></td><td><p>When using two one-handed weapons: +5% weapon damage, +1% evasion</p></td></tr><tr><td><p><strong>Heavy-Handed</strong></p></td><td><p>When using a two-handed melee weapon: +5% weapon damage, +5% critical hit damage</p></td></tr><tr><td><p><strong>Marksman</strong></p></td><td><p>When using a two-handed ranged weapon: +5% weapon damage, +1% critical hit chance</p></td></tr><tr><td><p><strong>Retributive</strong></p></td><td><p>Reflect 5% of incoming damage back to your attacker</p></td></tr><tr><td><p><strong>Flamespeaker</strong></p></td><td><p>+5% Fire damage</p></td></tr><tr><td><p><strong>Tidecaller</strong></p></td><td><p>+5% Water damage, Healing, and Magic Armor healing</p></td></tr><tr><td><p><strong>Stormseeker</strong></p></td><td><p>+5% Air damage</p></td></tr><tr><td><p><strong>Duneshaper</strong></p></td><td><p>+5% Earth damage, Poison damage, and Physical Armor healing</p></td></tr><tr><td><p><strong>Voidcantor</strong></p></td><td><p>+5% Psychic damage</p></td></tr><tr><td><p><strong>Deathbringer</strong></p></td><td><p>Heal for 10% of damage dealt</p></td></tr><tr><td><p><strong>Shroudstalker</strong></p></td><td><p>+5% Critical hit damage, +5% movement speed</p></td></tr><tr><td><p><strong>Formshifter</strong></p></td><td><p>You gain 2 unspent attribute points</p></td></tr><tr><td><p><strong>Huntmaster</strong></p></td><td><p>+5% damage to marked targets</p></td></tr><tr><td><p><strong>Warlord</strong></p></td><td><p>+5% Physical damage</p></td></tr></tbody></table>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "YLzjrNGr6Q1BXscc",
+            "name": "Civil Abilities",
+            "system": {
+                "description": "<table><tbody><tr><td><h3>Ability</h3></td><td><h3>Bonus</h3></td></tr><tr><td><p><strong>Scoundrel</strong></p></td><td><p>Hiding, lock picking, and other sleight of hand.</p></td></tr><tr><td><p><strong>Lore</strong></p></td><td><p>Recalling relevant information and finding meaning in passages.</p></td></tr><tr><td><p><strong>Nature</strong></p></td><td><p>Finding your way through the wilds, tracking creatures, knowledge of wildlife.</p></td></tr><tr><td><p><strong>Influence</strong></p></td><td><p>Changing the opinions of those around you, deceiving others, and performing.</p></td></tr><tr><td><p><strong>Religion</strong></p></td><td><p>Knowledge of religious practices and attuning yourself to spiritual processes.</p></td></tr></tbody></table>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "qPKqRSLHKNvNUZ2A",
+            "name": "Ability Points",
+            "system": {
+                "description": "<p>Ability points are a character building currency that you invest into combat and civil @UUID[Compendium.celestus.rules.CT3vGY7eiaSlCopQ]{abilities}. At level 1 you have 1 civil ability point and 2 combat ability points to spend. You can spend a maximum of 10 points in a combat ability and 5 in a civil ability.</p><p>As you level up you gain combat and civil ability points to spend: one combat ability point each level beyond 1, and one civil ability point every 3 levels (at level 3, 6, 9, …).</p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "0UljObhEHAo05oGI",
+            "name": "d100 Checks",
+            "system": {
+                "description": "<p>Some rules may refer to making a \"d100 check.\" This simply is an instruction to roll a 100-sided die and use the result for the rule that asked you to roll it.</p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "RhLk5CMny3L5KM6w",
+            "name": "Ability Checks",
+            "system": {
+                "description": "<p>Ability checks test character's talents and skills in an attempt to overcome adversity. The GM can ask for an ability check whenever a character attempts to accomplish some task that has a chance of uncertainty.</p><p>Often the GM will ask for a civil ability check, but in rare occasions may ask for a combat ability check. The GM will determine a suitable ability and attribute for the check. If they choose a civil ability it is a civil ability check, if they choose a combat ability it is a combat ability check. If the GM determines there is no suitable bonus, the character will only utilize the chosen attribute.</p><p>In order to perform an ability check, a character makes a @UUID[Compendium.celestus.rules.0UljObhEHAo05oGI]{d100 check} and adds a bonus that depends on the attribute and ability the GM determined.</p><p>For civil ability checks, add 5 times the character's ability total for the chosen ability.<br />For combat ability checks, add the character's ability total for the chosen ability.<br />For attributes, add the character's attribute total minus 10.</p><p>For example, a character makes a Nature (Wits) check. The die rolls 56, they have a 3 in Nature, and a 24 in Wits. They total would be 56 (die roll) + 3×5 (Nature) + 24-10 (Wits) for a total of 85.</p><h3>Difficulty Class</h3><p>When a GM asks for an ability check, they will determine a difficulty class (DC), they may choose not to share this value. The DC is the number that the check's total needs to surpass in order to succeed. Below are some example difficulty classes and how difficult they are to achieve.</p><table><tbody><tr><td><h3>Challenge</h3></td><td><h3>DC</h3></td></tr><tr><td><p>Very easy</p></td><td><p>25</p></td></tr><tr><td><p>Easy</p></td><td><p>50</p></td></tr><tr><td><p>Average</p></td><td><p>75</p></td></tr><tr><td><p>Hard</p></td><td><p>100</p></td></tr><tr><td><p>Very Hard</p></td><td><p>125</p></td></tr><tr><td><p>Nigh Impossible</p></td><td><p>150</p></td></tr></tbody></table>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "TxMUBgsFoFVL4BNR",
+            "name": "Lone Wolf",
+            "system": {
+                "description": "<p>When playing with 2 or fewer members in a party, each character gains +2 starting AP, +30% max HP, and +60% max physical and magic armor.</p><p>Double all spent combat ability points and attribute points up to the normal maximum of 10 and 40 respectively. For example, if a character has spent 15 points in strength to a value of 25, they would have that increased to 40. Any further points spent would not increase their total strength score.</p>"
+            },
+            "type": "Rule"
+        },
+        {
+            "_id": "BYa7JKlivItrhsrr",
+            "name": "Movement",
+            "system": {
+                "description": "<p><span style=\"font-family:'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif\">Moving during combat takes 1 action point to move a distance equal to your movement speed. This movement doesn't have to be done entirely in continuous move and you can act between moving.</span></p>"
+            },
+            "type": "Rule"
+        }
+    ]
+}

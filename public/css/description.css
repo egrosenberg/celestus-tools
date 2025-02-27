@@ -194,6 +194,11 @@ a.content-link:hover {
     width: 100%;
 }
 
+.roll.description table td p {
+    padding: 3px;
+    font-size: var(--font-size-14);
+}
+
 .roll.description tbody tr:nth-child(even) {
     background-color: var(--color-dark-3);
 }

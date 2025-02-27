@@ -10,7 +10,8 @@ const browsers = new Map([
     ['backgrounds', new Browser("backgrounds", "../data/backgrounds.json")],
     ['professions', new Browser("professions", "../data/professions.json")],
     ['ancestries', new Browser("ancestries", "../data/ancestries.json")],
-    ['talents', new Browser("talents", "../data/talents.json")]
+    ['talents', new Browser("talents", "../data/talents.json")],
+    ['rules', new Browser("rules", "../data/rules.json")]
 ]);
 
 const STATUS = {
@@ -40,6 +41,7 @@ hbs.loadPartials([
     "./templates/browse/parts/professions-list.hbs",
     "./templates/browse/parts/ancestries-list.hbs",
     "./templates/browse/parts/talents-list.hbs",
+    "./templates/browse/parts/rules-list.hbs",
     "./templates/parts/navigation.hbs",
 ]);
 
