@@ -27,14 +27,12 @@ function linkTooltips() {
                 $.get(path, {}, (data) => {
                     callback(
                         $(data).addClass("ui-tooltip")
-                            .css("left", e.offset().left)
-                            .css("top", e.offset().top)
                     );
                 });
                 return;
             }
         });
-        $(".ui-helper-hidden-accessible").hide();
+        $(".ui-helper-hidden-accessible").remove();
     });
 }
 

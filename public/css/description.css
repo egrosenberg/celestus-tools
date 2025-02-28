@@ -180,6 +180,7 @@
 a.content-link {
     cursor: pointer;
     font-weight: bold;
+    position: relative;
 }
 
 a.content-link:hover {

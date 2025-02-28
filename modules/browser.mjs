@@ -10,6 +10,9 @@ const defaultPaths = {
 }
 
 export default class Browser {
+    // full browser index, matches name to uuid and type
+    static index = [];
+
     /**
      * @param {String} key for use in generating paths
      * @param {String} jsonPath path to JSON file containing list data
@@ -34,6 +37,14 @@ export default class Browser {
             if (a.name > b.name) return 1;
             return 0;
         });
+        // add data to index
+        for (const entry of this._data) {
+            Browser.index.push({
+                name: entry.name,
+                id: entry._id,
+                type: this.key
+            });
+        }
         // create paths
         this.paths = structuredClone(defaultPaths);
         for (const [k, path] of Object.entries(this.paths)) {

@@ -113,10 +113,10 @@ app.get('/resources/descriptions', async (req, res) => {
     if (browser) {
         const html = await browser.description(req.query.id);
         if (html) return res.send(html);
-        else return res.status(STATUS.BadRequest).send("Invalid description type!");
+        else return res.status(STATUS.BadRequest).send("Invalid description ID: " + req.query.id);
     }
     else {
-        return res.status(STATUS.BadRequest).send("Invalid description type!");
+        return res.status(STATUS.BadRequest).send("Invalid description type:" + req.query.type);
     }
 });
 // fetch form
@@ -129,6 +129,10 @@ app.get('/resources/forms/:templateName', async (req, res) => {
         res.status(STATUS.BadRequest).send("Invalid template name!");
     }
     return;
+});
+// fetch search index
+app.post('/index', (req, res) => {
+    return res.send(JSON.stringify(Browser.index));
 });
 
 /**
