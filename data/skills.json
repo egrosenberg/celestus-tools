@@ -811,7 +811,7 @@
                 "overridesWeaponDamage": false,
                 "overridesWeaponType": false,
                 "overridesWeaponRange": true,
-                "school": "twohand",
+                "school": "special",
                 "tier": 0,
                 "hasScript": false,
                 "scriptId": "",
@@ -846,7 +846,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737588565607,
-                "modifiedTime": 1737830517542,
+                "modifiedTime": 1740870431640,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -1915,7 +1915,7 @@
                     "materialFull": ""
                 },
                 "statusEffects": [],
-                "school": "warlord",
+                "school": "special",
                 "lifesteal": 0,
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
@@ -1951,7 +1951,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735948174729,
-                "modifiedTime": 1738193219624,
+                "modifiedTime": 1740870401746,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "_id": "4DI2xsNKaTIXeJgB",
@@ -6673,7 +6673,7 @@
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
                 "overridesWeaponRange": false,
-                "school": "huntmaster",
+                "school": "special",
                 "tier": 0,
                 "overridesWeaponType": false,
                 "itemizeDamage": false,
@@ -6709,7 +6709,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736446315173,
-                "modifiedTime": 1736446592346,
+                "modifiedTime": 1740870450754,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -7555,7 +7555,7 @@
                 "overridesWeaponDamage": false,
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
-                "school": "twohand",
+                "school": "special",
                 "tier": 0,
                 "hasScript": false,
                 "scriptId": "",
@@ -7590,7 +7590,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737830049883,
-                "modifiedTime": 1737831281165,
+                "modifiedTime": 1740870439870,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -8835,7 +8835,7 @@
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
                 "overridesWeaponRange": false,
-                "school": "formshifter",
+                "school": "special",
                 "tier": 0,
                 "overridesWeaponType": false,
                 "itemizeDamage": false,
@@ -8871,7 +8871,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736455626599,
-                "modifiedTime": 1736455923201,
+                "modifiedTime": 1740870444166,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -9174,8 +9174,8 @@
                     "scoundrel": 0,
                     "lore": 0,
                     "nature": 0,
-                    "influence": 2,
-                    "religion": 0
+                    "influence": 0,
+                    "religion": 2
                 },
                 "damage": [],
                 "ability": "none",
@@ -9191,7 +9191,7 @@
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
                 "overridesWeaponRange": false,
-                "school": "influence",
+                "school": "religion",
                 "tier": 1,
                 "overridesWeaponType": false,
                 "itemizeDamage": false,
@@ -9226,7 +9226,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736297419895,
-                "modifiedTime": 1736297784234,
+                "modifiedTime": 1740098454029,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -9383,7 +9383,7 @@
                 },
                 "range": 0,
                 "statusEffects": [],
-                "school": "onehand",
+                "school": "special",
                 "lifesteal": 0,
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
@@ -9423,7 +9423,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735948174729,
-                "modifiedTime": 1736277960800,
+                "modifiedTime": 1740870412754,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -10473,7 +10473,7 @@
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
                 "overridesWeaponRange": false,
-                "school": "warlord",
+                "school": "special",
                 "tier": 0,
                 "overridesWeaponType": false,
                 "itemizeDamage": false,
@@ -10508,7 +10508,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736442968247,
-                "modifiedTime": 1736444654109,
+                "modifiedTime": 1740870447375,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -11577,7 +11577,7 @@
                 "overridesWeaponDamage": false,
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
-                "school": "retributive",
+                "school": "special",
                 "tier": 0,
                 "hasScript": true,
                 "scriptId": "shieldsUp",
@@ -11616,7 +11616,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737692211314,
-                "modifiedTime": 1737832548029,
+                "modifiedTime": 1740870424560,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -11683,7 +11683,7 @@
                 "overridesWeaponDamage": true,
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
-                "school": "warlord",
+                "school": "special",
                 "tier": 0,
                 "hasScript": false,
                 "scriptId": "",
@@ -11718,7 +11718,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737830603106,
-                "modifiedTime": 1737853768255,
+                "modifiedTime": 1740870427969,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -11833,7 +11833,7 @@
             "_id": "ScQrj8LxXd7SnM3q",
             "img": "icons/magic/earth/barrier-stone-explosion-debris.webp",
             "system": {
-                "description": "<p>Sharp stones jettison from the ground at a point you can see within range in a 10-foot radius circle. Each creature within the radius takes 100% Earth Damage.</p><p>★ Sets @UUID[Compendium.celestus.rules.X6IszAPOszReXljl]{Maimed} (Resisted by Physical Armor).</p>",
+                "description": "<p>Sharp stones jettison from the ground at a point you can see within range in a 10-foot radius circle, leaving an oil surface in their wake. Each creature within the radius takes 100% Earth Damage.</p><p>★ Sets @UUID[Compendium.celestus.rules.X6IszAPOszReXljl]{Maimed} (Resisted by Physical Armor).</p>",
                 "ap": 2,
                 "fp": 0,
                 "cooldown": {
@@ -11885,6 +11885,18 @@
                 ],
                 "school": "duneshaper",
                 "tier": 1,
+                "aoeLinger": true,
+                "linger": {
+                    "duration": 2,
+                    "surfaceType": "oil",
+                    "effects": false,
+                    "targets": "any",
+                    "targetType": "humanoid",
+                    "clearOnLeave": true,
+                    "lingerDuration": 0,
+                    "children": [],
+                    "texture": null
+                },
                 "lifesteal": 0,
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
@@ -11893,18 +11905,6 @@
                 "itemizeDamage": false,
                 "hasScript": false,
                 "scriptId": "",
-                "aoeLinger": false,
-                "linger": {
-                    "duration": 0,
-                    "effects": false,
-                    "targets": "any",
-                    "targetType": "humanoid",
-                    "clearOnLeave": true,
-                    "lingerDuration": 0,
-                    "surfaceType": "none",
-                    "children": [],
-                    "texture": null
-                },
                 "channelDuration": 0,
                 "targetMode": "10 ft. Cylinder",
                 "finalRange": "60 ft."
@@ -11923,7 +11923,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736057403333,
-                "modifiedTime": 1736275991500,
+                "modifiedTime": 1740183032291,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -12175,7 +12175,7 @@
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
                 "overridesWeaponRange": false,
-                "school": "warlord",
+                "school": "special",
                 "tier": 0,
                 "overridesWeaponType": false,
                 "itemizeDamage": false,
@@ -12210,7 +12210,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361265314,
-                "modifiedTime": 1736361330176,
+                "modifiedTime": 1740870421231,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "_id": "TTSollRswbZwxvie",
@@ -12841,7 +12841,7 @@
                 "overridesWeaponDamage": false,
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
-                "school": "onehand",
+                "school": "special",
                 "tier": 0,
                 "hasScript": false,
                 "scriptId": "",
@@ -12876,7 +12876,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737673917856,
-                "modifiedTime": 1737673988790,
+                "modifiedTime": 1740870409050,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -19907,7 +19907,7 @@
                 "overridesWeaponRange": false,
                 "itemizeDamage": false,
                 "school": "formshifter",
-                "tier": 0,
+                "tier": 4,
                 "hasScript": false,
                 "scriptId": "",
                 "aoeLinger": false,
@@ -20021,7 +20021,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1739497232219,
-                "modifiedTime": 1739499273086,
+                "modifiedTime": 1740098215904,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -21219,7 +21219,7 @@
                 "overridesWeaponDamage": false,
                 "overridesWeaponType": false,
                 "overridesWeaponRange": false,
-                "school": "dualwield",
+                "school": "special",
                 "tier": 0,
                 "hasScript": false,
                 "scriptId": "",
@@ -21254,7 +21254,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737830293965,
-                "modifiedTime": 1737831299671,
+                "modifiedTime": 1740870435596,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -22892,7 +22892,7 @@
                 "weaponEfficiency": 1,
                 "overridesWeaponDamage": false,
                 "overridesWeaponRange": false,
-                "school": "warlord",
+                "school": "special",
                 "overridesWeaponType": false,
                 "itemizeDamage": false,
                 "tier": 0,
@@ -22928,7 +22928,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736198888489,
-                "modifiedTime": 1737427713670,
+                "modifiedTime": 1740870416727,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -24993,7 +24993,7 @@
                 "targetMode": false
             },
             "effects": [],
-            "sort": 0,
+            "sort": 100000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -25006,7 +25006,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735972374614,
-                "modifiedTime": 1736276548649,
+                "modifiedTime": 1740183176597,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
