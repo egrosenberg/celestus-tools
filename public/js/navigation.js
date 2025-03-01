@@ -138,16 +138,19 @@ $(document).ready(() => {
         linkSearchTooltips();
     });
     // click results
-    $(document).on('click', '.search-result', (ev) => {
+    $(document).on('mousedown', '.search-result', (ev) => {
         console.log(ev);
         const type = ev.currentTarget.dataset.type;
         const id = ev.currentTarget.dataset.id;
+        let url = `/browse/${type}/?item=${id}`;
         if (type === "content") {
-            window.location.href = `/content/${id}`;
-            console.log(`/content/${id}`);
+            url = `/content/${id}`;
         }
-        else {
-            window.location.href = `/browse/${type}/?item=${id}`;
+        if (ev.button === 0) {
+            window.location.href = url;
+        }
+        else if (ev.button === 1) {
+            window.open(url, '_blank').focus();
         }
     });
 });
