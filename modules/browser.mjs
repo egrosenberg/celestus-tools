@@ -1,6 +1,7 @@
 import hbs from "./import/handlebars.mjs";
 import celestus from "../data/celestus.mjs";
 import { createRequire } from "module";
+import Index from "./Index.mjs";
 const require = createRequire(import.meta.url);
 
 const defaultPaths = {
@@ -10,8 +11,6 @@ const defaultPaths = {
 }
 
 export default class Browser {
-    // full browser index, matches name to uuid and type
-    static index = [];
 
     /**
      * @param {String} key for use in generating paths
@@ -39,7 +38,7 @@ export default class Browser {
         });
         // add data to index
         for (const entry of this._data) {
-            Browser.index.push({
+            Index.push({
                 name: entry.name,
                 id: entry._id,
                 type: this.key

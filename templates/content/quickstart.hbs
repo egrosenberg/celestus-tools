@@ -1,37 +1,86 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/description.css">
-    <link rel="stylesheet" type="text/css" href="/css/glyphter.css">
-    <script src="https://kit.fontawesome.com/e546e56560.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="/js/helpers.js"></script>
-    <script src="/js/navigation.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Celestus Quickstart</title>
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Celestus Rules - Quickstart" />
-    <meta name="twitter:description" content="Celestus Rules / Reference Database" />
-    <meta property="og:url" content="https://rules.crowsnest.me/" />
-    <meta property="og:image" content="https://rules.crowsnest.me/img/card.webp" />
-    <meta property="twitter:image" content="https://rules.crowsnest.me/img/card.webp" />
-</head>
-
-<body>
-    {{> "./templates/parts/navigation.hbs"}}
-    <div class="content">
-        <h1 class="ul-aqua">Celestus Quickstart</h1>
-        <div class="section">
-            <h2>The Character Sheet</h2>
-            <p>Celestus is a virtual Tabletop Role Playing Game (vTTRPG) designed to be played with Foundry VTT. It
-                takes inspiration from systems such as D&D5e, Pathfinder, Wanderhome, and CRPGs such as Divinity:
-                Original Sin. The combat system most closely matches that of Divinity: Original Sin 2, and the
-                roleplaying tools most closely match Wanderhome and Dungeons and Dragons. Celestus forgoes a traditional
-                “Class” system in order to offer dynamic and highly customizable gameplay, creating a Choose Your Own
-                Adventure out of character creation.</p>
-        </div>
-    </div>
-</body>
+<h1 class="ul-aqua">Celestus Quickstart</h1>
+<div class="section">
+    <h2 class="b-aqua">Resources</h2>
+    <p>
+        There are many resources in Celestus and they cover a variety of aspects of gameplay, from surviving to acting
+        in combat.
+        Resources can be split into two categories, <strong>Vital</strong> and <strong>Action</strong> resources.
+    </p>
+    <h3 class="ul-rose">Vital Resources</h3>
+    <h4 class="rose">Health (HP)</h4>
+    <p>
+        Health, often referred to as hit points or hp, is the primary resource that represents a character’s vitality.
+        Health is meant as a direct representation of a character’s current wellbeing. A character at full health is
+        presumed to be uninjured and a character with no health is on death’s door.
+    </p>
+    <p>
+        <strong class="rose">Max Hit Points</strong>
+        are based off character level and a character's constitution score. To calculate a character's HP, use the
+        <a class="content-link" data-uuid="Compendium.celestus.rules.swu6WZSRc6sYUxvg" data-id="swu6WZSRc6sYUxvg">
+            base max HP
+        </a>
+        for their level and then multiply it by 1 + (0.07 &times; each point they have in constitution beyond 10).
+        For example a level 9 character with 13 in constitution would have 235&times;(1+0.07&times;3)=284 max health.
+    </p>
+    <p>
+        <strong class="rose">When a character is reduced to 0 hp:</strong>
+        If a player character is reduced to 0 hp, they begin to die. A player character at 0 hp is incapacitated and
+        considered dying. A dying character still takes damage and their hp value goes into the negatives. When a
+        character reaches a hp value less than or equal to a negative of their max hp they die. A dying creature remains
+        incapacitated until their current hp goes above 0 at which point they are no longer dying. Whenever a dying
+        creature is healed in a way that stops them from dying, they gain one level of exhaustion.
+    </p>
+    <p>
+        If a non-player character (NPC) is reduced to 0 hp, they die. The GM can choose to allow one or more NPCs to
+        enter
+        a dying state similar to players rather than outright die.
+    </p>
+    <h4 class="rose">Armor</h4>
+    <p>
+        Armor what stands between a character’s health and damage being dealt to them. There are two types of armor in
+        Celestus, physical and magic. Physical damage is absorbed by physical armor and Magic damage types are blocked
+        by magic armor. For a full list of damage types and the armor they are blocked by see the
+        <a class="content-link" data-uuid="Compendium.celestus.rules.099jME2YXRgEoBm2" data-id="099jME2YXRgEoBm2">
+            damage types table.
+        </a>
+        When a character would take damage, that damage is first subtracted from their armor
+        values, and then any excess is applied to their health.
+    </p>
+    <p>
+        The second function of armor is to protect against
+        statuses. Many skills can apply statuses to characters and many statuses are resisted by either physical or
+        magic armor. For example, if a skill would try to set bleeding but the target still has physical armor, they
+        won’t begin bleeding. Statuses are attempted to be applied after a target takes any damage from a skill, which
+        may lead to a status applying that wouldn’t have without the damage. A statuses description will say what
+        type(s) of armor resist it. If none is specified, it can’t be resisted by armor. The full list of statuses can
+        be found in the <a href="/browse/rules">rules glossary.</a>
+    </p>
+    <h3 class="ul-amber">Action Resources</h3>
+    <h4 class="amber"><i class="fa-solid fa-circle ap-icon"></i> Action Points (AP)</h4>
+    <p>
+        Action points (represented as green circles) are the primary resource needed for using skills in Initiative. Many skills require a certain
+        amount of action points to use. While in initiative, a character must spend that many action points to use the
+        skill, outside of initiative you can ignore these costs.
+    </p>
+    <p>
+        Characters have a starting AP and max AP value. At the
+        start of each character’s turns they receive a number of action points equal to their starting value. A
+        character can never have more action points than their max.
+    </p>
+    <h4 class="amber"><i class="fa-solid fa-diamond fp-icon"></i> Focus Points (FP)</h4>
+    <p>
+        Focus points (represented as yellow diamonds) represent a character pulling on strength beyond their normal capacity. Focus points are spent in
+        the same way Action points are and some skills will require them as a cost. The main difference between action
+        points and focus points is that they don’t refresh every round, instead they refresh at the beginning of each
+        <a class="content-link" data-uuid="Compendium.celestus.rules.EfufPpCvHHYaT2f5" data-id="EfufPpCvHHYaT2f5">
+            scene.
+        </a>
+    </p>
+    <p>
+        <strong>Maximum Focus Points</strong> are determined by character level and are granted at
+        <a class="content-link" data-uuid="Compendium.celestus.rules.W89BHxXTdhVkFTBL" data-id="W89BHxXTdhVkFTBL">
+            levels 9, 11, and 13.
+        </a>
+    </p>
+    <h1>To Be Continued...</h1>
+</div>

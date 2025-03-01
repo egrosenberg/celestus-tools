@@ -114,6 +114,7 @@
     border: thick solid var(--color-dark-6);
     background-color: var(--color-dark-2);
     padding: 0.4em;
+    position: fixed;
 }
 
 .roll.description .summary {

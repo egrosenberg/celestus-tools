@@ -17,6 +17,7 @@ function linkTooltips() {
     $(function () {
         $("a.content-link").tooltip({
             items: "*",
+            position: { collision: 'none' },
             content: function (callback) {
                 const e = $(this);
                 // find which browser the item belongs to
@@ -196,47 +197,6 @@ $(document).ready(async () => {
             populateList();
         });
     });
-
-    /**
-     * Link to other browsers
-     */
-    $(document).on("click", ".content-link", async (ev) => {
-        ev.preventDefault();
-        // find which browser the item belongs to
-        const regex = /(?<=celestus.).+(?=\.)/;
-        const browse = regex.exec(ev.currentTarget.dataset.uuid)?.[0] ?? "";
-        // check if page is 404
-        const path = `/browse/${browse}/?item=${ev.currentTarget.dataset.id}`;
-        try {
-            await $.get(path);
-        } catch {
-            return console.error("Error: Linked Content does not exist on server.");
-        }
-        window.location.href = path;
-    })
-    /**
-     * Display descriptions of linked content when hoevered
-     */
-    //$(document).on("click", ".content-link", async (ev) => {
-    //    ev.preventDefault();
-    //    // find which browser the item belongs to
-    //    const regex = /(?<=celestus.).+(?=\.)/;
-    //    const browse = regex.exec(ev.currentTarget.dataset.uuid)?.[0] ?? "";
-    //    // check if page is 404
-    //    const path = `/resources/descriptions?type=${browse}&id=${ev.currentTarget.dataset.id}`;
-    //    try {
-    //        const response = await fetch(path);
-    //        if (!response.ok) {
-    //            throw new Error(`Response status: ${response.status}`);
-    //        }
-    //        const html = await response.text();
-    //        document.getElementById("description").innerHTML = html;
-    //        
-    //    } catch (error) {
-    //        console.error(error);
-    //    }
-    //    window.location.href = path;
-    //})
 });
 
 /**

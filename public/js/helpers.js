@@ -2,6 +2,54 @@
 /* global $ */
 
 
+$(document).ready(() => {
+    /**
+     * Link all tooltips (even if not a browser page)
+     */
+    $(function () {
+        $("a.content-link").tooltip({
+            items: "*",
+            position: { collision: 'none' },
+            content: function (callback) {
+                const e = $(this);
+                // find which browser the item belongs to
+                const regex = /(?<=celestus.).+(?=\.)/;
+                const browse = regex.exec(e.data("uuid"))?.[0] ?? "";
+                // check if page is 404
+                const path = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
+                $.get(path, {}, (data) => {
+                    callback(
+                        $(data).addClass("ui-tooltip")
+                    );
+                });
+                return;
+            }
+        });
+        $(".ui-helper-hidden-accessible").remove();
+    });
+    /**
+     * Link all content-links
+     */
+    $(document).on("mousedown", ".content-link", async (ev) => {
+        ev.preventDefault();
+        // find which browser the item belongs to
+        const regex = /(?<=celestus.).+(?=\.)/;
+        const browse = regex.exec(ev.currentTarget.dataset.uuid)?.[0] ?? "";
+        // check if page is 404
+        const path = `/browse/${browse}/?item=${ev.currentTarget.dataset.id}`;
+        try {
+            await $.get(path);
+        } catch {
+            return console.error("Error: Linked Content does not exist on server.");
+        }
+        if (ev.button === 0) {
+            window.location.href = path;
+        } else if (ev.button === 1) {
+            window.open(path, '_blank').focus();
+        }
+    });
+})
+
 /**
  * Activates listeners like button toggles on form
  * @param {Object} html dom element form

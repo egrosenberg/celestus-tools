@@ -33,16 +33,12 @@ function linkSearchTooltips() {
     $(function () {
         $(".search-result .name").tooltip({
             items: "*",
-            position: { collision: 'none', my: "left+15 center", at: "right center" },
+            position: { collision: 'none' },
             content: function (callback) {
                 const e = $(this).parent(".search-result");
                 const path = `/resources/descriptions?type=${e.data("type")}&id=${e.data("id")}`;
                 $.get(path, {}, (data) => {
-                    callback(
-                        $(data).addClass("ui-tooltip")
-                            //.css("left", e.offset().left)
-                            //.css("top", e.offset().top)
-                    );
+                    callback($(data).addClass("ui-tooltip"));
                 });
                 return;
             }
@@ -56,7 +52,7 @@ function renderSearchResults(arr) {
     for (const entry of arr) {
         html += `<li class="search-result flexrow" data-id="${entry.id}" data-type="${entry.type}">
             <div class="name">${entry.name}</div>
-            <div class="type">${entry.type.slice(0,1).toUpperCase()+entry.type.slice(1)}</div>
+            <div class="type">${entry.type.slice(0, 1).toUpperCase() + entry.type.slice(1)}</div>
             </li>`;
     }
     return html;
@@ -87,10 +83,15 @@ $(document).ready(() => {
     /**
      * Direct navigation buttons and dropdown items
      */
-    $('.navigation').on('click', '.tab.direct,.dropdown-item', (ev) => {
+    $('.navigation').on('mousedown', '.tab.direct,.dropdown-item', (ev) => {
         ev.preventDefault();
+        console.log(ev.button);
         if (ev.currentTarget.classList.contains("active")) return;
-        window.location.href = $(ev.currentTarget).data("dest");
+        if (ev.button === 0) {
+            window.location.href = $(ev.currentTarget).data("dest");
+        } else if (ev.button === 1) {
+            window.open($(ev.currentTarget).data("dest"), '_blank').focus();
+        }
     });
     /**
      * Dropdown navigation buttons
@@ -125,10 +126,10 @@ $(document).ready(() => {
      */
     // hide / show results
     $('.search-input').on('focus', () => {
-        $("#search-results").slideDown(10);
+        $("#search-results").slideDown(100);
     });
     $('.search-input').on('focusout ', () => {
-        $("#search-results").slideUp(10);
+        $("#search-results").delay(400).slideUp(100);
     });
     // filter
     $('.search-input').on('keyup', (ev) => {
@@ -143,10 +144,10 @@ $(document).ready(() => {
         const id = ev.currentTarget.dataset.id;
         if (type === "content") {
             window.location.href = `/content/${id}`;
+            console.log(`/content/${id}`);
         }
         else {
             window.location.href = `/browse/${type}/?item=${id}`;
-            console.log(`/browse/${type}/?item=${id}`);
         }
     });
 });

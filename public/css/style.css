@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: rgb(17, 17, 17);
-    color: white;
+    color: #eee;
 
     background-image: url("../img/bg.webp");
     background-repeat: no-repeat;
@@ -161,6 +161,18 @@ a:hover {
     display: inline;
 }
 
+.aqua {
+    color: var(--color-aqua-5);
+}
+
+.amber {
+    color: var(--color-amber-5);
+}
+
+.rose {
+    color: var(--color-rose-5);
+}
+
 .ul-aqua {
     text-decoration: underline;
     text-decoration-color: var(--color-aqua-3);
@@ -174,6 +186,18 @@ a:hover {
 .ul-rose {
     text-decoration: underline;
     text-decoration-color: var(--color-rose-3);
+}
+
+.b-aqua {
+    border-color: var(--color-aqua-3);
+}
+
+.b-amber {
+    border-color: var(--color-amber-3);
+}
+
+.b-rose {
+    border-color: var(--color-rose-3);
 }
 
 /* Navigation Bar */
@@ -332,6 +356,7 @@ a:hover {
 .navigation .search-results {
     margin-top: -15px;
     cursor: pointer;
+    pointer-events: none;
     display: none;
     list-style: none;
     right: 0px;
@@ -353,6 +378,7 @@ a:hover {
     background-color: var(--color-dark-3);
 }*/
 .navigation .search-result {
+    pointer-events: all;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: row;
@@ -510,13 +536,29 @@ h6 {
 
 .content h2 {
     font-size: var(--font-size-32);
-    margin: 0px 0px 10px 00px;
+    margin: 0px 0px 10px 0px;
     font-weight: 100;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
 }
+
+.content h3 {
+    font-size: var(--font-size-20);
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.content h4 {
+    font-size: var(--font-size-18);
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
 
 /* paragraphs */
 .content p {
     font-size: var(--font-size-16);
+    margin-top: 0px;
 }
 
 /* hyperlinks */
@@ -823,6 +865,19 @@ input[type=checkbox]:checked+label:hover {
 
 body .ui-tooltip {
     border-width: 2px;
+}
+
+.ui-tooltip.content-description {
+    background-color: var(--color-dark-2);
+    max-height: 600px;
+    overflow-y: hidden;
+    border: 5px solid var(--color-dark-6);
+    background-color: var(--color-dark-2);
+    padding: 0.4em;
+}
+
+.content-description p {
+    line-height: 150%;
 }
 
 /* Mobile Overrides */

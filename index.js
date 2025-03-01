@@ -3,8 +3,10 @@ import express from "express";
 import hbs from './modules/import/handlebars.mjs'
 import Browser from "./modules/browser.mjs";
 import celestus from "./data/celestus.mjs";
+import Content from "./modules/content.mjs";
+import Index from "./modules/Index.mjs";
 
-// create skills browser
+// create browsers map
 const browsers = new Map([
     ['skills', new Browser("skills", "../data/skills.json")],
     ['backgrounds', new Browser("backgrounds", "../data/backgrounds.json")],
@@ -13,6 +15,10 @@ const browsers = new Map([
     ['talents', new Browser("talents", "../data/talents.json")],
     ['rules', new Browser("rules", "../data/rules.json")]
 ]);
+// create content map
+const pages = new Map([
+    ['quickstart', new Content("quickstart", "Celestus Quickstart")],
+])
 
 const STATUS = {
     Ok: 200,
@@ -78,9 +84,15 @@ app.get('/:var(index|index.html)?', async (req, res) => {
 /**
  * Content pages
  */
-app.get('/content/:templateName', async (req, res) => {
-    const html = await hbs.renderFromTemplate(`templates/content/${req.params.templateName}.hbs`, { config: celestus });
-    if (!html) return res.redirect('/404/');
+app.get('/content/:page', async (req, res) => {
+    const page = pages.get(req.params.page);
+    const content = await page.render();
+    if (!content) return res.redirect('/404/');
+    const html = await hbs.renderFromTemplate('templates/content-page.hbs', {
+        title: page.title,
+        name: page.key,
+        content
+    })
     return res.send(html);
 });
 
@@ -109,7 +121,15 @@ app.get('/resources/browserdata/:browser', (req, res) => {
 });
 // fetch description
 app.get('/resources/descriptions', async (req, res) => {
-    const browser = browsers.get(req.query.type);
+    const type = req.query.type;
+    if (type === "content") {
+        const page = pages.get(req.query.id);
+        if (!page) return res.status(STATUS.BadRequest).send("Invalid description ID: " + req.query.id);
+        const content = await page.render();
+        const html = await hbs.renderFromTemplate('./templates/descriptions/content-description.hbs', { content });
+        return res.send(html);
+    }
+    const browser = browsers.get(type);
     if (browser) {
         const html = await browser.description(req.query.id);
         if (html) return res.send(html);
@@ -132,7 +152,7 @@ app.get('/resources/forms/:templateName', async (req, res) => {
 });
 // fetch search index
 app.post('/index', (req, res) => {
-    return res.send(JSON.stringify(Browser.index));
+    return res.send(JSON.stringify(Index));
 });
 
 /**
