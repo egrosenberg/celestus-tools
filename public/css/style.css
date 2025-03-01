@@ -886,11 +886,26 @@ body .ui-tooltip {
     .content {
         position: fixed;
         left: 5vw;
-        width: 90vw;
+        right: 5vw;
         overflow: auto;
         scrollbar-width: thin;
         overscroll-behavior: contain;
         background-color: var(--color-dark-2);
+    }
+
+    .content.thin {
+        left: calc(5vw);
+        right: calc(5vw);
+    }
+
+    .navigation {
+        left: 0vw;
+        right: 0vw;
+    }
+
+    .navigation .tabs {
+        left: 5vw;
+        right: 5vw;
     }
 
     .item-display {
