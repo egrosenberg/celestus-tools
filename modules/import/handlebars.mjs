@@ -22,8 +22,8 @@ function registerHelpers() {
     Handlebars.registerHelper('or',  (a, b) => a || b);
     Handlebars.registerHelper('and', (a, b) => a && b);
     Handlebars.registerHelper('not', (a) => !a);
-    Handlebars.registerHelper('ifThen', function(arg1, arg2) {
-        return (arg1 ? arg2 : "");
+    Handlebars.registerHelper('ifThen', function(arg1, arg2, arg3) {
+        return (arg1 ? arg2 : arg3??"");
     });
     Handlebars.registerHelper('not', (a) => !a);
     /**
