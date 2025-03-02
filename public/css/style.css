@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: rgb(17, 17, 17);
-    color: #eee;
+    color: #ddd;
 
     background-image: url("../img/bg.webp");
     background-repeat: no-repeat;
@@ -136,7 +136,8 @@ a:hover {
     margin-top: 0px;
 }
 
-.flexrow *,.flexcol * {
+.flexrow *,
+.flexcol * {
     flex: 1;
 }
 
@@ -208,9 +209,10 @@ a:hover {
 
     position: fixed;
     top: 0;
-    width: calc(70vw - 5px);
+    left: 0;
+    right: 0;
     padding: 5px;
-    padding-left: 30vw;
+    padding-left: calc(50vw - 1250px/2);
     padding-bottom: 5px;
 
     background-color: var(--color-dark-3);
@@ -250,7 +252,7 @@ a:hover {
     margin: 0px;
 }
 
-.navigation .tabs > * {
+.navigation .tabs>* {
     margin-right: 1px;
 }
 
@@ -262,7 +264,7 @@ a:hover {
     position: relative;
 }
 
-.navigation .tabs .tab {    
+.navigation .tabs .tab {
     cursor: pointer;
     color: white;
     font-size: var(--font-size-16);
@@ -389,12 +391,12 @@ a:hover {
     padding: 0px 10px;
 }
 
-.navigation .search-results li:last-child{
+.navigation .search-results li:last-child {
     border-bottom: none;
     padding-bottom: 10px;
 }
 
-.navigation .search-results li:first-child{
+.navigation .search-results li:first-child {
     padding-top: 20px;
 }
 
@@ -502,6 +504,9 @@ a:hover {
     padding-top: 100px;
     border-radius: 5px;
     background-color: var(--color-dark-1);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-aqua-1) rgba(0, 0, 0, 0);
 }
 
 .content.thin {
@@ -515,6 +520,21 @@ a:hover {
     border-radius: 5px;
     overflow: hidden;
     border-left: thin solid var(--color-dark-6);
+}
+
+.content .section {
+    margin-bottom: 35px;
+}
+
+.content .embedded-description {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+
+.content .embedded-description.center {
+    justify-content: center;
 }
 
 /* Titles */
@@ -567,10 +587,26 @@ h6 {
     color: var(--color-aqua-3);
 }
 
+.content a.extern {
+    color: var(--color-amber-3);
+}
+
+/* lists */
+.content ul {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.content ul.compressed {
+    margin-top: -15px;
+}
+
+
 /* Description */
 .item-display {
     position: fixed;
-    right: calc(50vw - 1250px/2);;
+    right: calc(50vw - 1250px/2);
+    ;
     top: 100;
     width: 400px;
 }
@@ -591,7 +627,7 @@ h6 {
     user-select: none;
 }
 
-.list {
+ul.list {
     flex: 1;
     pointer-events: all;
     overflow: scroll;
