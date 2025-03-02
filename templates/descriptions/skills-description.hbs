@@ -97,6 +97,22 @@
             ({{item.system.components.materialFull}})
             {{/if}}
         </div>
+        {{!-- attribute scalar --}}
+        {{#if system.damage}}
+        <div class="roll-tag">
+            <span class="name">
+                Scales With: 
+            </span>
+            {{#with (lookup config.abilities system.ability)}}{{label}}{{/with}}
+        </div>
+        {{/if}}
+        {{!-- memory cost --}}
+        <div class="roll-tag">
+            <span class="name">
+                Memory: 
+            </span>
+            {{item.system.memSlots}}
+        </div>
         {{!-- source --}}
         <div class="roll-tag">
             <span class="name">
