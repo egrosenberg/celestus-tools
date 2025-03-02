@@ -49,6 +49,14 @@
             "type": "Status"
         },
         {
+            "_id": "32cncHbHLvecLYmw",
+            "name": "Action Points",
+            "system": {
+                "description": "<p>Action points (represented as green circles )are the primary resource needed for using skills in Initiative. Many skills require a certain amount of action points to use. While in initiative, a character must spend that many action points to use the skill, outside of initiative you can ignore these costs.</p><p>Characters have a starting AP and max AP value. At the start of each character’s turns they receive a number of action points equal to their starting value. A character can never have more action points than their max.</p>"
+            },
+            "type": "Rule"
+        },
+        {
             "_id": "5WnOnUhH4LYfPLlZ",
             "name": "Burning",
             "system": {
@@ -76,7 +84,7 @@
             "_id": "8LxL22YMGHnMZ8MW",
             "name": "Types of Skills",
             "system": {
-                "description": "<h3>Civil</h3><ul><li>Civil skills can only be used outside of combat and may require multiple minutes to hours to execute.</li><li>Civil skills either have no cooldown, or require taking a rest to recharge.</li><li><p>Prerequisites for civil skills are based on Civil abilities.</p></li></ul><h3>Magic (Combat)</h3><ul><li>Magic skills are combat skills that are inherently magical.</li><li>These skills often will not have any sort of material component.</li><li>If a magic skill has a damage component, the base damage will be a value based on your level</li><li><p>If a magic skill's damage component scales off an attribute it will have a different base damage value than if it didn't</p></li></ul><h3>Weapon (Combat)</h3><ul><li>Weapon skills are combat skills that aren't inherently magical (though they can still be).</li><li>All weapon skills require an equipped weapon to be able to be used.</li><li>Some weapon skills may specify a type of weapon to be equipped to be used (e.g. many shroudstalker skills require a dagger)</li><li>Weapon skills' damage component is based on your equipped weapon damage.</li><li>Some weapon skills do only a certain percent of your weapon damage.</li><li><p>Some weapon skills may override the range of your weapon.</p></li></ul>"
+                "description": "<h3>Civil</h3><ul><li>Civil skills can only be used outside of combat and may require multiple minutes to hours to execute.</li><li>Civil skills either have no cooldown, or require taking a rest to recharge.</li><li>Prerequisites for civil skills are based on Civil abilities.</li></ul><h3>Magic (Combat)</h3><ul><li>Magic skills are combat skills that are inherently magical.</li><li>These skills often will not have any sort of material component.</li><li>If a magic skill has a damage component, the base damage will be a value based on your level</li><li>If a magic skill's damage component scales off an attribute it will have a different base damage value than if it didn't</li></ul><h3>Weapon (Combat)</h3><ul><li>Weapon skills are combat skills that aren't inherently magical (though they can still be).</li><li>All weapon skills require an equipped weapon to be able to be used.</li><li>Some weapon skills may specify a type of weapon to be equipped to be used (e.g. many shroudstalker skills require a dagger)</li><li>Weapon skills' damage component is based on your equipped weapon damage.</li><li>Some weapon skills do only a certain percent of your weapon damage.</li><li>Some weapon skills may override the range of your weapon.</li></ul>"
             },
             "type": "Rule"
         },
@@ -305,6 +313,14 @@
             "type": "Status"
         },
         {
+            "_id": "bVS53wJUpbkPekh0",
+            "name": "Skill Schools",
+            "system": {
+                "description": "<table><tbody><tr><td><h3>School</h3></td><td><h3>Characteristics</h3></td></tr><tr><td><p><strong>Flamespeaker</strong></p></td><td><p>Fiery destruction</p></td></tr><tr><td><p><strong>Tidecaller</strong></p></td><td><p>Healing water and frigid cold</p></td></tr><tr><td><p><strong>Stormspeaker</strong></p></td><td><p>Bolts of lightning and billowing gales</p></td></tr><tr><td><p><strong>Duneshaper</strong></p></td><td><p>Powerful boulders, earthen armor, and deadly poisons</p></td></tr><tr><td><p><strong>Voidcantor</strong></p></td><td><p>Psionic wrath and heightened senses</p></td></tr><tr><td><p><strong>Deathbringer</strong></p></td><td><p>Necromancy and blood</p></td></tr><tr><td><p><strong>Shroudstalker</strong></p></td><td><p>Shadowy assassination</p></td></tr><tr><td><p><strong>Formshifter</strong></p></td><td><p>Shapeshifting magic</p></td></tr><tr><td><p><strong>Huntmaster</strong></p></td><td><p>Sylvan magic and barrages of arrows</p></td></tr><tr><td><p><strong>Warlord</strong></p></td><td><p>Masterful battle tactics</p></td></tr></tbody></table>"
+            },
+            "type": "Table"
+        },
+        {
             "_id": "bW1XPBQBkzJsLeSU",
             "name": "Acid",
             "system": {
@@ -508,7 +524,7 @@
             "_id": "yraIEBlqV1ui6lpV",
             "name": "Focus Points",
             "system": {
-                "description": "<p>Focus points represent a character pulling on strength beyond their normal capacity. Focus points are spent in the same way Action points are and some skills will require them as a cost. The main difference between action points and focus points is that they don’t refresh every round, instead they refresh at the beginning of each @UUID[Compendium.celestus.rules.EfufPpCvHHYaT2f5]{scene.}</p><p><strong>Maximum Focus Points</strong> are determined by character level and are granted at @UUID[Compendium.celestus.rules.W89BHxXTdhVkFTBL]{levels 9, 11, and 13.}</p>"
+                "description": "<p>Focus points (represented as yellow diamonds) represent a character pulling on strength beyond their normal capacity. Focus points are spent in the same way Action points are and some skills will require them as a cost. The main difference between action points and focus points is that they don’t refresh every round, instead they refresh at the beginning of each @UUID[Compendium.celestus.rules.EfufPpCvHHYaT2f5]{scene.}</p><p><strong>Maximum Focus Points</strong> are determined by character level and are granted at @UUID[Compendium.celestus.rules.W89BHxXTdhVkFTBL]{levels 9, 11, and 13.}</p>"
             },
             "type": "Rule"
         },
@@ -527,14 +543,6 @@
                 "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Physical Armor.</p><p><strong>Changes:</strong></p><ul><li><p>-2 Constitution</p></li><li><p>-35% Damage</p></li></ul>"
             },
             "type": "Status"
-        },
-        {
-            "_id": "32cncHbHLvecLYmw",
-            "name": "Action Points",
-            "system": {
-                "description": "<p>Action points are the primary resource needed for using skills in Initiative. Many skills require a certain amount of action points to use. While in initiative, a character must spend that many action points to use the skill, outside of initiative you can ignore these costs.</p><p>Characters have a starting AP and max AP value. At the start of each character’s turns they receive a number of action points equal to their starting value. A character can never have more action points than their max.</p>"
-            },
-            "type": "Rule"
         }
     ]
 }
