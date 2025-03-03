@@ -601,6 +601,32 @@ h6 {
     margin-top: -15px;
 }
 
+/* tables */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content tbody tr:nth-child(even) {
+    background-color: var(--color-dark-3);
+}
+
+.content tbody tr:nth-child(odd) {
+    background-color: var(--color-dark-2);
+}
+
+.content table td {
+    padding: 2px;
+}
+
+.content table tr:has(td h3) {
+    border-bottom: thin solid white;
+}
+
+.content table h3 {
+    font-size: var(--font-size-18);
+    margin-bottom: -2px;
+}
 
 /* Description */
 .item-display {

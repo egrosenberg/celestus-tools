@@ -17,7 +17,7 @@ const browsers = new Map([
 ]);
 // create content map
 const pages = new Map([
-    ['quickstart', new Content("quickstart", "Celestus Quickstart")],
+    ['quickstart', new Content("quickstart", "Rules Overview")],
 ])
 
 const STATUS = {
