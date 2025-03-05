@@ -205,6 +205,10 @@ a.content-link:hover {
     background-color: var(--color-dark-3);
 }
 
+.description h3 {
+    margin-bottom: 0px;
+}
+
 /* AP and FP icons*/
 .ap-icon {
     color: green;
