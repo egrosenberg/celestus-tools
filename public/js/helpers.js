@@ -2,31 +2,42 @@
 /* global $ */
 
 
-$(document).ready(() => {
-    /**
-     * Link all tooltips (even if not a browser page)
-     */
+
+function linkTooltips() {
     $(function () {
         $("a.content-link").tooltip({
             items: "*",
             position: { collision: 'none' },
             content: function (callback) {
                 const e = $(this);
+                const position = e.position();
+                let top, left, x, y;
+                if (position.left < window.outerWidth / 2) {
+                    left = true;
+                }
+                if (position.top < window.outerHeight / 2) {
+                    top = true;
+                }
                 // find which browser the item belongs to
                 const regex = /(?<=celestus.).+(?=\.)/;
                 const browse = regex.exec(e.data("uuid"))?.[0] ?? "";
                 // check if page is 404
                 const path = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
                 $.get(path, {}, (data) => {
-                    callback(
-                        $(data).addClass("ui-tooltip")
-                    );
+                    callback($(data).addClass("ui-tooltip"));
                 });
                 return;
             }
         });
         $(".ui-helper-hidden-accessible").remove();
     });
+}
+
+$(document).ready(() => {
+    /**
+     * Link all tooltips (even if not a browser page)
+     */
+    linkTooltips();
     /**
      * Link all content-links
      */

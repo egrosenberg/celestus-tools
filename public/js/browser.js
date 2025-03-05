@@ -1,4 +1,4 @@
-/*global $, byString, createForm */
+/*global $, byString, createForm linkTooltips */
 
 var domList;
 var listItems;
@@ -12,30 +12,6 @@ while (pageIndex === "") {
 const filtersID = `${pageIndex}-searchFilters`;
 const orderKeyID = `${pageIndex}-orderKey`;
 const orderAscending = `${pageIndex}-orderAscending`;
-
-function linkTooltips() {
-    $(function () {
-        $("a.content-link").tooltip({
-            items: "*",
-            position: { collision: 'none' },
-            content: function (callback) {
-                const e = $(this);
-                // find which browser the item belongs to
-                const regex = /(?<=celestus.).+(?=\.)/;
-                const browse = regex.exec(e.data("uuid"))?.[0] ?? "";
-                // check if page is 404
-                const path = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
-                $.get(path, {}, (data) => {
-                    callback(
-                        $(data).addClass("ui-tooltip")
-                    );
-                });
-                return;
-            }
-        });
-        $(".ui-helper-hidden-accessible").remove();
-    });
-}
 
 /**
  * Selects an item from browser list and displays its description
