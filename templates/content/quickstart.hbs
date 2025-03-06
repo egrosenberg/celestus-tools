@@ -289,10 +289,62 @@
     </p>
 </div>
 <div class="section">
+    <h2 class="b-aqua">Attacks & Damage</h2>
+    <p>
+        Attack rolls and damage rolls are the gears that allow the machines that are skills to run combat. When playing
+        through Foundry or another VTT, you will not be required to perform any of these calculations. This section is
+        meant as a description and reference rather than a guide.
+    </p>
+    <h3 class="ul-amber collapse-header" data-for="attacks">Attacks</h3>
+    <div class="collapsible" id="attacks">
+    <p>
+        Some skills, especially weapon skills, will instruct you to make a weapon attack or "Strike" a target.
+        <br />There are three factors that affect an attack: the attacker's <strong>accuracy</strong>, the attacker's
+        <strong>critical hit chance</strong> and the target's <strong>evasion</strong>. <br />To perform an attack, the
+        attacking character makes a d100 test, the attack is a hit if the roll's result surpasses the attack's hit
+        threshold <span class="code">(100 - [target's accuracy] + [target's evasion])</span>.
+        If the attack hits, it becomes a critical hit if the roll's result surpasses the attacks' critical threshold
+        <span class="code">(100 - [target's critical hit chance])</span>. It doesn't
+        matter if an attack surpasses the critical threshold if it doesn't pass the hit threshold.
+    </p>
+    </div>
+    <h3 class="ul-rose collapse-header" data-for="damage">Damage</h3>
+    <div class="collapsible" id="damage">
+    <p>
+        There are two types of damage rolls in Celestus, <strong class="rose">weapon</strong> and
+        <strong class="rose">magic</strong>. All damage in Celestus is displayed as a percentage rather than a number or
+        dice formula. This is because all damage dealt is rolled as a formula based on character level and then
+        multiplied based on some final damage scalar.
+    </p>
+    <h4 class="rose collapse-header" data-for="weapon-damage">Weapon Damage</h4>
+    <p>
+        Weapon damage uses a
+        <a class="content-link" data-uuid="Compendium.celestus.rules.iHcTUezRISDslZar" data-id="iHcTUezRISDslZar">
+            formula that corresponds to the handedness of the weapon</a>.
+        A weapon's damage roll scalar is based off the weapon's efficiency and the strength/dexterity (depending on
+        weapon) of the attacker. The weapon damage scalar formula is:
+        <span class="code">[weapon efficiency]&times;(1+[elemental bonus])&times;(1+[character damage bonus]+[fighting
+            style bonus])</span>
+    </p>
+    <h4 class="rose">Magic Damage</h4>
+    <p>
+        Magic damage uses
+        <a class="content-link" data-uuid="Compendium.celestus.rules.ZAI3vnbUDstT5Pix" data-id="ZAI3vnbUDstT5Pix">
+            a formula that scales purely off of level</a>.
+        A skill will describe the base damage multiplier and the overall scalar can be calculated with the skill damage
+        scalar formula: <span class="code">[base multiplier]&times;(1+[elemental bonus])&times;(1+[character damage
+            bonus])</span>
+    </p>
+    <h4 class="rose">Critical Hits</h4>
+    <p>
+        When rolling damage for a critical hit, multiply the final value by the attacker's critical hit multiplier.
+    </p>
+    </div>
+</div>
+<div class="section">
     <h2 class="b-aqua">Attributes</h2>
     <p>Attributes, sometimes referred to as Primary Attributes, are
-        <a class="content-link" draggable="true" data-uuid="Compendium.celestus.rules.S3EUjWbDbCFacOFo"
-            data-id="S3EUjWbDbCFacOFo">
+        <a class="content-link" data-uuid="Compendium.celestus.rules.S3EUjWbDbCFacOFo" data-id="S3EUjWbDbCFacOFo">
             six different scores</a>
         that represent a character's physical and mental characteristics.
     </p>
