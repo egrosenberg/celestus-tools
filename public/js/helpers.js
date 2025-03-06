@@ -59,6 +59,18 @@ $(document).ready(() => {
             window.open(path, '_blank').focus();
         }
     });
+    /**
+     * Collapsible headers
+     */
+    $(document).on("click", ".collapse-header", async (ev) => {
+        const id = ev.currentTarget.dataset.for;
+        const section = document.getElementById(id);
+        if (section.classList.contains("active")) {
+            $(section).slideUp("fast", () => section.classList.remove("active"));
+        } else {
+            $(section).slideDown("fast", () => section.classList.add("active"));
+        }
+    });
 })
 
 /**
