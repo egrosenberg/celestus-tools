@@ -23,7 +23,13 @@ function closeDropdowns() {
  * @param {String} query
  */
 function filterSearch(query) {
-    return searchIndex.filter(i => i.name.toUpperCase().includes(query.toUpperCase()));
+    const words = query.toUpperCase().split(" ");
+    return searchIndex.filter((i) => {
+        for (const word of words) {
+            if (!i.name.toUpperCase().includes(word)) return false;
+        }
+        return true;
+    });
 }
 
 /**
