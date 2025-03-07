@@ -1,12 +1,15 @@
-FROM node:8
-# Create app directory
-WORKDIR /usr/src/app# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+FROM node:22.12.0
+
+RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+
+WORKDIR /home/node/app
+
 COPY package*.json ./
+
 RUN npm install
-# If you are building your code for production
-# RUN npm install --only=production# Bundle app source
-COPY . .
-EXPOSE 3030
-CMD [ "npm", "start" ]
+
+COPY --chown=node:node . .
+
+EXPOSE 7777
+
+CMD [ "node", "index.js" ]
