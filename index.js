@@ -18,6 +18,7 @@ const browsers = new Map([
 // create content map
 const pages = new Map([
     ['quickstart', new Content("quickstart", "Rules Overview")],
+    ['character-creation', new Content("character-creation", "Character Creation")],
 ])
 
 const STATUS = {
