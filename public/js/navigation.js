@@ -21,6 +21,7 @@ function closeDropdowns() {
 /**
  * Get filtered index of items
  * @param {String} query
+ * @returns {Object[]}
  */
 function filterSearch(query) {
     const words = query.toUpperCase().split(" ");
@@ -53,6 +54,11 @@ function linkSearchTooltips() {
     });
 }
 
+/**
+ * 
+ * @param {Object[]} arr array of objects to render as list items
+ * @returns {String} html
+ */
 function renderSearchResults(arr) {
     let html = "";
     for (const entry of arr) {
@@ -68,7 +74,13 @@ $(document).ready(() => {
     /**
      * Get search index
      */
-    $.post('/index', (data) => searchIndex = JSON.parse(data));
+    $.post('/index', (data) => {
+        searchIndex = JSON.parse(data)
+
+        // initial population of search results
+        $("#search-results").html(renderSearchResults(searchIndex));
+        linkSearchTooltips();
+    });
     /**
      * Set active tab based on window pathname
      */
@@ -135,7 +147,7 @@ $(document).ready(() => {
         $("#search-results").slideDown(100);
     });
     $('.search-input').on('focusout ', () => {
-        $("#search-results").delay(400).slideUp(100);
+        $("#search-results").delay(1).slideUp(100);
     });
     // filter
     $('.search-input').on('keyup', (ev) => {
