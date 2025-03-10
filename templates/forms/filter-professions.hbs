@@ -3,11 +3,11 @@
     <button><i class="fa-solid fa-check"></i></button>
 </header>
 <div class="form-content">
-    <h1>Civil Ability Bonus</h1>
-    {{#each config.civilSkills}}
-    <input name="civilAbilities.{{text}}" type="checkbox" id="civilAbilities.{{text}}" class="hidden-check"
-        data-value="{{text}}" data-field="civilAbilities"></input>
-    <label for="civilAbilities.{{text}}" class="form-toggle">
+    <h1>Combat Ability Bonus</h1>
+    {{#each config.combatSkills}}
+    <input name="combatAbilities.{{text}}" type="checkbox" id="combatAbilities.{{text}}" class="hidden-check"
+        data-value="{{text}}" data-field="combatAbilities"></input>
+    <label for="combatAbilities.{{text}}" class="form-toggle">
         <i class="{{glyph}}"></i> {{label}}
     </label>
     {{/each}}

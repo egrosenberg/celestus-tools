@@ -235,7 +235,13 @@ function filterByParams(filters) {
                     }
                 }
                 else if (filter.mode === "or") {
-                    currentValid = Boolean(filter.values.find(f => f == String(byString(item, filter.id))));
+                    currentValid = Boolean(filter.values.find(f => {
+                        const val = byString(item, filter.id);
+                        if (Array.isArray(val)) {
+                            return val.includes(f)
+                        }
+                        return f == String(val);
+                    }));
                 }
                 if (!currentValid) {
                     valid = false;
