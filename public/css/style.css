@@ -674,21 +674,32 @@ table h3 {
 
 /* Browser List */
 .browser {
-    cursor: pointer;
     pointer-events: all;
     display: flex;
     flex-direction: column;
     height: 100%;
 
+}
+
+.browser-title {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.browser .head p {
+    color: lightgray;
+}
+
+ul.list {
+    cursor: pointer;
     /* Make text not selectable */
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
 
-ul.list {
     flex: 1;
     pointer-events: all;
     overflow: scroll;
