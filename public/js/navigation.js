@@ -26,6 +26,13 @@ function closeDropdowns() {
 function filterSearch(query) {
     const words = query.toUpperCase().split(" ");
     return searchIndex.filter((i) => {
+        if (i.statuses?.length) {
+            for (const status of i.statuses) {
+                for (const word of words) {
+                    if (status.toUpperCase().includes(word) || word.includes(status.toUpperCase())) return true;
+                }
+            }
+        }
         for (const word of words) {
             if (!i.name.toUpperCase().includes(word)) return false;
         }

@@ -38,11 +38,13 @@ export default class Browser {
         });
         // add data to index
         for (const entry of this._data) {
-            Index.push({
+            const obj = {
                 name: entry.name,
                 id: entry._id,
+                statuses: entry.system.statusEffects,
                 type: this.key
-            });
+            };
+            Index.push(obj);
         }
         // create paths
         this.paths = structuredClone(defaultPaths);
