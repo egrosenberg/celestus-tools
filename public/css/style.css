@@ -703,36 +703,39 @@ ul.list {
 
 .list-input {
     color: white;
-    width: 100%;
     background-color: var(--color-dark-3);
     border: none;
-    padding: 3px;
-    margin-bottom: 10px;
+    padding: 5px;
     font-size: var(--font-size-14);
-    border-bottom: thin white solid;
+    border: 1px solid var(--color-dark-6);
+    flex: 1;
 }
 
 .input {
+    display: flex;
+    flex-direction: row;
     position: relative;
     margin: 0px;
+    margin-bottom: 10px;
 }
 
 .input .filter-button {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    width: 20px;
-    height: 20px;
-    background: none;
-    color: white;
-    border: none;
+    background: var(--color-dark-3);
+    border: solid var(--color-dark-6);
+    border-width: 1px;
+    font-size: var(--font-size-16);
+    color: lightgray;
+    padding: 5px;
 
     text-shadow: black 0px 0px 8px;
     cursor: pointer;
+    display: inline-block;
+    flex: 0;
 }
 
 .input .filter-button:hover {
-    text-shadow: white 0px 0px 8px;
+    color: white;
+    background-color: var(--color-dark-2);
 }
 
 .list-header {
