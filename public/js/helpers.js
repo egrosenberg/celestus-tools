@@ -53,11 +53,73 @@ $(document).ready(() => {
         } catch {
             return console.error("Error: Linked Content does not exist on server.");
         }
+        const e = $(ev.currentTarget);
         if (ev.button === 0) {
-            window.location.href = path;
+            // check if element already exists
+            const existing = document.getElementById(e.data("uuid"));
+            if (existing) {
+                $("#overlay").append(existing);
+                return;
+            }
+            const promise = new Promise(function (resolve) {
+                // find which browser the item belongs to
+                const regex = /(?<=celestus.).+(?=\.)/;
+                const browse = regex.exec(e.data("uuid"))?.[0] ?? "";
+
+                const path = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
+                $.get(path, {}, (data) => {
+                    resolve($(data));
+                });
+                return;
+            });
+            const parent = $(e.closest(".item-display")[0] ?? e.closest(".popout")[0] ?? e.closest(".content")[0]);
+            const parentPosition = parent.position();
+            const position = e.position();
+            position.top += parentPosition.top + e.height();
+            position.left += parentPosition.left;
+            const description = await promise;
+            const popout = $(`<div class="popout" id="${e.data("uuid")}">
+                    <div class="popout-head">
+                        <div class="popout-name"></div>
+                        <div class="popout-buttons">
+                            <a class="exit-popout">
+                                <i class="fa-solid fa-xmark"></i> Close
+                            </a>
+                        </div>
+                    </div>
+                </div>`);
+            popout.append(description);
+            popout.modal();
+            popout.draggable({
+                cancel: ".description",
+                scroll: false,
+                contain: "#overlay",
+                start: (ev) => $("#overlay").append($(ev.currentTarget)),
+            });
+            popout.css({ top: position.top, left: position.left });
+            $("#overlay").append(popout);
+            // window.location.href = path;
         } else if (ev.button === 1) {
             window.open(path, '_blank').focus();
         }
+    });
+    /**
+     * Exit popouts
+     */
+    $(document).on("click", ".exit-popout", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        $(ev.currentTarget).closest(".popout").remove();
+    });
+    /**
+     * When click on popout, move to top
+     */
+    $(document).on("click", ".popout *", (ev) => {
+        ev.preventDefault();
+        // ignore if clicking on a content link
+        const classes = ev.currentTarget.classList;
+        if (classes.contains("content-link") || classes.contains("exit-popout")) return false;
+        $("#overlay").append($(ev.currentTarget).parents(".popout"));
     });
     /**
      * Collapsible headers

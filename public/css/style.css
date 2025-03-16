@@ -826,6 +826,63 @@ ul.list {
     flex: 2;
 }
 
+#overlay {
+    z-index: 450;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+#overlay > * {
+    pointer-events: all;
+}
+
+.popout {
+    position: absolute;
+    width: 400px;
+    box-shadow: 0 0 1em black;
+    border: thin solid var(--color-dark-1);
+    border-radius: 0.5em;
+}
+
+.popout-head {
+    background-color: var(--color-cool-5-90);  
+    padding: 0.3em;
+    cursor: move;
+    border-radius: 0.5em 0.5em 0 0;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popout-head .popout-name {
+    flex: 1;
+}
+
+.popout-head a {
+    font-size: var(--font-size-16);
+}
+
+.popout-head a.exit-popout {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.popout-head a.exit-popout:hover {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 8px var(--color-rose-1);
+}
+
+.popout .dice-flavor { 
+    border: none 0;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
 .popup-form {
     position: fixed;
     z-index: 1000;
@@ -969,7 +1026,7 @@ input[type=checkbox]:checked+label:hover {
 /* Tooltips */
 .ui-tooltip {
     width: 500px;
-    z-index: 9999;
+    z-index: 400;
     position: absolute;
     pointer-events: none;
 }
