@@ -56,6 +56,10 @@ body {
     --color-dark-4: #555;
     --color-dark-5: #666;
     --color-dark-6: #777;
+    --color-dark-2-25: rgba(34, 34, 34, 0.25);
+    --color-dark-2-50: rgba(34, 34, 34, 0.5);
+    --color-dark-2-75: rgba(34, 34, 34, 0.75);
+    --color-dark-2-90: rgba(34, 34, 34, 0.9);
 
     --color-aqua-1: #0D4142;
     --color-aqua-2: #007375;
@@ -884,6 +888,11 @@ ul.list {
 .popout .dice-flavor { 
     border: none 0;
     border-radius: 0 0 0.5em 0.5em;
+    background-color: var(--color-dark-2-90);
+}
+
+.popout .roll.description header i {
+    z-index: 449;
 }
 
 .popup-form {
