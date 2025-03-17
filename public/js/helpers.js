@@ -101,6 +101,7 @@ $(document).ready(() => {
             popout.css({ top: position.top, left: position.left });
             $("#overlay").append(popout);
             $(`#${e.data("uuid")} a`).tooltip();
+            linkTooltips();
             // window.location.href = path;
         } else if (ev.button === 1) {
             window.open(path, '_blank').focus();
