@@ -859,20 +859,23 @@ ul.list {
     justify-content: space-between;
 }
 
-.popout-head .popout-name {
-    flex: 1;
-}
 
 .popout-head a {
-    font-size: var(--font-size-16);
+    cursor: pointer;
 }
 
-.popout-head a.exit-popout {
-    cursor: pointer;
+.popout-head .popout-buttons {
+    font-size: var(--font-size-16);
     font-weight: bold;
 }
 
-.popout-head a.exit-popout:hover {
+.popout-head .popout-name {
+    flex: 1;
+    font-size: var(--font-size-14);
+    font-weight: normal;
+}
+
+.popout-head a:hover {
     text-decoration: none;
     color: white;
     text-shadow: 0 0 8px var(--color-rose-1);
@@ -1025,10 +1028,14 @@ input[type=checkbox]:checked+label:hover {
 
 /* Tooltips */
 .ui-tooltip {
-    width: 500px;
-    z-index: 400;
+    z-index: 500;
     position: absolute;
     pointer-events: none;
+    background-color: var(--color-cool-5-90);
+    padding: 0.5em;
+    width: auto;
+    font-weight: bold;
+    border-radius: 0.5em;
 }
 
 body .ui-tooltip {
@@ -1036,12 +1043,15 @@ body .ui-tooltip {
 }
 
 .ui-tooltip.content-description {
+    font-weight: normal;
+    width: 500px;
     background-color: var(--color-dark-2);
     max-height: 600px;
     overflow-y: hidden;
     border: 5px solid var(--color-dark-6);
     background-color: var(--color-dark-2);
     padding: 0.4em;
+    border-radius: 0;
 }
 
 .content-description p {

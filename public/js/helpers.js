@@ -24,7 +24,7 @@ function linkTooltips() {
                 // check if page is 404
                 const path = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
                 $.get(path, {}, (data) => {
-                    callback($(data).addClass("ui-tooltip"));
+                    callback($(data).addClass("ui-tooltip").addClass("content-description"));
                 });
                 return;
             }
@@ -34,6 +34,7 @@ function linkTooltips() {
 }
 
 $(document).ready(() => {
+    $( document ).tooltip();
     /**
      * Link all tooltips (even if not a browser page)
      */
@@ -62,12 +63,8 @@ $(document).ready(() => {
                 return;
             }
             const promise = new Promise(function (resolve) {
-                // find which browser the item belongs to
-                const regex = /(?<=celestus.).+(?=\.)/;
-                const browse = regex.exec(e.data("uuid"))?.[0] ?? "";
-
-                const path = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
-                $.get(path, {}, (data) => {
+                const descriptionPath = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
+                $.get(descriptionPath, {}, (data) => {
                     resolve($(data));
                 });
                 return;
@@ -80,9 +77,14 @@ $(document).ready(() => {
             const description = await promise;
             const popout = $(`<div class="popout" id="${e.data("uuid")}">
                     <div class="popout-head">
-                        <div class="popout-name"></div>
+                        <div class="popout-name">
+                            <a class="copy-text" data-text="${window.location.origin}${path}" title="Copy URL to keyboard">
+                                <i class="fa-solid fa-book"></i>
+                                ${e.data("id")}
+                            </a>
+                        </div>
                         <div class="popout-buttons">
-                            <a class="exit-popout">
+                            <a class="exit-popout" title="Close Popup">
                                 <i class="fa-solid fa-xmark"></i> Close
                             </a>
                         </div>
@@ -98,6 +100,7 @@ $(document).ready(() => {
             });
             popout.css({ top: position.top, left: position.left });
             $("#overlay").append(popout);
+            $(`#${e.data("uuid")} a`).tooltip();
             // window.location.href = path;
         } else if (ev.button === 1) {
             window.open(path, '_blank').focus();
@@ -109,7 +112,7 @@ $(document).ready(() => {
     $(document).on("click", ".exit-popout", (ev) => {
         ev.preventDefault();
         ev.stopPropagation();
-        $(ev.currentTarget).closest(".popout").remove();
+        $(ev.currentTarget).closest(".popout").fadeOut(300, function () { $(this).remove(); });
     });
     /**
      * When click on popout, move to top
@@ -132,6 +135,13 @@ $(document).ready(() => {
         } else {
             $(section).slideDown("fast", () => section.classList.add("active"));
         }
+    });
+    /**
+     * Copy text on click of a.copy-text
+     */
+    $(document).on("click", ".copy-text", (ev) => {
+        ev.preventDefault();
+        navigator.clipboard.writeText($(ev.currentTarget).data("text"));
     });
 })
 
