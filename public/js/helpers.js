@@ -80,7 +80,7 @@ $(document).ready(() => {
                         <div class="popout-name">
                             <a class="copy-text" data-text="${window.location.origin}${path}" title="Copy URL to keyboard">
                                 <i class="fa-solid fa-book"></i>
-                                ${e.data("id")}
+                                ${browse[0].toUpperCase()+browse.slice(1)}/${description.find(".title").text()}
                             </a>
                         </div>
                         <div class="popout-buttons">
