@@ -56,12 +56,8 @@ $(document).ready(() => {
         }
         const e = $(ev.currentTarget);
         if (ev.button === 0) {
-            // check if element already exists
-            const existing = document.getElementById(e.data("uuid"));
-            if (existing) {
-                $("#overlay").append(existing);
-                return;
-            }
+            // remove any existing windows
+            await $(document.getElementById(e.data("uuid"))).remove();
             const promise = new Promise(function (resolve) {
                 const descriptionPath = `/resources/descriptions?type=${browse}&id=${e.data("id")}`;
                 $.get(descriptionPath, {}, (data) => {
