@@ -50,6 +50,7 @@ hbs.loadPartials([
     "./templates/browse/parts/talents-list.hbs",
     "./templates/browse/parts/rules-list.hbs",
     "./templates/parts/navigation.hbs",
+    "./templates/parts/js-includes.hbs",
 ]);
 
 const app = express();
@@ -89,6 +90,7 @@ app.get('/content/:page', async (req, res) => {
     const page = pages.get(req.params.page);
     const content = await page.render();
     if (!content) return res.redirect('/404/');
+    if (typeof req.query.bare !== "undefined") return res.send(content);
     const html = await hbs.renderFromTemplate('templates/content-page.hbs', {
         title: page.title,
         name: page.key,
@@ -110,6 +112,17 @@ app.get('/browse/:browser', async (req, res) => {
             list: list,
             description
         });
+        // if request is for bare, only return content
+        if (typeof req.query.bare !== "undefined") {
+            return res.send(`
+                <div class="browser" id="list">
+                    ${list}
+                </div>
+                <div class="item-display" id="description">
+                    ${description}
+                </div>
+            `);
+        }
         return res.send(msg);
     }
     return res.redirect('/404/');
