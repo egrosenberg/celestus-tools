@@ -4,14 +4,22 @@ var domList;
 var listItems;
 var items = new Map();
 
-const pathname = window.location.pathname.split("/");
+let pathname, filtersID, orderKeyID, orderAscending;
 let pageIndex = "";
-while (pageIndex === "") {
-    pageIndex = pathname.pop();
+
+/**
+ * Sets all variables needed in order to get the names for associated cookies with this page
+ */
+function prepCookieParams() {
+    pathname = window.location.pathname.split("/");
+    pageIndex = "";
+    while (pageIndex === "") {
+        pageIndex = pathname.pop();
+    }
+    filtersID = `${pageIndex}-searchFilters`;
+    orderKeyID = `${pageIndex}-orderKey`;
+    orderAscending = `${pageIndex}-orderAscending`;
 }
-const filtersID = `${pageIndex}-searchFilters`;
-const orderKeyID = `${pageIndex}-orderKey`;
-const orderAscending = `${pageIndex}-orderAscending`;
 
 /**
  * Selects an item from browser list and displays its description
@@ -43,7 +51,14 @@ async function selectItem(target) {
     }
 }
 
-$(document).ready(async () => {
+/**
+ * Initializes browser data and does first filter and select
+ */
+async function initializeBrowser() {
+    // only init browser if it is an actual browser page
+    if (!window.location.pathname.startsWith("/browse")) return;
+    prepCookieParams();
+
     if (!localStorage.getItem(filtersID)) {
         localStorage.setItem(filtersID, "[]")
     }
@@ -88,6 +103,11 @@ $(document).ready(async () => {
 
     // link tooltips
     linkTooltips();
+}
+
+$(document).ready(async () => {
+    // initialize browser data
+    await initializeBrowser();
 
     // show skill description when clicking on a skill
     $(document).on("click", ".browser-item", (ev) => {

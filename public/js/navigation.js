@@ -1,4 +1,4 @@
-/*global $ */
+/*global $ initializeBrowser */
 
 let searchIndex = [];
 
@@ -77,21 +77,12 @@ function renderSearchResults(arr) {
     return html;
 }
 
-$(document).ready(() => {
-    /**
-     * Get search index
-     */
-    $.post('/index', (data) => {
-        searchIndex = JSON.parse(data)
-
-        // initial population of search results
-        $("#search-results").html(renderSearchResults(searchIndex));
-        linkSearchTooltips();
-    });
-    /**
-     * Set active tab based on window pathname
-     */
+/**
+ * Set active tab based on window pathname
+ */
+function setActiveNavTab() {
     $('.navigation .tab').each((i, e) => {
+        e.classList.remove("active");
         if (window.location.pathname === $(e).data("dest")) {
             e.classList.add("active");
         }
@@ -105,17 +96,80 @@ $(document).ready(() => {
             });
         }
     })
+}
+
+$(document).ready(() => {
+    /**
+     * Get search index
+     */
+    $.post('/index', (data) => {
+        searchIndex = JSON.parse(data)
+
+        // initial population of search results
+        $("#search-results").html(renderSearchResults(searchIndex));
+        linkSearchTooltips();
+    });
+
+    // set active tab
+    setActiveNavTab();
+
     /**
      * Direct navigation buttons and dropdown items
      */
     $('.navigation').on('mousedown', '.tab.direct,.dropdown-item', (ev) => {
         ev.preventDefault();
-        console.log(ev.button);
         if (ev.currentTarget.classList.contains("active")) return;
         if (ev.button === 0) {
-            window.location.href = $(ev.currentTarget).data("dest");
+            const path = $(ev.currentTarget).data("dest");
+            // if link is to a content or browser page, fetch content
+            if (path.startsWith("/browse") || path.startsWith("/content")) {
+                // get content and and replace content div in page
+                $.get({
+                    url: path + "?bare",
+                    data: "html",
+                    success: (data) => {
+                        // replace content
+                        $(".content").html($(data));
+                        // push history state to url
+                        window.history.pushState({ "html": data, "pageTitle": path }, "", path);
+                        // set content type based on path
+                        if (path.startsWith("/browse")) {
+                            // initialize browser data
+                            initializeBrowser?.();
+                            $(".content").addClass("thin");
+                        }
+                        else {
+                            $(".content").removeClass("thin");
+                        }
+                        // set proper active tab in navigation
+                        setActiveNavTab();
+                    }
+                });
+            }
+            else {
+                window.location.href = path;
+            }
         } else if (ev.button === 1) {
             window.open($(ev.currentTarget).data("dest"), '_blank').focus();
+        }
+    });
+    /**
+     * listen to history pop state
+     */
+    window.addEventListener("popstate", (e) => {
+        if(e.state){
+            document.getElementById("content").innerHTML = e.state.html;
+            document.title = e.state.pageTitle;
+            initializeBrowser();
+            const path = window.location.pathname;
+            if (path.startsWith("/browse")) {
+                // initialize browser data
+                initializeBrowser?.();
+                $(".content").addClass("thin");
+            }
+            else {
+                $(".content").removeClass("thin");
+            }
         }
     });
     /**
@@ -164,7 +218,6 @@ $(document).ready(() => {
     });
     // click results
     $(document).on('mousedown', '.search-result', (ev) => {
-        console.log(ev);
         const type = ev.currentTarget.dataset.type;
         const id = ev.currentTarget.dataset.id;
         let url = `/browse/${type}/?item=${id}`;

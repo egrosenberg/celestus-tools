@@ -33,7 +33,7 @@ const STATUS = {
 };
 
 const HOSTS = [
-    "rules.crowsnest.me",
+    "celestus.info",
     "127.0.0.1",
     "192.168.1.39"
 ];
