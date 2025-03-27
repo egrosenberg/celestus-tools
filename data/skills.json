@@ -636,7 +636,7 @@
                 "finalRange": ""
             },
             "effects": [],
-            "sort": 0,
+            "sort": 100000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -649,7 +649,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736131547572,
-                "modifiedTime": 1736276245201,
+                "modifiedTime": 1741327542357,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -2540,7 +2540,7 @@
                 "finalRange": "30 ft."
             },
             "effects": [],
-            "sort": 0,
+            "sort": 200000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -2553,7 +2553,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736131284436,
-                "modifiedTime": 1737613411957,
+                "modifiedTime": 1741327542357,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -6330,7 +6330,7 @@
             "_id": "EmCLdkP42INVykH6",
             "img": "icons/magic/earth/explosion-lava-stone-yellow.webp",
             "system": {
-                "description": "<p>You send tremors through the ground in a 60-foot radius, damage and knocking down enemy creatures within range. Has no effect on flying creatures.</p><p>★ Sets @UUID[Compendium.celestus.rules.m4Sd3wSukc9j0o3h]{Prone} (Resisted by Physical Armor)</p>",
+                "description": "<p>You send tremors through the ground in a 60-foot radius, dealing 100% Earth damage to and knocking down enemy creatures within range. Has no effect on flying creatures.</p><p>★ Sets @UUID[Compendium.celestus.rules.m4Sd3wSukc9j0o3h]{Prone} (Resisted by Physical Armor)</p>",
                 "ap": 3,
                 "fp": 0,
                 "cooldown": {
@@ -6419,7 +6419,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736058987014,
-                "modifiedTime": 1736276000107,
+                "modifiedTime": 1742959688891,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -6721,7 +6721,7 @@
             "_id": "FzrRLQ24oBkEPUzT",
             "img": "icons/magic/fire/barrier-shield-explosion-yellow.webp",
             "system": {
-                "description": "<p>You sling a orb of flame at a point you can see within range and then erupts into a ball of flame, leaving a fiery surface in its wake. Each creature within a 15-foot radius of that point takes 100% Fire Damage.</p><p><span title=\"Copy to Clipboard\" class=\"copy-the-code-shortcode\" data-target data-button-text=\"★\" data-button-copy-text=\"Copied to Clipboard\" data-content=\"★\" data-copy-as=\"text\" data-link style=\"color:\">★ </span>Sets @UUID[Compendium.celestus.rules.5WnOnUhH4LYfPLlZ]{Burning} (Resisted by Magic Amor).</p>",
+                "description": "<p>You sling a orb of flame at a point you can see within range. It erupts into a plume of fire that leaves a burning surface in its wake. Each creature within a 15-foot radius of that point takes 100% Fire Damage.</p><p><span title=\"Copy to Clipboard\" class=\"copy-the-code-shortcode\" data-target data-button-text=\"★\" data-button-copy-text=\"Copied to Clipboard\" data-content=\"★\" data-copy-as=\"text\" data-link style=\"color:\">★ </span>Sets @UUID[Compendium.celestus.rules.5WnOnUhH4LYfPLlZ]{Burning} (Resisted by Magic Amor).</p>",
                 "ap": 2,
                 "fp": 0,
                 "cooldown": {
@@ -6811,7 +6811,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735963937511,
-                "modifiedTime": 1738374408008,
+                "modifiedTime": 1740897274308,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -7147,8 +7147,8 @@
                 "ability": "none",
                 "attack": true,
                 "targets": {
-                    "count": 0,
-                    "type": "none",
+                    "count": 3,
+                    "type": "creature",
                     "size": 0
                 },
                 "range": 0,
@@ -7176,8 +7176,8 @@
                     "texture": null
                 },
                 "channelDuration": 0,
-                "targetMode": false,
-                "finalRange": "Uses weapon range"
+                "targetMode": "3 Creatures",
+                "finalRange": ""
             },
             "effects": [],
             "sort": 0,
@@ -7193,7 +7193,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736133976448,
-                "modifiedTime": 1736276257767,
+                "modifiedTime": 1741330056310,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -7542,7 +7542,7 @@
                 },
                 "damage": [],
                 "ability": "none",
-                "attack": false,
+                "attack": true,
                 "targets": {
                     "count": 1,
                     "type": "creature",
@@ -7590,7 +7590,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737830049883,
-                "modifiedTime": 1740870439870,
+                "modifiedTime": 1741330481720,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -10879,7 +10879,7 @@
             "_id": "QSz3BAmhkP3rL2yv",
             "img": "icons/skills/melee/sword-winged-holy-orange.webp",
             "system": {
-                "description": "<p>You leap into the air and strike downwards as you land a point you can see within range, dealing 15% Physical Damage to each creature within a 5-foot radius of where you land.</p><p>Cannot be used while Grounded.</p>",
+                "description": "<p>You leap into the air and strike downwards as you land a point you can see within 60 feet, dealing 15% Physical Damage to each creature within a 5-foot radius of where you land.</p><p>Cannot be used while Grounded.</p>",
                 "ap": 1,
                 "fp": 0,
                 "cooldown": {
@@ -10966,7 +10966,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736137950804,
-                "modifiedTime": 1737666218583,
+                "modifiedTime": 1742659107494,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -11910,7 +11910,7 @@
                 "finalRange": "60 ft."
             },
             "effects": [],
-            "sort": 0,
+            "sort": 100000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -11923,7 +11923,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736057403333,
-                "modifiedTime": 1740183032291,
+                "modifiedTime": 1741328424180,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -12576,8 +12576,8 @@
                 "ability": "none",
                 "attack": true,
                 "targets": {
-                    "count": 0,
-                    "type": "none",
+                    "count": 3,
+                    "type": "creature",
                     "size": 0
                 },
                 "range": 0,
@@ -12606,11 +12606,11 @@
                     "texture": null
                 },
                 "channelDuration": 0,
-                "targetMode": false,
-                "finalRange": "Uses weapon range"
+                "targetMode": "3 Creatures",
+                "finalRange": ""
             },
             "effects": [],
-            "sort": 0,
+            "sort": 400000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -12623,7 +12623,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736131775803,
-                "modifiedTime": 1737508354698,
+                "modifiedTime": 1741330077710,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -14471,7 +14471,7 @@
                 "finalRange": "Touch"
             },
             "effects": [],
-            "sort": 0,
+            "sort": 200000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -14484,7 +14484,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736058814791,
-                "modifiedTime": 1736275983387,
+                "modifiedTime": 1741328424180,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -18478,8 +18478,8 @@
                 "ap": 2,
                 "fp": 0,
                 "cooldown": {
-                    "value": 5,
-                    "max": 0
+                    "value": 0,
+                    "max": 5
                 },
                 "components": {
                     "verbal": true,
@@ -18562,7 +18562,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735973049849,
-                "modifiedTime": 1736276612914,
+                "modifiedTime": 1742666632810,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -20635,7 +20635,7 @@
                 "linger": {
                     "surfaceType": "water",
                     "duration": 3,
-                    "effects": true,
+                    "effects": false,
                     "lingerDuration": -1,
                     "clearOnLeave": false,
                     "targets": "any",
@@ -20670,7 +20670,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735966739430,
-                "modifiedTime": 1738022105367,
+                "modifiedTime": 1742688859513,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -21206,7 +21206,7 @@
                 },
                 "damage": [],
                 "ability": "none",
-                "attack": false,
+                "attack": true,
                 "targets": {
                     "count": 1,
                     "type": "creature",
@@ -21254,7 +21254,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1737830293965,
-                "modifiedTime": 1740870435596,
+                "modifiedTime": 1741416485912,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": true
@@ -22309,7 +22309,7 @@
                 "finalRange": "90 ft."
             },
             "effects": [],
-            "sort": 0,
+            "sort": 300000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -22322,7 +22322,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736130918811,
-                "modifiedTime": 1736276236286,
+                "modifiedTime": 1741327542357,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -23639,8 +23639,8 @@
                 "tier": 2,
                 "aoeLinger": false,
                 "linger": {
-                    "duration": 4,
-                    "surfaceType": "ice",
+                    "duration": null,
+                    "surfaceType": "none",
                     "effects": false,
                     "targets": "any",
                     "targetType": "humanoid",
@@ -23674,7 +23674,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1735972759728,
-                "modifiedTime": 1738012702824,
+                "modifiedTime": 1741414743326,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false
@@ -23963,7 +23963,7 @@
                     "img": "systems/celestus/svg/angry-eyes.svg",
                     "origin": "Compendium.celestus.skills.Item.v8dgT7p2wRt1tQqy",
                     "duration": {
-                        "rounds": 3,
+                        "rounds": 2,
                         "startTime": null,
                         "seconds": null,
                         "combat": null,
@@ -24009,7 +24009,7 @@
                         "systemId": "celestus",
                         "systemVersion": "0.0.1",
                         "createdTime": 1736137336443,
-                        "modifiedTime": 1737692384957,
+                        "modifiedTime": 1742689941826,
                         "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
                     }
                 }
@@ -24696,7 +24696,7 @@
                 "finalRange": "60 ft."
             },
             "effects": [],
-            "sort": 0,
+            "sort": 300000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -24709,7 +24709,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736058294883,
-                "modifiedTime": 1738734282373,
+                "modifiedTime": 1741328424180,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             },
             "inherited": false

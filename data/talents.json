@@ -59,7 +59,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -127,7 +128,7 @@
                 "canAlways": []
             },
             "effects": [],
-            "sort": 1300000,
+            "sort": 1700000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -140,7 +141,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736374003077,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -206,7 +207,8 @@
                         "phys_armor": 0,
                         "mag_armor": 0,
                         "t_phys_armor": 0,
-                        "t_mag_armor": 0
+                        "t_mag_armor": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -271,7 +273,7 @@
                 "canAlways": []
             },
             "effects": [],
-            "sort": 0,
+            "sort": 100000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -284,7 +286,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1740098629199,
-                "modifiedTime": 1740099108738,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -347,7 +349,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -476,7 +479,7 @@
                     }
                 }
             ],
-            "sort": 100000,
+            "sort": 500000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -489,7 +492,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361346845,
-                "modifiedTime": 1739306664799,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -552,7 +555,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -683,7 +687,7 @@
                     }
                 }
             ],
-            "sort": 0,
+            "sort": 200000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -696,7 +700,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736376463146,
-                "modifiedTime": 1736376557198,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -759,7 +763,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -890,7 +895,7 @@
                     }
                 }
             ],
-            "sort": 200000,
+            "sort": 600000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -903,7 +908,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736365152581,
-                "modifiedTime": 1738435230571,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -966,7 +971,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -1034,7 +1040,7 @@
                 "canAlways": []
             },
             "effects": [],
-            "sort": 400000,
+            "sort": 800000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -1047,7 +1053,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736360801097,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1110,7 +1116,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -1178,7 +1185,7 @@
                 "canAlways": []
             },
             "effects": [],
-            "sort": 500000,
+            "sort": 900000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -1191,7 +1198,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361082894,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1254,7 +1261,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -1385,7 +1393,7 @@
                     }
                 }
             ],
-            "sort": 0,
+            "sort": 300000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -1398,7 +1406,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736378198827,
-                "modifiedTime": 1737691778095,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1464,7 +1472,8 @@
                         "phys_armor": 0,
                         "mag_armor": 0,
                         "t_phys_armor": 0,
-                        "t_mag_armor": 0
+                        "t_mag_armor": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -1592,7 +1601,7 @@
                     }
                 }
             ],
-            "sort": 0,
+            "sort": 400000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -1605,7 +1614,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1738183829212,
-                "modifiedTime": 1738184390594,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1668,7 +1677,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -1777,7 +1787,7 @@
                         {
                             "key": "system.resources.ap.start",
                             "mode": 5,
-                            "value": "@system.resources.ap.max",
+                            "value": "@resources.ap.max",
                             "priority": null
                         },
                         {
@@ -1800,12 +1810,12 @@
                         "systemId": "celestus",
                         "systemVersion": "0.0.1",
                         "createdTime": 1736356963285,
-                        "modifiedTime": 1736357240608,
+                        "modifiedTime": 1741327904085,
                         "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
                     }
                 }
             ],
-            "sort": 600000,
+            "sort": 1000000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -1818,7 +1828,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736356671888,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1881,7 +1891,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -2012,7 +2023,7 @@
                     }
                 }
             ],
-            "sort": 700000,
+            "sort": 1100000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -2025,7 +2036,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736372067252,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2088,7 +2099,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -2219,7 +2231,7 @@
                     }
                 }
             ],
-            "sort": 800000,
+            "sort": 1200000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -2232,7 +2244,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736371556332,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2295,7 +2307,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -2426,7 +2439,7 @@
                     }
                 }
             ],
-            "sort": 900000,
+            "sort": 1300000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -2439,7 +2452,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736373666925,
-                "modifiedTime": 1739389115370,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2502,7 +2515,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -2570,7 +2584,7 @@
                 "canAlways": []
             },
             "effects": [],
-            "sort": 1000000,
+            "sort": 1400000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -2583,7 +2597,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361551118,
-                "modifiedTime": 1737683817762,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2646,7 +2660,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -2777,7 +2792,7 @@
                     }
                 }
             ],
-            "sort": 1100000,
+            "sort": 1500000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -2790,7 +2805,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736372775394,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2852,7 +2867,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -2990,7 +3006,7 @@
                 }
             ],
             "folder": "Nd8Y4X5YuQ7zsaYv",
-            "sort": 300000,
+            "sort": 700000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -3003,7 +3019,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736375869338,
-                "modifiedTime": 1736376078297,
+                "modifiedTime": 1742954752215,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -3066,7 +3082,8 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
-                        "shadow": 0
+                        "shadow": 0,
+                        "special": 0
                     },
                     "statusImmune": [],
                     "crit_bonus": 0,
@@ -3195,7 +3212,7 @@
                     }
                 }
             ],
-            "sort": 1200000,
+            "sort": 1600000,
             "ownership": {
                 "default": 0,
                 "ZJKmiL4ZAI5FH4eV": 3
@@ -3208,7 +3225,210 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361861999,
-                "modifiedTime": 1736376078313,
+                "modifiedTime": 1742954752215,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "Nd8Y4X5YuQ7zsaYv",
+            "name": "Spellblade",
+            "type": "feature",
+            "_id": "KrPEt947A8Siir5m",
+            "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
+            "system": {
+                "description": "<p>You have mastered weaving sword and sorcery. Through performing a 1 hour ritual, or as part of a rest, you can magically bind a melee weapon you possess to your magic. While wielding the bound weapon, you may use intelligence when calculating damage. Additionally, while wielding the bound weapon, you cannot be disarmed or @UUID[Compendium.celestus.rules.ApravHaqi2H9tSn2]{atrophied}.</p><p>For 1 action point, you can temporarily shunt to or retrieve your weapon from a pocket dimension.</p><p>You can only have one weapon bound in this way at a time, and attempting to bind another weapon will cause all other weapon's you are bound to to unbind. If the bound weapon is ever not on your person or in the pocket dimension for more than 24 hours the bond ceases.</p>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "equipped": true,
+                "type": "talent",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "special": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [
+                {
+                    "name": "Bound Weapon",
+                    "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
+                    "origin": "Compendium.celestus.talents.Item.KrPEt947A8Siir5m",
+                    "duration": {
+                        "rounds": null,
+                        "startTime": null,
+                        "seconds": null,
+                        "combat": null,
+                        "turns": null,
+                        "startRound": null,
+                        "startTurn": null
+                    },
+                    "disabled": false,
+                    "type": "status",
+                    "_id": "kW2zpSDR0bu1TbE9",
+                    "system": {
+                        "damage": [],
+                        "damageRiders": [],
+                        "resistedBy": "none",
+                        "combines": [],
+                        "removes": [],
+                        "blocks": [
+                            "atrophy"
+                        ],
+                        "triggers": [],
+                        "aura": {
+                            "has": false,
+                            "targetsSelf": true,
+                            "radius": 0,
+                            "targets": "any",
+                            "targetType": "humanoid",
+                            "clearOnLeave": true,
+                            "lingerDuration": 0,
+                            "children": []
+                        },
+                        "grantedSkills": [],
+                        "ownedItems": []
+                    },
+                    "changes": [],
+                    "description": "",
+                    "tint": "#ffffff",
+                    "transfer": false,
+                    "statuses": [],
+                    "sort": 0,
+                    "flags": {},
+                    "_stats": {
+                        "compendiumSource": null,
+                        "duplicateSource": null,
+                        "coreVersion": "12.331",
+                        "systemId": "celestus",
+                        "systemVersion": "0.0.1",
+                        "createdTime": 1743090534505,
+                        "modifiedTime": 1743090752502,
+                        "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+                    }
+                }
+            ],
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1743090468058,
+                "modifiedTime": 1743090738283,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         }
