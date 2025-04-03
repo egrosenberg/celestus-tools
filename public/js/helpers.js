@@ -7,17 +7,9 @@ function linkTooltips() {
     $(function () {
         $("a.content-link").tooltip({
             items: "*",
-            position: { collision: 'none' },
+            position: { collision: 'none', my: "left top", at: "left bottom"},
             content: function (callback) {
                 const e = $(this);
-                const position = e.position();
-                let top, left, x, y;
-                if (position.left < window.outerWidth / 2) {
-                    left = true;
-                }
-                if (position.top < window.outerHeight / 2) {
-                    top = true;
-                }
                 // find which browser the item belongs to
                 const regex = /(?<=celestus.).+(?=\.)/;
                 const browse = regex.exec(e.data("uuid"))?.[0] ?? "";
@@ -34,7 +26,9 @@ function linkTooltips() {
 }
 
 $(document).ready(() => {
-    $( document ).tooltip();
+    $(document).tooltip({
+        position: { my: "center top", at: "center bottom" }
+    });
     /**
      * Link all tooltips (even if not a browser page)
      */
@@ -76,12 +70,15 @@ $(document).ready(() => {
                         <div class="popout-name">
                             <a class="copy-text" data-text="${window.location.origin}${path}" title="Copy URL to keyboard">
                                 <i class="fa-solid fa-book"></i>
-                                ${browse[0].toUpperCase()+browse.slice(1)}/${description.find(".title").text()}
+                                ${browse[0].toUpperCase() + browse.slice(1)}/${description.find(".title").text()}
                             </a>
                         </div>
                         <div class="popout-buttons">
+                            <a class="open-popout-link" title="Open In New Tab" data-path="${window.location.origin}${path}">
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
                             <a class="exit-popout" title="Close Popup">
-                                <i class="fa-solid fa-xmark"></i> Close
+                                <i class="fa-solid fa-xmark"></i>
                             </a>
                         </div>
                     </div>
@@ -109,7 +106,15 @@ $(document).ready(() => {
     $(document).on("click", ".exit-popout", (ev) => {
         ev.preventDefault();
         ev.stopPropagation();
-        $(ev.currentTarget).closest(".popout").fadeOut(300, function () { $(this).remove(); });
+        $(ev.currentTarget).closest(".popout").slideUp(150, function () { $(this).remove(); });
+    });
+    /**
+     * Open popup in new tab
+     */
+    $(document).on("click", ".open-popout-link", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        window.open($(ev.currentTarget).data("path"), '_blank').focus();
     });
     /**
      * When click on popout, move to top
