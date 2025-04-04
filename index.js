@@ -19,6 +19,7 @@ const browsers = new Map([
 const pages = new Map([
     ['quickstart', new Content("quickstart", "Rules Overview")],
     ['character-creation', new Content("character-creation", "Character Creation")],
+    ['foundry-guide', new Content("foundry-guide", "Foundry Guide")],
 ])
 
 const STATUS = {

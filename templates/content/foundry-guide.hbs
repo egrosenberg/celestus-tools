@@ -1,0 +1,567 @@
+<h1 class="ul-aqua">Foundry Visual Guide</h1>
+<div class="section" id="you-can-always">
+    This document will go over the Celestus specific foundry ui elements, focusing mostly on the character sheet.
+</div>
+<h1 class="ul-amber collapse-header" id="charsheet" data-for="collapse-charsheet" title="Click to hide/show.">
+    The Character Sheet
+</h1>
+<div class="collapsible active" id="collapse-charsheet">
+    <div class="section">
+        <div class="image-wide">
+            <img src="/img/foundry-screenshots/full-sheet.webp">
+            <div class="description">
+                A screenshot of a Celestus character sheet in Foundry.
+            </div>
+        </div>
+    </div>
+    <h2 class="collapse-header b-amber" data-for="collapse-charinfo" id="charinfo" title="Click to hide/show.">
+        Character Info / Header
+    </h2>
+    <div class="collapsible active" id="collapse-charinfo">
+        <div class="section">
+            <div class="image-wide section collapse-header" data-for="character-header-img"
+                title="Click to hide/show image.">
+                <div class="collapsible active" id="character-header-img">
+                    <img class="active" src="/img/foundry-screenshots/character-header.webp" width="586">
+                </div>
+                <div class="description">
+                    A screenshot of the character sheet header, it's bottom half is transposed beside the top half.
+                </div>
+            </div>
+            <div>
+                <h3 class="ul-amber">The Character Sheet Header</h3>
+                <p class="no-bottom">
+                    The character sheet header is a vertical scrollable element that contains much of the most
+                    basic
+                    and essential information about a character. The character sheet header is broken into seven
+                    sections:
+                </p>
+                <ul>
+                    <li>Basic Info</li>
+                    <li>Resources</li>
+                    <li>Weapon Damage</li>
+                    <li>Attributes</li>
+                    <li>Resistances</li>
+                    <li>Bonuses</li>
+                    <li>Languages</li>
+                </ul>
+            </div>
+            <div class="section paired-content">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/header/basic-info.webp" width="266" height="465" style="flex: 0">
+                    <div class="description" style="width:266px">
+                        A screenshot of the character sheet header's basic info section.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Basic Info</h3>
+                    <p>
+                        The first section of the character sheet contains basic character info. This includes the
+                        character's portrait, name, creature type, level, exhaustion, movement, and initiative.
+                    </p>
+                    <p>
+                        The character portrait has a small gear icon in the bottom right corner, clicking on this
+                        will
+                        open a configuration menu where you can toggle an optional portrait frame as well as change
+                        the
+                        actor's token's pointer color.
+                    </p>
+                    <p>
+                        The character name field is a simple text input field where you can input a character's
+                        name.
+                        The creature type field is a searchable dropdown that can be used to select the creature's
+                        type
+                        from the list of all possible creature types.
+                    </p>
+                    <p>
+                        Following the creature type is four individual labels containing various pieces of
+                        information
+                        on the character.
+                    </p>
+                    <p>
+                        The character level is an editable text field that can be changed to level up or down a
+                        character. Changing its value will automatically alter the character's memorization
+                        abilities,
+                        attribute and ability points available, as well as any other variables tied to character
+                        level.
+                    </p>
+                    <p>
+                        The exhaustion level is also an editable text field which will automatically apply the
+                        effects
+                        of exhaustion.
+                        Any exhaustion levels are automatically removed upon using the rest button.
+                    </p>
+                    <p>
+                        Both the movement and initiative fields are automatically calculated and cannot be directly
+                        edited.
+                        Clicking the initiative will automatically add the actor to combat and roll initiative so
+                        long
+                        as it has an owned active token.
+                    </p>
+                    <p>
+                        Finally, there are three icons: refresh, rest, and combat. Hitting the refresh button will
+                        trigger a standard refresh of resources for ending a scene (health, armor, normal
+                        cooldowns).
+                        The second button triggers the effects of a rest. The third icon is an indicator of whether
+                        or
+                        not the character is currently involved in a combat.
+                    </p>
+                </div>
+            </div>
+            <div class="section paired-content">
+                <div class="image-tall" style="width:257px;">
+                    <img src="/img/foundry-screenshots/header/resources.webp" width="257" height="206">
+                    <div class="description">
+                        A screenshot of the character sheet resources section.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Resources</h3>
+                    <p>
+                        The second section in the character sheet header is the resources section.
+                    </p>
+                    <p>
+                        <a class="content-link" data-uuid="Compendium.celestus.rules.32cncHbHLvecLYmw"
+                            data-id="32cncHbHLvecLYmw">Action Points</a>
+                        and
+                        <a class="content-link" data-uuid="Compendium.celestus.rules.yraIEBlqV1ui6lpV"
+                            data-id="yraIEBlqV1ui6lpV">Focus Points</a>
+                        are visually represented and can be interacted with by clicking on their icons. Clicking an
+                        action/focus point icon will set the character's current total to that value. If the character's
+                        total is already at that value, it will lower it by one.
+                    </p>
+                </div>
+            </div>
+            <div class="section paired-content">
+                <div class="image-tall" style="width:257px;">
+                    <img src="/img/foundry-screenshots/header/weapon-damage.webp" width="257" height="160">
+                    <div class="description">
+                        A screenshot of the character sheet weapon damage breakdown.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Weapon Damage</h3>
+                    <p>
+                        The weapon damage section provides a breakdown of a character's total weapon damage.
+                        It is organized as a list of each damage type as a minimum to maximum range as well as an
+                        average damage in parenthesis. There is an icon that shows which type of damage each component
+                        is and hovering over a damage component provides its damage type as written text.
+                    </p>
+                    <p>
+                        At the bottom of this section is a single entry for the total combined weapon damage.
+                    </p>
+                </div>
+            </div>
+            <div class="section paired-content">
+                <div class="image-tall" style="width:258px;">
+                    <img src="/img/foundry-screenshots/header/attributes.webp" width="258" height="233">
+                    <div class="description">
+                        A screenshot of the character sheet attributes section.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Attributes</h3>
+                    <p>
+                        The attributes section provides a breakdown of a character's
+                        <a class="content-link" data-uuid="Compendium.celestus.rules.3hjf9cfosUYnnxtP"
+                            data-id="3hjf9cfosUYnnxtP">Primary Attributes</a>.
+                    </p>
+                    <p>
+                        At the top of the section is a display of a character's total unspent attribute points. This
+                        will display as a negative if a player has overspent attribute points.
+                    </p>
+                    <p class="no-bottom">
+                        Each attribute is displayed as a row with 5 components:
+                    </p>
+                    <ul>
+                        <li>
+                            The row starts with a label containing
+                            the name of the attribute. Hovering over this name will display a tooltip that describes
+                            what
+                            that
+                            <a class="content-link" data-uuid="Compendium.celestus.rules.S3EUjWbDbCFacOFo"
+                                data-id="S3EUjWbDbCFacOFo">attribute</a>
+                            is responsible for.
+                        </li>
+                        <li>
+                            The name is followed by an input field that shows the character's base attribute value. This
+                            is a text field and can be used to manually edit a character's base attributes in order to
+                            spend attribute points.
+                        </li>
+                        <li>
+                            After the base attribute value is the total of all bonuses effecting that attribute, be it
+                            from statuses, features, or any other effect.
+                        </li>
+                        <li>
+                            Next is the calculated attribute total after accounting for all features and effects.
+                        </li>
+                        <li>
+                            Finally here is a value enclosed in parenthesis. This value represents the effective
+                            modification coming from that attribute. Wits only displays the percentage for crit chance
+                            as a character's initiative bonus is already displayed earlier on the sheet.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section paired-content">
+                <div class="image-tall" style="width:257px;">
+                    <img src="/img/foundry-screenshots/header/resistances.webp" width="257" height="149">
+                    <div class="description">
+                        A screenshot of the character sheet resistances section.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Resistances</h3>
+                    <p>
+                        The resistances section provides a list of a character's damage resistances and status
+                        immunities.
+                        Each damage resistance is displayed as the damage type and then the total resistance value.
+                        Status immunities are listed by name.
+                    </p>
+                </div>
+            </div>
+            <div class="section paired-content">
+                <div class="image-tall" style="width:257px;">
+                    <img src="/img/foundry-screenshots/header/bonuses.webp" width="257" height="229">
+                    <div class="description">
+                        A screenshot of the character sheet bonuses section.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Bonuses</h3>
+                    <p>
+                        The bonuses section displays many miscellaneous bonuses of a character. Each bonus is listed as
+                        name and its total percentage after applying all modifiers.
+                    </p>
+                </div>
+            </div>
+            <div class="section paired-content">
+                <div class="image-tall" style="width:257px;">
+                    <img src="/img/foundry-screenshots/header/languages.webp" width="257" height="103">
+                    <div class="description">
+                        A screenshot of the character sheet languages section.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Languages</h3>
+                    <p>
+                        the languages section lists all language proficiencies a character has. These can be modified by
+                        clicking the gear icon in the top right corner of the section. Pressing this button opens up a
+                        configuration menu where you can select any languages for a character to be proficient in.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="collapse-header b-amber" data-for="collapse-abilities" id="abilities" title="Click to hide/show.">
+        Abilities
+    </h2>
+    <div class="collapsible active" id="collapse-abilities">
+        <div class="image-wide section collapse-header" data-for="character-abilities-img"
+            title="Click to hide/show image.">
+            <div class="collapsible active" id="character-abilities-img">
+                <img class="active" src="/img/foundry-screenshots/abilities-tab.webp" width="936" height="728">
+            </div>
+            <div class="description collapse-header" data-for="character-abilities-img">
+                A screenshot of the character sheet abilities tab.
+            </div>
+        </div>
+        <div class="section">
+            <h3 class="ul-amber">The Character Abilities Tab</h3>
+            <p>
+                The abilities page is the first tab in the body of a character sheet. It lists all
+                <a class="content-link" data-uuid="Compendium.celestus.rules.YLzjrNGr6Q1BXscc"
+                    data-id="YLzjrNGr6Q1BXscc">civil</a> and
+                <a class="content-link" data-uuid="Compendium.celestus.rules.iuH7zrOpg909VkOR"
+                    data-id="iuH7zrOpg909VkOR">combat abilities</a>,
+                as well as a list of all
+                <a class="content-link" data-uuid="Compendium.celestus.rules.QbdFbQkWYH788N2x"
+                    data-id="QbdFbQkWYH788N2x">"you can always"</a>
+                options from a characters origin.
+            </p>
+            <div class="section paired-content">
+                <div class="image-tall" style="width:262;">
+                    <img src="/img/foundry-screenshots/abilities/you-can-always.webp" width="262" height="158">
+                    <div class="description">
+                        A screenshot of a character sheet's "You Can Always..." section, expanded.
+                    </div>
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">You Can Always...</h3>
+                    <p>
+                        At the top the abilities tab is a horizontal bar that says "You Can Always..." Clicking on this
+                        bar will expand a dropdown that lists all "you can always" options granted to a character by
+                        their origins. This can be used as a quick reference during play instead of opening each
+                        individual feature.
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="ul-amber">Ability Lists</h3>
+                <p>
+                    The majority of the ability tabs is filled out by lists of combat and civil abilities. The title of
+                    each section will display the number of unspent or overspent ability points if the character has
+                    any. Hovering over an ability label will display a tooltip describing its purpose or effects and
+                    clicking on one will open a dialog box that prompts a roll of an
+                    <a class="content-link" data-uuid="Compendium.celestus.rules.RhLk5CMny3L5KM6w"
+                        data-id="RhLk5CMny3L5KM6w"> ability check</a>.
+                </p>
+                <p>
+                    Following an ability label is an input field to set a character's invested ability points in a
+                    particular ability. Following that is the character's total bonus to that ability. Next is the
+                    character's final ability value after applying all bonuses. Finally, for combat abilities, enclosed
+                    in parenthesis is the character's total bonus they are receiving from that ability expressed as a
+                    percentage.
+                </p>
+            </div>
+        </div>
+    </div>
+    <h2 class="collapse-header b-amber" data-for="collapse-skills" id="skills" title="Click to hide/show.">
+        Skills
+    </h2>
+    <div class="collapsible active" id="collapse-skills">
+        <div class="image-wide section collapse-header" data-for="character-skills-img"
+            title="Click to hide/show image.">
+            <div class="collapsible active" id="character-skills-img">
+                <img class="active" src="/img/foundry-screenshots/skills-tab.webp" width="936" height="728">
+            </div>
+            <div class="description">
+                A screenshot of the character sheet skills tab.
+            </div>
+        </div>
+        <div class="section">
+            <p>
+                The skills page is the second tab on the character sheet and is broken into 3 sections: Always
+                Memorized,
+                Memorized, and Unmemorized. Each section lists all skills that can be currently described by that
+                memorization category.
+            </p>
+            <div class="paired-content">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/skills/single-skill.webp" width="179" height="153">
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-amber">Parts of a Skill Entry</h3>
+                    <p>
+                        The most noticeable part of a skill is it's icon, which can be used to quickly identify skills
+                        in a list. Hovering over a skill's icon will display a tooltip with the name of the skill.
+                        Clicking on a skill's icon will bring up a dialog that allows you to use the skill. If a
+                        skill requires more than one memory slot, there will be a number of gray brain icons to
+                        represent the additional memory slots it costs. There will also be a small icon in the bottom
+                        left corner of a skill icon that shows which school the skill belongs to, if the skill is
+                        unmemorized there will instead be numbers next to icons to describe the skill's memorization
+                        requirements.
+                    </p>
+                    <p>
+                        Below the skill's icon is the total
+                        <a class="content-link" data-uuid="Compendium.celestus.rules.32cncHbHLvecLYmw"
+                            data-id="32cncHbHLvecLYmw">action</a> and
+                        <a class="content-link" data-uuid="Compendium.celestus.rules.yraIEBlqV1ui6lpV"
+                            data-id="yraIEBlqV1ui6lpV">focus point</a> costs to use the skill represented as circles and
+                        diamonds respectively.
+                    </p>
+                    <p>
+                        Below the action / focus point cost is a span of skill controls. The brain icon can be used to
+                        memorize or unmemorize a skill, the notepad can be used to open up the skill's item sheet to
+                        edit it, and the trash can icon can be clicked to delete the skill. You can also right click the
+                        skill's icon to open it's item sheet.
+                    </p>
+                </div>
+            </div>
+            <h3 class="ul-amber">States of a Skill</h3>
+            <p>
+                If a memorized skill cannot be used currently for any reason, the skill's icon will be darkened and an
+                overlay will be placed on top of it indicating the status of the skill.
+            </p>
+            <div class="paired-content">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/skills/cooldown-number.webp" width="83" height="84">
+                </div>
+                <div class="flex5">
+                    <h4 class="amber">Cooldown</h4>
+                    <p>
+                        If a skill is on cooldown, there will be a large numeral overlayed on top of a stopwatch icon.
+                        The number that is displayed is the skill's current cooldown in rounds.
+                    </p>
+                </div>
+            </div>
+            <div class="paired-content">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/skills/cooldown-rest.webp" width="84" height="84">
+                </div>
+                <div class="flex5">
+                    <h4 class="amber">Extended Cooldown</h4>
+                    <p>
+                        If a skill has a cooldown that cannot be measured in rounds (e.g. a civil skill that only
+                        becomes useable again after a rest, or a combat skill that only becomes useable at the end of a
+                        scene) instead of a numeral being displayed, a circular sunset icon will be overlayed indicating
+                        that it cannot be used currently.
+                    </p>
+                </div>
+            </div>
+            <div class="paired-content">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/skills/cooldown-unavailable.webp" width="84" height="84">
+                </div>
+                <div class="flex5">
+                    <h4 class="amber">Unavailable</h4>
+                    <p>
+                        If a skill is otherwise unavailable a simple circle with a strikethrough will be overlayed on
+                        top of the icon to indicate it is as such. Some reasons a skill might be unavailable are a
+                        character being
+                        <a class="content-link" data-uuid="Compendium.celestus.rules.I9RkvpW5qGPRkeuv"
+                            data-id="I9RkvpW5qGPRkeuv">silenced</a>,
+                        <a class="content-link" data-uuid="Compendium.celestus.rules.ApravHaqi2H9tSn2"
+                            data-id="ApravHaqi2H9tSn2">disarmed</a>, or otherwise incapacitated.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="collapse-header b-amber" data-for="collapse-items" id="items" title="Click to hide/show.">
+        Items
+    </h2>
+    <div class="collapsible active" id="collapse-items">
+        <div class="image-wide section collapse-header" data-for="character-items-img"
+            title="Click to hide/show image.">
+            <div class="collapsible active" id="character-items-img">
+                <img class="active" src="/img/foundry-screenshots/items-tab.webp" width="936" height="728">
+            </div>
+            <div class="description">
+                A screenshot of the character sheet items tab.
+            </div>
+        </div>
+        <div class="section">
+            The items tab is where you can manage any physical inventory items your character might have. There are two
+            main sections of the items tab. At the top of the tab is a large section displaying a character's currently
+            equipped gear, the rest of the items tab display's all of a character's items and currency.
+        </div>
+        <h3 class="ul-amber">Equipped Gear</h3>
+        <p>
+            The first section of the equipped gear tab is a large area that shows each equipment slot and what the
+            character currently has equipped in each slot. Clicking on one of the slots opens up a small popup wherein
+            you can click on another piece of gear to equip it into that slot. Right clicking on a piece of gear in this
+            section will open up the item sheet for that piece of gear.
+        </p>
+        <h3 class="ul-amber">Currency</h3>
+        <p>
+            Below the equipped gear is a small section that lists each currency type and the character's current balance
+            of that coinage. Hovering over the coin icon for a type of currency will show the coin type's name. Each
+            currency has a text input field that can be used to modify a character's current balance. Any math formulas
+            entered will be automatically calculated and starting an input with a plus or minus symbol will either add
+            or subtract that value to the character's total.
+        </p>
+        <h3 class="ul-amber">Inventory Lists</h3>
+        <p>
+            The rest of the items page consists of itemized lists of each type of equipment a character can have.
+        </p>
+        <h4 class="amber">Armor List</h4>
+        <div class="image-wide section">
+            <img src="/img/foundry-screenshots/items/armor.webp" width="835" height="565">
+        </div>
+        <p>
+            The first inventory list is the armor list. The header describes the function of each column and at its end
+            is a button that allows you to create a new armor item on the character sheet.
+        </p>
+        <p>
+            Each item is represented by a single row in the armor list. At the beginning of each entry is the item's
+            icon, left clicking this icon will create a chat message describing the item and right clicking it will open
+            its item sheet. Beside the icon is the item's name.
+            Clicking an item's name will drop down the item's description below it. The second column of an armor entry
+            is its armor value, this is shown as its physical and magic armor values beside each other. The final column
+            of an armor entry is the item controls, the shield icon can be used to equip or unequip a piece of armor,
+            the notepad icon can be used to open its item sheet, and the trashcan icon can be used to delete it.
+        </p>
+        <h4 class="amber">Weapons List</h4>
+        <div class="image-wide section">
+            <img src="/img/foundry-screenshots/items/weapons.webp" width="836" height="134">
+        </div>
+        <p>
+            The second inventory list is the weapons list. This list is functionally the same as the armor list except
+            the value column displays a breakdown of the weapon's damage (calculated without damage bonuses).
+        </p>
+        <h4 class="amber">Offhands List</h4>
+        <div class="image-wide section">
+            <img src="/img/foundry-screenshots/items/offhands.webp" width="836" height="133">
+        </div>
+        <p>
+            The third inventory list is the offhands list. It functions the exact same as the armor list.
+        </p>
+        <h4 class="amber">Consumables List</h4>
+        <div class="image-wide section">
+            <img src="/img/foundry-screenshots/items/consumables.webp" width="836" height="132">
+        </div>
+        <p>
+            The third inventory list is the consumables list. It functions similarly to the lists before it except
+            instead of having a value column it has a quantity column. There is a text field to input a quantity or you
+            can use the plus and minus buttons beside the input to change the quantity.
+        </p>
+    </div>
+    <h2 class="collapse-header b-amber" data-for="collapse-features" id="features" title="Click to hide/show.">
+        Features
+    </h2>
+    <div class="collapsible active" id="collapse-features">
+        <div class="image-wide section collapse-header" data-for="character-features-img"
+            title="Click to hide/show image.">
+            <div class="collapsible active" id="character-features-img">
+                <img class="active" src="/img/foundry-screenshots/features-tab.webp" width="860" height="486">
+            </div>
+            <div class="description">
+                A screenshot of the character sheet features tab.
+            </div>
+        </div>
+        <div class="section">
+            <p>
+                The features page is similar in functionality to that of the items page. The features tab is split into
+                three sections for organizational purposes.
+            </p>
+            <ul>
+                <li>
+                    <b>The Origins Section</b> lists all of a character's
+                    <a class="content-link" data-uuid="Compendium.celestus.rules.8cfxxoH7Kydh4eW3"
+                        data-id="8cfxxoH7Kydh4eW3">origin features</a>.
+                </li>
+                <li>
+                    <b>The Talents Section</b> lists all of a character's
+                    <a class="content-link" data-uuid="Compendium.celestus.rules.kzohdS6QcsMQWF8h"
+                        data-id="kzohdS6QcsMQWF8h">talents</a>.
+                </li>
+                <li>
+                    <b>The Features Section</b> lists any other special features a character has been granted.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="collapse-header b-amber" data-for="collapse-biography" id="biography" title="Click to hide/show.">
+        Biography
+    </h2>
+    <div class="collapsible active" id="collapse-biography">
+        <div class="section">
+            The biography page is inhabited by a single text editor one can use to store information about their
+            character or save notes to their sheet throughout play.
+        </div>
+    </div>
+    <h2 class="collapse-header b-amber" data-for="collapse-effects" id="effects" title="Click to hide/show.">
+        Effects
+    </h2>
+    <div class="collapsible active" id="collapse-effects">
+        <div class="image-wide section collapse-header" data-for="character-effects-img"
+            title="Click to hide/show image.">
+            <div class="collapsible active" id="character-effects-img">
+                <img class="active" src="/img/foundry-screenshots/effects-tab.webp" width="899" height="488">
+            </div>
+            <div class="description">
+                A screenshot of the character sheet effects tab.
+            </div>
+        </div>
+        <div class="section">
+            <p>
+                The effects tab is similar in functionality and appearance to the inventory lists. The main difference
+                is the center of each entry is occupied by the name of the origin of the effect and the effect's
+                remaining duration. Additionally, the effect controls have a button disable or enable an effect, rather
+                than equip an item. As effects don't possess descriptions in the same way items do, left clicking an
+                effect will not do anything.
+            </p>
+        </div>
+    </div>
+</div>

@@ -52,7 +52,7 @@
             "_id": "32cncHbHLvecLYmw",
             "name": "Action Points",
             "system": {
-                "description": "<p>Action points (represented as green circles )are the primary resource needed for using skills in Initiative. Many skills require a certain amount of action points to use. While in initiative, a character must spend that many action points to use the skill, outside of initiative you can ignore these costs.</p><p>Characters have a starting AP and max AP value. At the start of each character’s turns they receive a number of action points equal to their starting value. A character can never have more action points than their max.</p>"
+                "description": "<p>Action points (represented as green circles) are the primary resource needed for using skills in Initiative. Many skills require a certain amount of action points to use. While in initiative, a character must spend that many action points to use the skill, outside of initiative you can ignore these costs.</p><p>Characters have a starting AP and max AP value. At the start of each character’s turns they receive a number of action points equal to their starting value. A character can never have more action points than their max.</p>"
             },
             "type": "Rule"
         },
@@ -337,6 +337,14 @@
             "type": "Status"
         },
         {
+            "_id": "bKI2wHDSnVkmvrk6",
+            "name": "Lifesteal",
+            "system": {
+                "description": "<p>Lifesteal is a percentage value that is derived from statuses, features, and abilities (namely, the deathbringer @UUID[Compendium.celestus.rules.iuH7zrOpg909VkOR]{combat ability}). When a character deals damage, they also heal an amount equal to the total damage dealt multiplied by their lifesteal percentage.</p>"
+            },
+            "type": "Rule"
+        },
+        {
             "_id": "bVS53wJUpbkPekh0",
             "name": "Skill Schools",
             "system": {
@@ -460,7 +468,7 @@
             "_id": "kcJXtk5NcqeIWPf9",
             "name": "Professions",
             "system": {
-                "description": "<p><span style=\"font-family:'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif\"><a href=\"https://celestus.info/browse/professions/\" title=\"Professions\">Professions</a> represent the skills your character maintains as they begin their adventure. These are the closest thing this system has to traditional \"character classes\". Are you a powerful Warrior who strikes down foes with their martial prowess? Or perhaps you are Pactbound, owing your magic to a powerful entity. Professions are an essential building block for your character's mechanical direction. Professions also have a @UUID[Compendium.celestus.rules.QbdFbQkWYH788N2x]{You Can Always...} section.</span></p>"
+                "description": "<p><span style=\"font-family:'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif\"><a href=\"https://celestus.info/browse/professions/\" title=\"Professions\">Professions</a> represent the skills your character maintains as they begin their adventure. These are the closest thing this system has to traditional \"character classes\". Are you a powerful @UUID[Compendium.celestus.professions.Kaip2yVYwrHcJU2X]{Warrior} who strikes down foes with their martial prowess? Or perhaps you are @UUID[Compendium.celestus.professions.ebivE3YBEMFQ2NsB]{Pactbound}, owing your magic to a powerful entity. Professions are an essential building block for your character's mechanical direction. Professions also have a @UUID[Compendium.celestus.rules.QbdFbQkWYH788N2x]{You Can Always...} section.</span></p>"
             },
             "type": "Rule"
         },
@@ -575,6 +583,14 @@
                 "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Physical Armor.</p><p><strong>Changes:</strong></p><ul><li><p>-2 Constitution</p></li><li><p>-35% Damage</p></li></ul>"
             },
             "type": "Status"
+        },
+        {
+            "_id": "8cfxxoH7Kydh4eW3",
+            "name": "Character Origins",
+            "system": {
+                "description": "<p>A character's origin represents who they were before their adventure and what they were as they began it. A character's origin is comprised of an @UUID[Compendium.celestus.rules.1K7OPa5ikLITwkPK]{ancestry}, a @UUID[Compendium.celestus.rules.5kaokmq8N0pTvdOL]{background}, and a @UUID[Compendium.celestus.rules.kcJXtk5NcqeIWPf9]{profession}.</p>"
+            },
+            "type": "Rule"
         }
     ]
 }
