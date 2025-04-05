@@ -7,7 +7,7 @@ function linkTooltips() {
     $(function () {
         $("a.content-link").tooltip({
             items: "*",
-            position: { collision: 'none', my: "left top", at: "left bottom"},
+            position: { collision: 'none', my: "left top", at: "left bottom" },
             content: function (callback) {
                 const e = $(this);
                 // find which browser the item belongs to
@@ -25,6 +25,49 @@ function linkTooltips() {
     });
 }
 
+/**
+ * Indicates wether a collapse-header is dropped down or not
+ * @param {Element} e DOM element to indicate
+ * @param {?Boolean} override boolean to not check target and just change icon
+ */
+function indicateCollapse(e, override = null) {
+    if (override !== null) {
+        $(e).find(".collapse-indicator").each((i, e) => $(e).remove());
+        let html = e.innerHTML.trimStart();
+        if (override) {
+            e.innerHTML = '<i class="fa-solid fa-circle-chevron-down collapse-indicator"></i>' + html;
+        }
+        else {
+            e.innerHTML = '<i class="fa-solid fa-circle-chevron-right collapse-indicator"></i>' +  html;
+        }
+        return;
+    }
+    // find corresponding collapse section
+    const target = document.getElementById($(e).data("for"));
+    if (target) {
+        // remove any existing indicators
+        $(e).find(".collapse-indicator").each((i, e) => $(e).remove());
+        let html = e.innerHTML.trimStart();
+        // check if target is expanded
+        const expanded = target.classList.contains("active");
+        if (expanded) {
+            e.innerHTML = '<i class="fa-solid fa-circle-chevron-down collapse-indicator"></i>' + html;
+        }
+        else {
+            e.innerHTML = '<i class="fa-solid fa-circle-chevron-right collapse-indicator"></i>' +  html;
+        }
+    }
+}
+
+/**
+ * Set collapse indicators on all h1.collapse-header elements
+ */
+function indicateCollapseHeads() {
+    $('h1.collapse-header,h2.collapse-header').each((i, e) => {
+        indicateCollapse(e);
+    });
+}
+
 $(document).ready(() => {
     $(document).tooltip({
         position: { my: "center top", at: "center bottom" }
@@ -33,6 +76,10 @@ $(document).ready(() => {
      * Link all tooltips (even if not a browser page)
      */
     linkTooltips();
+    /**
+     * Initialize chevrons for dropdowns
+     */
+    indicateCollapseHeads();
     /**
      * Link all content-links
      */
@@ -133,9 +180,19 @@ $(document).ready(() => {
         const id = ev.currentTarget.dataset.for;
         const section = document.getElementById(id);
         if (section.classList.contains("active")) {
-            $(section).slideUp("fast", () => section.classList.remove("active"));
+            $(section).slideUp("fast", () => {
+                if ($(ev.currentTarget).find(".collapse-indicator")) {
+                    indicateCollapse(ev.target, false);
+                }
+                section.classList.remove("active");
+            });
         } else {
-            $(section).slideDown("fast", () => section.classList.add("active"));
+            $(section).slideDown("fast", () => {
+                if ($(ev.currentTarget).find(".collapse-indicator")) {
+                    indicateCollapse(ev.target, true);
+                }
+                section.classList.add("active");
+            });
         }
     });
     /**

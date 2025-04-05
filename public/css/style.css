@@ -572,6 +572,11 @@ h6 {
     font-weight: bold;
 }
 
+.content i.collapse-indicator {
+    margin-right: 10px;
+}
+
+
 .content h2 {
     font-size: var(--font-size-32);
     margin: 0px 0px 10px 0px;
