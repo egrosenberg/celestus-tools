@@ -565,3 +565,236 @@
         </div>
     </div>
 </div>
+<h1 class="ul-aqua collapse-header" id="playing" data-for="collapse-playing" title="Click to hide/show.">
+    Playing The Game
+</h1>
+<div class="collapsible active" id="collapse-playing">
+    <h2 class="collapse-header b-aqua" data-for="collapse-hotbar" id="hotbar" title="Click to hide/show.">
+        Setting Up Your Hotbar
+    </h2>
+    <div class="collapsible active" id="collapse-hotbar">
+        <div class="image-wide section">
+            <img src="/img/foundry-screenshots/hotbar-populated.webp" width="627" height="75">
+            <div class="description">
+                A screenshot of a player's hotbar filled out with different skills.
+            </div>
+        </div>
+        <div class="section">
+            <p>
+                The hotbar or "macro bar" is a feature built into foundry that can allow players and GMs to quickly
+                access parts of character sheets, especially skills. Clicking on a macro corresponding to a skill or
+                item will achieve the same effect as clicking them on the character sheet. Hovering over a macro
+                associated with an item or skill will show the skill / item's description in the top right corner of the
+                play area.
+            </p>
+            <p>
+                There are two main ways to had skills or items to a player's hotbar. One option is to individually drag
+                skills and items from the character sheet onto the hotbar. The other method is to click the button with
+                the brain icon that is beside the hotbar. Clicking this button will automatically populate your hotbar
+                with all currently memorized skills. This function is especially useful for GMs who may want to quickly
+                see and use skills known by npcs without having to open their sheets.
+            </p>
+        </div>
+    </div>
+    <h2 class="collapse-header b-aqua" data-for="collapse-using-skill" id="using-skill" title="Click to hide/show.">
+        Using a Skill
+    </h2>
+    <div class="collapsible active" id="collapse-using-skill">
+        <div class="section">
+            <p>
+                Using a skill is one of the most common things you will do while playing a game of Celestus. The process
+                for
+                using a skill is one that is fairly straightforward. For more information on skills, check out the
+                <a href="/content/quickstart#skills">quickstart guide</a>.
+            </p>
+            <p>
+                There are two ways to use a skill in celestus: through the skills tab on a character's sheet, or by
+                clicking the skill's macro on the hotbar while controlling the character's token. No matter how you
+                initiate the process of using a skill, the rest of the process is the same.
+            </p>
+            <p>
+                Once you click on a skill, you will first be prompted if you would like to use the skill's resources.
+                Hitting no to this prompt will cause the skill to not consume action points or focus points. Skills will
+                not consume action points regardless of which option you pick if the character is not currently in
+                initiative. If for some reason the character is unable to use the skill, a warning will pop up in this
+                message alerting the user of why the skill is unavailable. If you wish to use a skill that a character
+                does not have the resources for or otherwise would be unable to use, you can always answer "no" to the
+                use resources prompt. You can also answer "no" if you simply want to post the skill's description in
+                chat. If you answer "no" to the use resources prompt, the chat message skill description will have a
+                blue background to signify no resources were spent.
+            </p>
+            <div class="paired-content section">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/skills/chat-message.webp" width="288" height="439">
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-aqua">The Chat Message</h3>
+                    <p>
+                        Once you have activated a skill, a message will be created in chat. This message will contain
+                        the character who used the skill as well as the player responsible for that character using it,
+                        a description of the skill, and buttons that can be used to perform the required actions of the
+                        skill. The only users that can activate these buttons are those who have ownership over the
+                        character that used the skill, or those with Game Master privileges.
+                    </p>
+                </div>
+            </div>
+            <div class="paired-content section">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/skills/attack-roll.webp" width="288" height="122">
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-aqua">Attack Rolls</h3>
+                    <p>
+                        Some skills may require an attack roll. In order to perform an attack roll, the attacker must
+                        first target all tokens they are attempting to attack. To do so, either use the foundry
+                        targeting tool or press t (or shift + t) while mousing over the token you would like to target.
+                        Once you have targeted all characters you would like to attack, click the button that says "Roll
+                        Attack".
+                    </p>
+                    <p>
+                        Once an attack has been rolled, a chat message will be created showing the result. The outcome
+                        of the attack will be automatically calculated and the color of the die result indicates whether
+                        the attack hit (green), missed (red), or was a critical hit (blue).
+                    </p>
+                </div>
+            </div>
+            <div class="paired-content section">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/skills/damage-message.webp" width="288" height="245">
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-aqua">Damage Rolls</h3>
+                    <p>
+                        Some skills may require have a damage component. To roll the damage of a skill, click the "Roll
+                        Damage" button. The game will automatically roll the skill's damage dice and calculating the
+                        applicable damage multipliers. Once the damage has been rolled, a chat message will be created
+                        with the roll results as well as the damage total and a breakdown of each damage type and value.
+                    </p>
+                    <p>
+                        You can apply skill damage to characters by selecting their token and clicking apply damage. If
+                        you would like to apply damage with a multiplier you can click one of the multipliers below the
+                        apply damage button instead. If you would like to only apply one damage component at a time, you
+                        can hover over the damage component and click the damage multiplier you would like to apply
+                        (clicking 1 will will apply the base damage of that component).
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="ul-aqua">Applying Status Effects</h3>
+                <p>
+                    Some skills apply status effects to their targets. In order to apply a skill's statuses, first
+                    select all of the character's tokens you want to apply the statuses to, and then click "Apply
+                    Statuses". The game will automatically check if the status will be resisted by armor, so there is no
+                    need to manually check.
+                </p>
+                <h3 class="ul-aqua">Area of Effect Skills</h3>
+                <p>
+                    Some skills will specify an are of creatures they affect. For these skills, there will be a button
+                    labeled "Draw Template". Clicking this button will create a template of the area of effect to follow
+                    your cursor until you left click on the canvas (or right click to cancel). Once you click the
+                    location you want to place the template, the game will create a temporary measured template on the
+                    map showing the total area of effect of the skill. Some skills create surfaces, if this is the case,
+                    the game will instead create a special surface template that can apply effects or interact with
+                    other surfaces. Be careful with surfaces as once you place them it can be difficult to undo their
+                    effects.
+                </p>
+                <h3 class="ul-aqua">Complex Skills</h3>
+                <p>
+                    Some skills have extra complex effects to automate them. For example,
+                    <a class="content-link" data-uuid="Compendium.celestus.skills.rrxB9WzXIzYMJUTW"
+                        data-id="rrxB9WzXIzYMJUTW">Shed Skin</a> resets the cooldown of all combat abilities.
+                    Because the automation of these skills is so out of the ordinary, they will have custom scripts to
+                    be run. These scripts often have effects that are difficult to undo, so be extra careful when
+                    executing them (the game will warn you of this every time you attempt to do so). When a skill of
+                    this type comes up, there will be a button labeled "Execute Skill" that only shows up for Game
+                    Masters. A Game Master can click this button to execute the special effects of the skill.
+                </p>
+            </div>
+        </div>
+    </div>
+    <h2 class="collapse-header b-aqua" data-for="collapse-map" id="map" title="Click to hide/show.">
+        The Battlemap & Combat
+    </h2>
+    <div class="collapsible active" id="collapse-map">
+        <div class="image-wide section">
+            <img src="/img/foundry-screenshots/battlemap.webp" height="711" width="788">
+            <div class="description">
+                A screenshot of a combat happening involving an adventuring party and a group of flame newts.
+            </div>
+        </div>
+        <div class="section">
+            <p>
+                The battlemap is where you will spend most all of combat. The Celestus system for Foundry introduces
+                important features that allow for system-specific functionality and ease of play.
+            </p>
+            <div class="paired-content section">
+                <div class="image-tall">
+                    <img src="/img/foundry-screenshots/map/token-hover.webp" height="563" width="562">
+                </div>
+                <div class="flex5">
+                    <h3 class="ul-aqua">Directionality</h3>
+                    <p>
+                        When playing Celestus using a map the direction a character is facing may be relevant. In order
+                        handle this, Celestus adds semi-transparent pointers to each token on the map that indicate the
+                        direction it is facing. The direction of this point will automatically change to face the
+                        direction the token moves. The pointer will also change direction if it's character used a skill
+                        that places a template or rolls an attack. You can manually readjust the direction a token is
+                        facing by selecting it and pressing ctrl+alt+d which will cause the token to point towards
+                        wherever your cursor is.
+                    </p>
+                    <h3 class="ul-aqua">Backstabs and Attack Range</h3>
+                    <p>
+                        Some skills are capable of backstabbing, causing an instant crit if the attack hits. Because of
+                        this it is important to visualize where a token can be standing in order to be able to backstab
+                        a creature. When you hover over a token, an overlay will appear. Part of this overlay is a knife
+                        symbol and a blue cone. This blue cone represents the angle at which a character must be within
+                        in order backstab that token.
+                    </p>
+                    <p>
+                        Many skills or effects will refer to a characters reach or "melee range". As Celestus is
+                        designed to be played on a gridless map, it can be difficult to determine a character's reach
+                        quickly. This is why part of the token hover overlay is a white circle that represents the
+                        character's reach. Any token that dips into that circle is considered within the token's melee
+                        range.
+                    </p>
+                </div>
+            </div>
+            <h3 class="ul-aqua">Teleporting</h3>
+            <p>
+                Some skills will allow a character to teleport. This can cause some issues if you simply drag your
+                character. They may get stuck on a wall, or even worse, you may drag them through a surface an
+                accidentally apply a status that character shouldn't have. Because of this, the Celestus system has a
+                special shortcut to teleport tokens. The default keybind is ctrl+alt+t but you can change the keybind in
+                the game settings. Select a token and enter the key combination and you will initiate the teleport. A
+                purple spinning wheel will follow your cursor until you left or right click on the canvas. Left clicking
+                will finalize the teleport and right clicking will cancel the teleport.
+            </p>
+            <h3 class="ul-aqua">Your Character Resources</h3>
+            <div class="image-wide">
+                <img src="/img/foundry-screenshots/map/resources-ui.webp" width="510" height="156">
+            </div>
+            <p>
+                It can be a hassle to constantly open your character to monitor or modify resources during combat.
+                Fortunately you don't have to. At the bottom right of the user interface is a widget that displays all
+                of a character's resources.
+            </p>
+            <p>
+                The action point and focus point symbols function the same as they do on a character sheet. The armor
+                and health values have text fields you can use to change the character's current value of that resource.
+                If your input starts with an addition or subtraction it will instead add or subtract the following
+                expression from the character's health / armor pool.
+            </p>
+            <h3 class="ul-aqua">Token Information</h3>
+            <div class="image-wide">
+                <img src="/img/foundry-screenshots/map/token-info.webp" width="651" height="180">
+            </div>
+            <p>
+                When you're in combat, you may want to know the status of the combatants. To quickly view the state of a
+                combatant you can mouse over the token. Doing such causes a widget to appear in the top center of the
+                user interface. This interface contains their current and max armor and health as well as any statuses
+                affecting them. If you wish for this to "lock in" on a token you can right click or middle click the
+                token (if you are the token's owner you can only middle click the actor).
+            </p>
+        </div>
+    </div>
+</div>
