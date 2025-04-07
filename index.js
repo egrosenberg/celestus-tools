@@ -91,7 +91,7 @@ app.get('/content/:page', async (req, res) => {
     const page = pages.get(req.params.page);
     const content = await page.render();
     if (!content) return res.redirect('/404/');
-    if (typeof req.query.bare !== "undefined") return res.send(content);
+    if (typeof req.query.bare !== "undefined") return res.send(`${page.title}\n` + content);
     const html = await hbs.renderFromTemplate('templates/content-page.hbs', {
         title: page.title,
         name: page.key,
@@ -115,7 +115,7 @@ app.get('/browse/:browser', async (req, res) => {
         });
         // if request is for bare, only return content
         if (typeof req.query.bare !== "undefined") {
-            return res.send(`
+            return res.send(`Browse - ${browser.key.at(0).toUpperCase() + browser.key.slice(1)}\n
                 <div class="browser" id="list">
                     ${list}
                 </div>

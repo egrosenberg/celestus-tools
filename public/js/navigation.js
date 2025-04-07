@@ -128,6 +128,10 @@ $(document).ready(() => {
                     url: path + "?bare",
                     data: "html",
                     success: (data) => {
+                        // extract title
+                        const splitIndex = data.search('\n');
+                        document.title = data.slice(0,splitIndex);
+                        data = data.slice(splitIndex + 1);
                         // replace content
                         $(".content").html($(data));
                         // push history state to url
