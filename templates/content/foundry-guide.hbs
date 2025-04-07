@@ -1,6 +1,7 @@
 <h1 class="ul-aqua">Foundry Visual Guide</h1>
 <div class="section" id="you-can-always">
-    This document will go over the Celestus specific foundry ui elements, focusing mostly on the character sheet.
+    This document will go over the Celestus specific foundry user interface elements, focusing mostly on the character
+    sheet.
 </div>
 <h1 class="ul-amber collapse-header" id="charsheet" data-for="collapse-charsheet" title="Click to hide/show.">
     The Character Sheet
@@ -31,10 +32,8 @@
             <div>
                 <h3 class="ul-amber">The Character Sheet Header</h3>
                 <p class="no-bottom">
-                    The character sheet header is a vertical scrollable element that contains much of the most
-                    basic
-                    and essential information about a character. The character sheet header is broken into seven
-                    sections:
+                    The character sheet header is a vertical scrollable element that contains the basic and essential
+                    information about a character. The character sheet header is broken into seven sections:
                 </p>
                 <ul>
                     <li>Basic Info</li>
@@ -60,51 +59,38 @@
                         character's portrait, name, creature type, level, exhaustion, movement, and initiative.
                     </p>
                     <p>
-                        The character portrait has a small gear icon in the bottom right corner, clicking on this
-                        will
-                        open a configuration menu where you can toggle an optional portrait frame as well as change
-                        the
-                        actor's token's pointer color.
+                        The character portrait has a small gear icon in the bottom right corner. Clicking this
+                        will open a configuration menu where you can toggle an optional portrait frame as well as change
+                        the actor's token's pointer color.
                     </p>
                     <p>
-                        The character name field is a simple text input field where you can input a character's
-                        name.
-                        The creature type field is a searchable dropdown that can be used to select the creature's
-                        type
-                        from the list of all possible creature types.
+                        The character name field is a text input field where you can input a character's
+                        name. The 'creature type' field is a searchable dropdown that can be used to select the
+                        creature's type from the list of all possible types.
                     </p>
                     <p>
                         Following the creature type is four individual labels containing various pieces of
-                        information
-                        on the character.
+                        information on the character.
                     </p>
                     <p>
                         The character level is an editable text field that can be changed to level up or down a
-                        character. Changing its value will automatically alter the character's memorization
-                        abilities,
-                        attribute and ability points available, as well as any other variables tied to character
-                        level.
+                        character. Changing its value will automatically alter any variables that are dependant on
+                        character level.
                     </p>
                     <p>
                         The exhaustion level is also an editable text field which will automatically apply the
-                        effects
-                        of exhaustion.
-                        Any exhaustion levels are automatically removed upon using the rest button.
+                        effects of exhaustion. Any exhaustion levels are automatically removed upon using the rest
+                        button.
                     </p>
                     <p>
                         Both the movement and initiative fields are automatically calculated and cannot be directly
-                        edited.
-                        Clicking the initiative will automatically add the actor to combat and roll initiative so
-                        long
-                        as it has an owned active token.
+                        edited. Clicking the initiative will add the actor to combat and roll initiative.
                     </p>
                     <p>
                         Finally, there are three icons: refresh, rest, and combat. Hitting the refresh button will
                         trigger a standard refresh of resources for ending a scene (health, armor, normal
-                        cooldowns).
-                        The second button triggers the effects of a rest. The third icon is an indicator of whether
-                        or
-                        not the character is currently involved in a combat.
+                        cooldowns). The second button triggers the effects of a rest. The third icon is an indicator of
+                        whether or not the character is currently involved in a combat.
                     </p>
                 </div>
             </div>
@@ -143,9 +129,9 @@
                     <h3 class="ul-amber">Weapon Damage</h3>
                     <p>
                         The weapon damage section provides a breakdown of a character's total weapon damage.
-                        It is organized as a list of each damage type as a minimum to maximum range as well as an
-                        average damage in parenthesis. There is an icon that shows which type of damage each component
-                        is and hovering over a damage component provides its damage type as written text.
+                        It contains a list of each damage type, shown as a minimum to maximum range as well as the
+                        average damage in parentheses. The icons on the righthand side show which type each damage
+                        component is. Hovering over these icons will display their type as written text.
                     </p>
                     <p>
                         At the bottom of this section is a single entry for the total combined weapon damage.
@@ -189,14 +175,14 @@
                             spend attribute points.
                         </li>
                         <li>
-                            After the base attribute value is the total of all bonuses effecting that attribute, be it
+                            After the base attribute value is the total of all bonuses affecting that attribute, be it
                             from statuses, features, or any other effect.
                         </li>
                         <li>
                             Next is the calculated attribute total after accounting for all features and effects.
                         </li>
                         <li>
-                            Finally here is a value enclosed in parenthesis. This value represents the effective
+                            Finally, there is a value enclosed in parenthesis. This value represents the effective
                             modification coming from that attribute. Wits only displays the percentage for crit chance
                             as a character's initiative bonus is already displayed earlier on the sheet.
                         </li>
@@ -231,7 +217,7 @@
                     <h3 class="ul-amber">Bonuses</h3>
                     <p>
                         The bonuses section displays many miscellaneous bonuses of a character. Each bonus is listed as
-                        name and its total percentage after applying all modifiers.
+                        its name and final percentage.
                     </p>
                 </div>
             </div>
@@ -246,8 +232,7 @@
                     <h3 class="ul-amber">Languages</h3>
                     <p>
                         the languages section lists all language proficiencies a character has. These can be modified by
-                        clicking the gear icon in the top right corner of the section. Pressing this button opens up a
-                        configuration menu where you can select any languages for a character to be proficient in.
+                        clicking the gear icon in the top right corner of the section.
                     </p>
                 </div>
             </div>
@@ -291,7 +276,7 @@
                     <p>
                         At the top the abilities tab is a horizontal bar that says "You Can Always..." Clicking on this
                         bar will expand a dropdown that lists all "you can always" options granted to a character by
-                        their origins. This can be used as a quick reference during play instead of opening each
+                        their origins. This can be used as a reference during play without needing to open each
                         individual feature.
                     </p>
                 </div>
@@ -300,18 +285,18 @@
                 <h3 class="ul-amber">Ability Lists</h3>
                 <p>
                     The majority of the ability tabs is filled out by lists of combat and civil abilities. The title of
-                    each section will display the number of unspent or overspent ability points if the character has
-                    any. Hovering over an ability label will display a tooltip describing its purpose or effects and
-                    clicking on one will open a dialog box that prompts a roll of an
+                    each section will display the number of unspent or overspent ability points (if the character has
+                    any). Hovering over an ability label will display a tooltip describing its purpose or effects.
+                    Clicking on an ability label will open a dialog box prompting a roll of an
                     <a class="content-link" data-uuid="Compendium.celestus.rules.RhLk5CMny3L5KM6w"
                         data-id="RhLk5CMny3L5KM6w"> ability check</a>.
                 </p>
                 <p>
-                    Following an ability label is an input field to set a character's invested ability points in a
-                    particular ability. Following that is the character's total bonus to that ability. Next is the
-                    character's final ability value after applying all bonuses. Finally, for combat abilities, enclosed
-                    in parenthesis is the character's total bonus they are receiving from that ability expressed as a
-                    percentage.
+                    Following an ability label is an input that can be used to set a character's invested ability points
+                    in that ability. Next is the character's total bonus to that ability. Following that is the
+                    character's final ability value (after applying all bonuses). Finally, for combat abilities,
+                    enclosed
+                    in parenthesis is the character's total bonus they are receiving from that ability.
                 </p>
             </div>
         </div>
@@ -343,35 +328,35 @@
                 <div class="flex5">
                     <h3 class="ul-amber">Parts of a Skill Entry</h3>
                     <p>
-                        The most noticeable part of a skill is it's icon, which can be used to quickly identify skills
-                        in a list. Hovering over a skill's icon will display a tooltip with the name of the skill.
+                        The most noticeable part of a skill is its icon, which can be used to quickly identify skills
+                        in a list. Hovering over a skill's icon will render its description to the top right corner of
+                        the screen.
                         Clicking on a skill's icon will bring up a dialog that allows you to use the skill. If a
                         skill requires more than one memory slot, there will be a number of gray brain icons to
-                        represent the additional memory slots it costs. There will also be a small icon in the bottom
-                        left corner of a skill icon that shows which school the skill belongs to, if the skill is
-                        unmemorized there will instead be numbers next to icons to describe the skill's memorization
-                        requirements.
+                        represent the additional memory slots it costs. Each skill icon has a symbol in the bottom right
+                        corner that shows which school it belongs to. If that skill is unmemorized, there will instead
+                        be
+                        a list of numbers and icons that describe its memorization requirements.
                     </p>
                     <p>
                         Below the skill's icon is the total
                         <a class="content-link" data-uuid="Compendium.celestus.rules.32cncHbHLvecLYmw"
                             data-id="32cncHbHLvecLYmw">action</a> and
                         <a class="content-link" data-uuid="Compendium.celestus.rules.yraIEBlqV1ui6lpV"
-                            data-id="yraIEBlqV1ui6lpV">focus point</a> costs to use the skill represented as circles and
-                        diamonds respectively.
+                            data-id="yraIEBlqV1ui6lpV">focus point</a> costs to use the skill.
                     </p>
                     <p>
                         Below the action / focus point cost is a span of skill controls. The brain icon can be used to
                         memorize or unmemorize a skill, the notepad can be used to open up the skill's item sheet to
                         edit it, and the trash can icon can be clicked to delete the skill. You can also right click the
-                        skill's icon to open it's item sheet.
+                        skill's icon to open its item sheet.
                     </p>
                 </div>
             </div>
             <h3 class="ul-amber">States of a Skill</h3>
             <p>
-                If a memorized skill cannot be used currently for any reason, the skill's icon will be darkened and an
-                overlay will be placed on top of it indicating the status of the skill.
+                If a memorized skill is currently unusable, the skill's icon will be darkened with an overlay placed
+                atop it indicating its status.
             </p>
             <div class="paired-content">
                 <div class="image-tall">
@@ -381,7 +366,7 @@
                     <h4 class="amber">Cooldown</h4>
                     <p>
                         If a skill is on cooldown, there will be a large numeral overlayed on top of a stopwatch icon.
-                        The number that is displayed is the skill's current cooldown in rounds.
+                        The number that is displayed is the skill's remaining cooldown in rounds.
                     </p>
                 </div>
             </div>
@@ -394,8 +379,7 @@
                     <p>
                         If a skill has a cooldown that cannot be measured in rounds (e.g. a civil skill that only
                         becomes useable again after a rest, or a combat skill that only becomes useable at the end of a
-                        scene) instead of a numeral being displayed, a circular sunset icon will be overlayed indicating
-                        that it cannot be used currently.
+                        scene) a circular sunset icon will be overlayed indicating that it cannot be used currently.
                     </p>
                 </div>
             </div>
@@ -406,9 +390,9 @@
                 <div class="flex5">
                     <h4 class="amber">Unavailable</h4>
                     <p>
-                        If a skill is otherwise unavailable a simple circle with a strikethrough will be overlayed on
-                        top of the icon to indicate it is as such. Some reasons a skill might be unavailable are a
-                        character being
+                        If a skill is otherwise unavailable, a simple circle with a strikethrough will be overlayed on
+                        top of the icon to indicate it is as such. Some reasons a skill might be unavailable include a
+                        character being:
                         <a class="content-link" data-uuid="Compendium.celestus.rules.I9RkvpW5qGPRkeuv"
                             data-id="I9RkvpW5qGPRkeuv">silenced</a>,
                         <a class="content-link" data-uuid="Compendium.celestus.rules.ApravHaqi2H9tSn2"
@@ -433,23 +417,23 @@
         </div>
         <div class="section">
             The items tab is where you can manage any physical inventory items your character might have. There are two
-            main sections of the items tab. At the top of the tab is a large section displaying a character's currently
-            equipped gear, the rest of the items tab display's all of a character's items and currency.
+            main sections of the items tab. At the top is a large section displaying a character's currently
+            equipped gear, the rest of the tab lists a character's items and currency.
         </div>
         <h3 class="ul-amber">Equipped Gear</h3>
         <p>
-            The first section of the equipped gear tab is a large area that shows each equipment slot and what the
-            character currently has equipped in each slot. Clicking on one of the slots opens up a small popup wherein
-            you can click on another piece of gear to equip it into that slot. Right clicking on a piece of gear in this
-            section will open up the item sheet for that piece of gear.
+            The first section of the items tab is a large area that shows each equipment slot and what the
+            character currently has equipped in that slot. Clicking on one of these slots opens a small popup wherein
+            you can click on another piece of gear to equip it. Right clicking on a piece of gear in this
+            section will open up its item sheet.
         </p>
         <h3 class="ul-amber">Currency</h3>
         <p>
             Below the equipped gear is a small section that lists each currency type and the character's current balance
-            of that coinage. Hovering over the coin icon for a type of currency will show the coin type's name. Each
-            currency has a text input field that can be used to modify a character's current balance. Any math formulas
-            entered will be automatically calculated and starting an input with a plus or minus symbol will either add
-            or subtract that value to the character's total.
+            of that coinage. Hovering over the icon for a type of currency will show the coin type's name. Each
+            currency has an input field that can be used to modify a character's current balance. Any math formulas
+            entered will be automatically calculated. Starting an input with a plus or minus symbol will add
+            or subtract that value from the character's total.
         </p>
         <h3 class="ul-amber">Inventory Lists</h3>
         <p>
@@ -464,13 +448,13 @@
             is a button that allows you to create a new armor item on the character sheet.
         </p>
         <p>
-            Each item is represented by a single row in the armor list. At the beginning of each entry is the item's
-            icon, left clicking this icon will create a chat message describing the item and right clicking it will open
-            its item sheet. Beside the icon is the item's name.
-            Clicking an item's name will drop down the item's description below it. The second column of an armor entry
-            is its armor value, this is shown as its physical and magic armor values beside each other. The final column
-            of an armor entry is the item controls, the shield icon can be used to equip or unequip a piece of armor,
-            the notepad icon can be used to open its item sheet, and the trashcan icon can be used to delete it.
+            Each item is represented as a row. At the beginning of each entry is the item's
+            icon. Left clicking this icon will create a chat message describing the item, and right clicking it will
+            open its item sheet. Beside the icon is the item's name. Clicking an item's name will drop down the item's
+            description below it. The second column of an armor entry is its armor value, this is shown as its physical
+            and magic armor values beside each other. The final column of an armor entry is the item controls. The
+            shield icon can be used to equip or unequip a piece of armor, the notepad icon can be used to open its item
+            sheet, and the trashcan icon can be used to delete it.
         </p>
         <h4 class="amber">Weapons List</h4>
         <div class="image-wide section">
@@ -492,7 +476,7 @@
             <img src="/img/foundry-screenshots/items/consumables.webp" width="836" height="132">
         </div>
         <p>
-            The third inventory list is the consumables list. It functions similarly to the lists before it except
+            The fourth inventory list is the consumables list. It functions similarly to the lists before it except
             instead of having a value column it has a quantity column. There is a text field to input a quantity or you
             can use the plus and minus buttons beside the input to change the quantity.
         </p>
@@ -558,9 +542,9 @@
             <p>
                 The effects tab is similar in functionality and appearance to the inventory lists. The main difference
                 is the center of each entry is occupied by the name of the origin of the effect and the effect's
-                remaining duration. Additionally, the effect controls have a button disable or enable an effect, rather
-                than equip an item. As effects don't possess descriptions in the same way items do, left clicking an
-                effect will not do anything.
+                remaining duration. Additionally, the effect controls have a button to disable or enable an effect,
+                rather than equip an item. As effects don't possess descriptions in the same way items do, left clicking
+                an effect will not do anything.
             </p>
         </div>
     </div>
@@ -588,11 +572,11 @@
                 play area.
             </p>
             <p>
-                There are two main ways to had skills or items to a player's hotbar. One option is to individually drag
+                There are two main ways to add skills or items to a player's hotbar. One option is to individually drag
                 skills and items from the character sheet onto the hotbar. The other method is to click the button with
                 the brain icon that is beside the hotbar. Clicking this button will automatically populate your hotbar
                 with all currently memorized skills. This function is especially useful for GMs who may want to quickly
-                see and use skills known by npcs without having to open their sheets.
+                see and use skills known by NPCs without having to open their sheets.
             </p>
         </div>
     </div>
@@ -603,12 +587,11 @@
         <div class="section">
             <p>
                 Using a skill is one of the most common things you will do while playing a game of Celestus. The process
-                for
-                using a skill is one that is fairly straightforward. For more information on skills, check out the
+                for using a skill is fairly straightforward. For more information on skills, check out the
                 <a href="/content/quickstart#skills">quickstart guide</a>.
             </p>
             <p>
-                There are two ways to use a skill in celestus: through the skills tab on a character's sheet, or by
+                There are two ways to use a skill in Celestus: through the skills tab on a character's sheet, or by
                 clicking the skill's macro on the hotbar while controlling the character's token. No matter how you
                 initiate the process of using a skill, the rest of the process is the same.
             </p>
@@ -621,7 +604,7 @@
                 does not have the resources for or otherwise would be unable to use, you can always answer "no" to the
                 use resources prompt. You can also answer "no" if you simply want to post the skill's description in
                 chat. If you answer "no" to the use resources prompt, the chat message skill description will have a
-                blue background to signify no resources were spent.
+                blue background to signify that no resources were spent.
             </p>
             <div class="paired-content section">
                 <div class="image-tall">
@@ -631,9 +614,9 @@
                     <h3 class="ul-aqua">The Chat Message</h3>
                     <p>
                         Once you have activated a skill, a message will be created in chat. This message will contain
-                        the character who used the skill as well as the player responsible for that character using it,
-                        a description of the skill, and buttons that can be used to perform the required actions of the
-                        skill. The only users that can activate these buttons are those who have ownership over the
+                        the character who used the skill, the player responsible for that character using it,
+                        a description of the skill, and buttons that can be used to perform its required actions.
+                        The only users that can activate these buttons are those who have ownership over the
                         character that used the skill, or those with Game Master privileges.
                     </p>
                 </div>
@@ -665,8 +648,8 @@
                 <div class="flex5">
                     <h3 class="ul-aqua">Damage Rolls</h3>
                     <p>
-                        Some skills may require have a damage component. To roll the damage of a skill, click the "Roll
-                        Damage" button. The game will automatically roll the skill's damage dice and calculating the
+                        Some skills may have a damage component. To roll the damage of a skill, click the "Roll
+                        Damage" button. The game will automatically roll the skill's damage dice and calculate the
                         applicable damage multipliers. Once the damage has been rolled, a chat message will be created
                         with the roll results as well as the damage total and a breakdown of each damage type and value.
                     </p>
@@ -675,7 +658,7 @@
                         you would like to apply damage with a multiplier you can click one of the multipliers below the
                         apply damage button instead. If you would like to only apply one damage component at a time, you
                         can hover over the damage component and click the damage multiplier you would like to apply
-                        (clicking 1 will will apply the base damage of that component).
+                        (clicking 1 will apply the base damage of that component).
                     </p>
                 </div>
             </div>
@@ -689,14 +672,15 @@
                 </p>
                 <h3 class="ul-aqua">Area of Effect Skills</h3>
                 <p>
-                    Some skills will specify an are of creatures they affect. For these skills, there will be a button
+                    Some skills will specify an area they affect. For these skills, there will be a button
                     labeled "Draw Template". Clicking this button will create a template of the area of effect to follow
                     your cursor until you left click on the canvas (or right click to cancel). Once you click the
                     location you want to place the template, the game will create a temporary measured template on the
-                    map showing the total area of effect of the skill. Some skills create surfaces, if this is the case,
+                    map showing the total area of effect of the skill. Some skills create surfaces. When this is the
+                    case,
                     the game will instead create a special surface template that can apply effects or interact with
-                    other surfaces. Be careful with surfaces as once you place them it can be difficult to undo their
-                    effects.
+                    other surfaces. Be careful with surfaces as it can be difficult to undo their
+                    effects once they have been placed.
                 </p>
                 <h3 class="ul-aqua">Complex Skills</h3>
                 <p>
@@ -724,7 +708,7 @@
         </div>
         <div class="section">
             <p>
-                The battlemap is where you will spend most all of combat. The Celestus system for Foundry introduces
+                The battlemap is where you will spend most of combat. The Celestus system for Foundry introduces
                 important features that allow for system-specific functionality and ease of play.
             </p>
             <div class="paired-content section">
@@ -734,21 +718,22 @@
                 <div class="flex5">
                     <h3 class="ul-aqua">Directionality</h3>
                     <p>
-                        When playing Celestus using a map the direction a character is facing may be relevant. In order
-                        handle this, Celestus adds semi-transparent pointers to each token on the map that indicate the
-                        direction it is facing. The direction of this point will automatically change to face the
-                        direction the token moves. The pointer will also change direction if it's character used a skill
+                        When playing Celestus using a map, the direction a character is facing may be relevant. In order
+                        handle this, Celestus adds semi-transparent pointers to each token on the map that indicates the
+                        direction it is facing. The direction of this pointer will automatically change to face the
+                        direction the token moves. The pointer will also change direction when its character uses a
+                        skill
                         that places a template or rolls an attack. You can manually readjust the direction a token is
                         facing by selecting it and pressing ctrl+alt+d which will cause the token to point towards
                         wherever your cursor is.
                     </p>
                     <h3 class="ul-aqua">Backstabs and Attack Range</h3>
                     <p>
-                        Some skills are capable of backstabbing, causing an instant crit if the attack hits. Because of
-                        this it is important to visualize where a token can be standing in order to be able to backstab
-                        a creature. When you hover over a token, an overlay will appear. Part of this overlay is a knife
-                        symbol and a blue cone. This blue cone represents the angle at which a character must be within
-                        in order backstab that token.
+                        Some skills are able to backstab, guaranteeing a critical strike if the attack hits.
+                        Because of this, it is important to visualize where a token must be standing to be eligible to
+                        backstab a creature. When you hover over a token, an overlay will appear. Part of this
+                        overlay is a knife symbol and a blue cone. This blue cone represents the angle a
+                        character must be within to backstab that token.
                     </p>
                     <p>
                         Many skills or effects will refer to a characters reach or "melee range". As Celestus is
@@ -761,28 +746,22 @@
             </div>
             <h3 class="ul-aqua">Teleporting</h3>
             <p>
-                Some skills will allow a character to teleport. This can cause some issues if you simply drag your
-                character. They may get stuck on a wall, or even worse, you may drag them through a surface an
-                accidentally apply a status that character shouldn't have. Because of this, the Celestus system has a
-                special shortcut to teleport tokens. The default keybind is ctrl+alt+t but you can change the keybind in
-                the game settings. Select a token and enter the key combination and you will initiate the teleport. A
-                purple spinning wheel will follow your cursor until you left or right click on the canvas. Left clicking
-                will finalize the teleport and right clicking will cancel the teleport.
+                Some skills will allow a character to teleport. In order to avoid unwanted side effects, the Celestus
+                system enables you to teleport tokens. Tokens can be teleported by using the teleportation keybind
+                (ctrl+alt+t by default). You must first select a token before inputting the keybind. Once you have
+                input it, a purple spinning wheel will follow your cursor until you left or right click on the
+                canvas. Left clicking will finalize the teleport and right clicking will cancel the teleport.
             </p>
             <h3 class="ul-aqua">Your Character Resources</h3>
             <div class="image-wide">
                 <img src="/img/foundry-screenshots/map/resources-ui.webp" width="510" height="156">
             </div>
             <p>
-                It can be a hassle to constantly open your character to monitor or modify resources during combat.
-                Fortunately you don't have to. At the bottom right of the user interface is a widget that displays all
-                of a character's resources.
-            </p>
-            <p>
-                The action point and focus point symbols function the same as they do on a character sheet. The armor
-                and health values have text fields you can use to change the character's current value of that resource.
-                If your input starts with an addition or subtraction it will instead add or subtract the following
-                expression from the character's health / armor pool.
+                The bottom right of the user interface contains a widget that displays all of a character's resources at
+                a glance. The action point and focus point symbols in this widget function the same as they do on a
+                character sheet. The armor and health values have text fields you can use to change the character's
+                current value of that resource. If your input starts with an addition or subtraction it will instead add
+                or subtract the following expression from the character's health / armor pool.
             </p>
             <h3 class="ul-aqua">Token Information</h3>
             <div class="image-wide">
@@ -790,10 +769,10 @@
             </div>
             <p>
                 When you're in combat, you may want to know the status of the combatants. To quickly view the state of a
-                combatant you can mouse over the token. Doing such causes a widget to appear in the top center of the
-                user interface. This interface contains their current and max armor and health as well as any statuses
-                affecting them. If you wish for this to "lock in" on a token you can right click or middle click the
-                token (if you are the token's owner you can only middle click the actor).
+                combatant you can mouse over the token. Doing so causes a widget to appear in the top center of the
+                user interface. This widget contains the characters current and max armor and health as well as any statuses
+                affecting them. If you want to "lock" this widget on a particular token you can right or middle click it
+                (if you are the token's owner you must middle click).
             </p>
         </div>
     </div>
