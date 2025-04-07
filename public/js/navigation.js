@@ -1,4 +1,4 @@
-/*global $ initializeBrowser */
+/*global $ initializeBrowser linkTooltips indicateCollapseHeads */
 
 let searchIndex = [];
 
@@ -143,6 +143,14 @@ $(document).ready(() => {
                         }
                         // set proper active tab in navigation
                         setActiveNavTab();
+                        /**
+                         * Link all tooltips (even if not a browser page)
+                         */
+                        linkTooltips();
+                        /**
+                         * Initialize chevrons for dropdowns
+                         */
+                        indicateCollapseHeads();
                     }
                 });
             }
