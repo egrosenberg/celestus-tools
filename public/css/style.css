@@ -574,6 +574,7 @@ h6 {
 
 .content i.collapse-indicator {
     margin-right: 10px;
+    pointer-events: none;
 }
 
 
