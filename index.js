@@ -35,6 +35,7 @@ const STATUS = {
 
 const HOSTS = [
     "celestus.info",
+    'test.celestus.info',
     "127.0.0.1",
     "192.168.1.39"
 ];
@@ -63,7 +64,9 @@ app.set('trust proxy', [
     'loopback',
     'linklocal',
     'uniquelocal',
-    '192.168.1.55'
+    '192.168.1.55',
+    'test.celestus.info',
+    'celestus.info'
 ]);
 
 // allow access to public files
