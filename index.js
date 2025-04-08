@@ -65,8 +65,7 @@ app.set('trust proxy', [
     'linklocal',
     'uniquelocal',
     '192.168.1.55',
-    'test.celestus.info',
-    'celestus.info'
+    '127.0.0.1'
 ]);
 
 // allow access to public files
