@@ -97,6 +97,14 @@
             "type": "Rule"
         },
         {
+            "_id": "8cfxxoH7Kydh4eW3",
+            "name": "Character Origins",
+            "system": {
+                "description": "<p>A character's origin represents who they were before their adventure and what they were as they began it. A character's origin is comprised of an @UUID[Compendium.celestus.rules.1K7OPa5ikLITwkPK]{ancestry}, a @UUID[Compendium.celestus.rules.5kaokmq8N0pTvdOL]{background}, and a @UUID[Compendium.celestus.rules.kcJXtk5NcqeIWPf9]{profession}.</p>"
+            },
+            "type": "Rule"
+        },
+        {
             "_id": "9qo7qdEF3hIuvsXr",
             "name": "Slowed",
             "system": {
@@ -348,7 +356,7 @@
             "_id": "bVS53wJUpbkPekh0",
             "name": "Skill Schools",
             "system": {
-                "description": "<table><tbody><tr><td><h3>School</h3></td><td><h3>Characteristics</h3></td></tr><tr><td><p><strong>Flamespeaker</strong></p></td><td><p>Fiery destruction</p></td></tr><tr><td><p><strong>Tidecaller</strong></p></td><td><p>Healing water and frigid cold</p></td></tr><tr><td><p><strong>Stormspeaker</strong></p></td><td><p>Bolts of lightning and billowing gales</p></td></tr><tr><td><p><strong>Duneshaper</strong></p></td><td><p>Powerful boulders, earthen armor, and deadly poisons</p></td></tr><tr><td><p><strong>Voidcantor</strong></p></td><td><p>Psionic wrath and heightened senses</p></td></tr><tr><td><p><strong>Deathbringer</strong></p></td><td><p>Necromancy and blood</p></td></tr><tr><td><p><strong>Shroudstalker</strong></p></td><td><p>Shadowy assassination</p></td></tr><tr><td><p><strong>Formshifter</strong></p></td><td><p>Shapeshifting magic</p></td></tr><tr><td><p><strong>Huntmaster</strong></p></td><td><p>Sylvan magic and barrages of arrows</p></td></tr><tr><td><p><strong>Warlord</strong></p></td><td><p>Masterful battle tactics</p></td></tr></tbody></table>"
+                "description": "<table><tbody><tr><td><h3>School</h3></td><td><h3>Characteristics</h3></td></tr><tr><td><p><strong>Flamespeaker</strong></p></td><td><p>Fiery destruction</p></td></tr><tr><td><p><strong>Tidecaller</strong></p></td><td><p>Healing water and frigid cold</p></td></tr><tr><td><p><strong>Stormspeaker</strong></p></td><td><p>Bolts of lightning and billowing gales</p></td></tr><tr><td><p><strong>Duneshaper</strong></p></td><td><p>Powerful boulders, earthen armor, and deadly poisons</p></td></tr><tr><td><p><strong>Voidcantor</strong></p></td><td><p>Psionic wrath and heightened senses</p></td></tr><tr><td><p><strong>Deathbringer</strong></p></td><td><p>Necromancy and blood</p></td></tr><tr><td><p><strong>Shroudstalker</strong></p></td><td><p>Shadowy assassination</p></td></tr><tr><td><p><strong>Lightbringer</strong></p></td><td><p>Holy radiance</p></td></tr><tr><td><p><strong>Formshifter</strong></p></td><td><p>Shapeshifting magic</p></td></tr><tr><td><p><strong>Huntmaster</strong></p></td><td><p>Sylvan magic and barrages of arrows</p></td></tr><tr><td><p><strong>Warlord</strong></p></td><td><p>Masterful battle tactics</p></td></tr></tbody></table>"
             },
             "type": "Table"
         },
@@ -452,7 +460,7 @@
             "_id": "iuH7zrOpg909VkOR",
             "name": "Combat Abilities",
             "system": {
-                "description": "<table><tbody><tr><td><h3>Ability</h3></td><td><h3>Bonus</h3></td></tr><tr><td><p><strong>Dueling</strong></p></td><td><p>When using a single one-handed weapon: +5% weapon damage , +5% accuracy</p></td></tr><tr><td><p><strong>Dual Wielding</strong></p></td><td><p>When using two one-handed weapons: +5% weapon damage, +1% evasion</p></td></tr><tr><td><p><strong>Heavy-Handed</strong></p></td><td><p>When using a two-handed melee weapon: +5% weapon damage, +5% critical hit damage</p></td></tr><tr><td><p><strong>Marksman</strong></p></td><td><p>When using a two-handed ranged weapon: +5% weapon damage, +1% critical hit chance</p></td></tr><tr><td><p><strong>Retributive</strong></p></td><td><p>Reflect 5% of incoming damage back to your attacker</p></td></tr><tr><td><p><strong>Flamespeaker</strong></p></td><td><p>+5% Fire damage</p></td></tr><tr><td><p><strong>Tidecaller</strong></p></td><td><p>+5% Water damage, Healing, and Magic Armor healing</p></td></tr><tr><td><p><strong>Stormseeker</strong></p></td><td><p>+5% Air damage</p></td></tr><tr><td><p><strong>Duneshaper</strong></p></td><td><p>+5% Earth damage, Poison damage, and Physical Armor healing</p></td></tr><tr><td><p><strong>Voidcantor</strong></p></td><td><p>+5% Psychic damage</p></td></tr><tr><td><p><strong>Deathbringer</strong></p></td><td><p>Heal for 10% of damage dealt</p></td></tr><tr><td><p><strong>Shroudstalker</strong></p></td><td><p>+5% Critical hit damage, +5% movement speed</p></td></tr><tr><td><p><strong>Formshifter</strong></p></td><td><p>You gain 1 unspent attribute point</p></td></tr><tr><td><p><strong>Huntmaster</strong></p></td><td><p>+5% damage to marked targets</p></td></tr><tr><td><p><strong>Warlord</strong></p></td><td><p>+5% Physical damage</p></td></tr></tbody></table>"
+                "description": "<table><tbody><tr><td><h3>Ability</h3></td><td><h3>Bonus</h3></td></tr><tr><td><p><strong>Dueling</strong></p></td><td><p>When using a single one-handed weapon: +5% weapon damage , +5% accuracy</p></td></tr><tr><td><p><strong>Dual Wielding</strong></p></td><td><p>When using two one-handed weapons: +5% weapon damage, +1% evasion</p></td></tr><tr><td><p><strong>Heavy-Handed</strong></p></td><td><p>When using a two-handed melee weapon: +5% weapon damage, +5% critical hit damage</p></td></tr><tr><td><p><strong>Marksman</strong></p></td><td><p>When using a two-handed ranged weapon: +5% weapon damage, +1% critical hit chance</p></td></tr><tr><td><p><strong>Retributive</strong></p></td><td><p>Reflect 5% of incoming damage back to your attacker</p></td></tr><tr><td><p><strong>Flamespeaker</strong></p></td><td><p>+5% Fire damage</p></td></tr><tr><td><p><strong>Tidecaller</strong></p></td><td><p>+5% Water damage, Healing, and Magic Armor healing</p></td></tr><tr><td><p><strong>Stormseeker</strong></p></td><td><p>+5% Air damage</p></td></tr><tr><td><p><strong>Duneshaper</strong></p></td><td><p>+5% Earth damage, Poison damage, and Physical Armor healing</p></td></tr><tr><td><p><strong>Voidcantor</strong></p></td><td><p>+5% Psychic damage</p></td></tr><tr><td><p><strong>Deathbringer</strong></p></td><td><p>Heal for 10% of damage dealt</p></td></tr><tr><td><p><strong>Shroudstalker</strong></p></td><td><p>+5% Critical hit damage, +5% movement speed</p></td></tr><tr><td><p><strong>Lightbringer</strong></p></td><td><p>+5% Radiant damage</p></td></tr><tr><td><p><strong>Formshifter</strong></p></td><td><p>You gain 1 unspent attribute point</p></td></tr><tr><td><p><strong>Huntmaster</strong></p></td><td><p>+5% damage to marked targets</p></td></tr><tr><td><p><strong>Warlord</strong></p></td><td><p>+5% Physical damage</p></td></tr></tbody></table>"
             },
             "type": "Table"
         },
@@ -583,14 +591,6 @@
                 "description": "<p><strong>Duration: </strong>2 rounds.</p><p><strong>Resisted by: </strong>Physical Armor.</p><p><strong>Changes:</strong></p><ul><li><p>-2 Constitution</p></li><li><p>-35% Damage</p></li></ul>"
             },
             "type": "Status"
-        },
-        {
-            "_id": "8cfxxoH7Kydh4eW3",
-            "name": "Character Origins",
-            "system": {
-                "description": "<p>A character's origin represents who they were before their adventure and what they were as they began it. A character's origin is comprised of an @UUID[Compendium.celestus.rules.1K7OPa5ikLITwkPK]{ancestry}, a @UUID[Compendium.celestus.rules.5kaokmq8N0pTvdOL]{background}, and a @UUID[Compendium.celestus.rules.kcJXtk5NcqeIWPf9]{profession}.</p>"
-            },
-            "type": "Rule"
         }
     ]
 }

@@ -1,13 +1,165 @@
 {
     "data": [
         {
+            "folder": "nZctBb88FOKktz03",
+            "name": "Flames of the Phoenix",
+            "type": "feature",
+            "_id": "2LYa30NWlYgI3ou3",
+            "img": "icons/magic/fire/flame-burning-eye.webp",
+            "system": {
+                "description": "<p><strong>Requires Flamespeaker 10.</strong></p><p>You have mastered the art of pyromancy and have forever altered your physicality. You gain the following benefits:</p><ul><li><p>You gain 50% fire resistance.</p></li><li><p>If you would start your turn at 0 or less hit points, you restore all missing hit points. Once you use this feature you must complete a rest before doing so again.</p></li><li><p>You learn the skill @UUID[Compendium.celestus.skills.QniPNhrIl9prWmV7]{Falling Star}. You always have it memorized, it doesn't count against your skills known or memorized and you don't need to meet it's memorization requirements.</p></li></ul>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "equipped": false,
+                "type": "feature",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0.5,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "special": 0,
+                        "radiant": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [
+                    {
+                        "uuid": "Compendium.celestus.skills.QniPNhrIl9prWmV7",
+                        "name": "Falling Star"
+                    }
+                ],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [],
+            "sort": 150000,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1743717192969,
+                "modifiedTime": 1744237130122,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
             "folder": "Nd8Y4X5YuQ7zsaYv",
             "name": "Mindful",
             "type": "feature",
             "_id": "2g9h7vJeRpFt3djq",
             "img": "icons/skills/wounds/anatomy-organ-brain-pink-red.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>You gain +3 Mind.</p>",
                 "type": "talent",
                 "slot": "none",
@@ -28,7 +180,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -60,6 +213,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -141,7 +295,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736374003077,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704234494,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -152,7 +306,7 @@
             "_id": "5wH3WKdLx75lsc8C",
             "img": "icons/magic/symbols/runes-carved-stone-yellow.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>You have trained your memory and are able to use Civil Skills regardless of whether or not you have them memorized, so long as you are not in combat.</p>",
                 "price": 0,
                 "quantity": 1,
@@ -176,7 +330,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -208,9 +363,377 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [
+                {
+                    "name": "Eiditic",
+                    "img": "icons/magic/symbols/runes-carved-stone-yellow.webp",
+                    "origin": "Compendium.celestus.talents.Item.5wH3WKdLx75lsc8C",
+                    "duration": {
+                        "rounds": null,
+                        "startTime": null,
+                        "seconds": null,
+                        "combat": null,
+                        "turns": null,
+                        "startRound": null,
+                        "startTurn": null
+                    },
+                    "disabled": false,
+                    "type": "status",
+                    "_id": "aAfuoEW8LbfvkEDK",
+                    "system": {
+                        "damage": [],
+                        "damageRiders": [],
+                        "resistedBy": "none",
+                        "combines": [],
+                        "removes": [],
+                        "blocks": [],
+                        "triggers": [],
+                        "aura": {
+                            "has": false,
+                            "targetsSelf": true,
+                            "radius": 0,
+                            "targets": "any",
+                            "targetType": "humanoid",
+                            "clearOnLeave": true,
+                            "lingerDuration": 0,
+                            "children": []
+                        },
+                        "grantedSkills": [],
+                        "ownedItems": [],
+                        "damageFlatScalar": false
+                    },
+                    "changes": [
+                        {
+                            "key": "flags.celestus.eiditic",
+                            "mode": 5,
+                            "value": "true",
+                            "priority": null
+                        }
+                    ],
+                    "description": "",
+                    "tint": "#ffffff",
+                    "transfer": false,
+                    "statuses": [],
+                    "sort": 0,
+                    "flags": {},
+                    "_stats": {
+                        "compendiumSource": null,
+                        "duplicateSource": null,
+                        "coreVersion": "12.331",
+                        "systemId": "celestus",
+                        "systemVersion": "0.0.1",
+                        "createdTime": 1743711365426,
+                        "modifiedTime": 1743892060112,
+                        "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+                    }
+                }
+            ],
+            "sort": 100000,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1740098629199,
+                "modifiedTime": 1743704250807,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "nZctBb88FOKktz03",
+            "name": "Rime of the Leviathan",
+            "type": "feature",
+            "_id": "5wrwW8CnnxsWHNfy",
+            "img": "icons/creatures/eyes/lizard-single-slit-blue.webp",
+            "system": {
+                "description": "<p><strong>Requires Tidecaller 10.</strong></p><p>You have mastered the art of cryomancy and have forever altered your physicality. You gain the following benefits:</p><ul><li><p>You gain 50% Water resistance.</p></li><li><p>You can breath water as though it were air and can swim through any water unimpeded.</p></li><li><p>Whenever you reduce a creature's hit points to 0 with a magic skill that does water damage, you can cause that creature's body to permanently freeze over, trapping them in a stasis between life and death.</p></li><li><p>You learn the skill @UUID[Compendium.celestus.skills.bInBeiF4XKmNHdVE]{Breath of Frigid Depths}. You always have it memorized, it doesn't count against your skills known or memorized and you don't need to meet it's memorization requirements.</p></li></ul>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "equipped": true,
+                "type": "talent",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0.5,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "special": 0,
+                        "radiant": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [
+                    {
+                        "uuid": "Compendium.celestus.skills.Item.bInBeiF4XKmNHdVE",
+                        "name": "Breath of Frigid Depths"
+                    }
+                ],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [],
+            "sort": 200000,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1743718403558,
+                "modifiedTime": 1744237129114,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "nZctBb88FOKktz03",
+            "name": "Will of the Exarch",
+            "type": "feature",
+            "_id": "9U16qauEav8ImPck",
+            "img": "icons/skills/melee/spear-tips-quintuple-orange.webp",
+            "system": {
+                "description": "<p><strong>Requires Warlord 10.</strong></p><p>You have mastered the art of physical combat and gain the following benefits:</p><ul><li><p>You gain 20% physical resistance.</p></li><li><p>You are immune to @UUID[Compendium.celestus.rules.m4Sd3wSukc9j0o3h]{Prone}, @UUID[Compendium.celestus.rules.X6IszAPOszReXljl]{Maimed}, and @UUID[Compendium.celestus.rules.ApravHaqi2H9tSn2]{Atrophied}.</p></li><li><p>You learn the skill @UUID[Compendium.celestus.skills.fn3h1jCR4YGGWLw7]{Unshakeable}. You always have it memorized, it doesn't count against your skills known or memorized and you don't need to meet it's memorization requirements.</p></li></ul>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "equipped": true,
+                "type": "talent",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "special": 0,
+                        "radiant": 0
+                    },
+                    "statusImmune": [
+                        "prone",
+                        "maim",
+                        "atrophy"
+                    ],
                     "crit_bonus": 0,
                     "crit_chance": 0,
                     "accuracy": 0,
@@ -285,8 +808,8 @@
                 "coreVersion": "12.331",
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
-                "createdTime": 1740098629199,
-                "modifiedTime": 1742954752215,
+                "createdTime": 1743816722637,
+                "modifiedTime": 1744237127706,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -318,7 +841,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -350,6 +874,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -458,6 +983,7 @@
                             }
                         ],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [],
@@ -503,7 +1029,7 @@
             "_id": "EzLGpbP2MjTbj9k7",
             "img": "icons/creatures/reptiles/turtle-shell-glowing-green.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>You gain a bonus to your Magic and Physical Armor maximums equal to half your Constitution modifier.</p>",
                 "type": "talent",
                 "slot": "none",
@@ -524,7 +1050,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -556,6 +1083,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -659,6 +1187,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -700,7 +1229,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736376463146,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704230387,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -732,7 +1261,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -764,6 +1294,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -867,6 +1398,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -914,12 +1446,218 @@
         },
         {
             "folder": "Nd8Y4X5YuQ7zsaYv",
+            "name": "Spellblade",
+            "type": "feature",
+            "_id": "KrPEt947A8Siir5m",
+            "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
+            "system": {
+                "description": "<p>You have mastered weaving sword and sorcery. Through performing a 1 hour ritual, or as part of a rest, you can magically bind a melee weapon you possess to your magic. While wielding the bound weapon, you may use intelligence when calculating damage. Additionally, while wielding the bound weapon, you cannot be disarmed or @UUID[Compendium.celestus.rules.ApravHaqi2H9tSn2]{atrophied}.</p><p>For 1 action point, you can temporarily shunt to or retrieve your weapon from a pocket dimension.</p><p>You can only have one weapon bound in this way at a time, and attempting to bind another weapon will cause all other weapon's you are bound to to unbind. If the bound weapon is ever not on your person or in the pocket dimension for more than 24 hours the bond ceases.</p>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "equipped": true,
+                "type": "talent",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "special": 0,
+                        "radiant": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [
+                {
+                    "name": "Bound Weapon",
+                    "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
+                    "origin": "Compendium.celestus.talents.Item.KrPEt947A8Siir5m",
+                    "duration": {
+                        "rounds": null,
+                        "startTime": null,
+                        "seconds": null,
+                        "combat": null,
+                        "turns": null,
+                        "startRound": null,
+                        "startTurn": null
+                    },
+                    "disabled": false,
+                    "type": "status",
+                    "_id": "kW2zpSDR0bu1TbE9",
+                    "system": {
+                        "damage": [],
+                        "damageRiders": [],
+                        "resistedBy": "none",
+                        "combines": [],
+                        "removes": [],
+                        "blocks": [
+                            "atrophy"
+                        ],
+                        "triggers": [],
+                        "aura": {
+                            "has": false,
+                            "targetsSelf": true,
+                            "radius": 0,
+                            "targets": "any",
+                            "targetType": "humanoid",
+                            "clearOnLeave": true,
+                            "lingerDuration": 0,
+                            "children": []
+                        },
+                        "grantedSkills": [],
+                        "ownedItems": [],
+                        "damageFlatScalar": false
+                    },
+                    "changes": [],
+                    "description": "",
+                    "tint": "#ffffff",
+                    "transfer": false,
+                    "statuses": [],
+                    "sort": 0,
+                    "flags": {},
+                    "_stats": {
+                        "compendiumSource": null,
+                        "duplicateSource": null,
+                        "coreVersion": "12.331",
+                        "systemId": "celestus",
+                        "systemVersion": "0.0.1",
+                        "createdTime": 1743090534505,
+                        "modifiedTime": 1743090752502,
+                        "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+                    }
+                }
+            ],
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1743090468058,
+                "modifiedTime": 1743090738283,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "Nd8Y4X5YuQ7zsaYv",
             "name": "Combat Training",
             "type": "feature",
             "_id": "MwRkaudljJfj9z7m",
             "img": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>You have trained extensively in combat, you gain +1 to two combat abilities of your choice. You can earn this talent multiple times.</p>",
                 "type": "talent",
                 "slot": "none",
@@ -940,7 +1678,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -972,6 +1711,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -1053,7 +1793,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736360801097,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704256493,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1064,7 +1804,7 @@
             "_id": "N7rSevUCzPGdKeLB",
             "img": "icons/skills/social/diplomacy-peace-alliance.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>You have gained experience in all manners of life, you gain +1 to all Civil Abilities.</p>",
                 "type": "feature",
                 "slot": "none",
@@ -1085,7 +1825,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 1,
@@ -1117,6 +1858,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -1198,7 +1940,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361082894,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704240305,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1230,7 +1972,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -1262,6 +2005,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -1365,6 +2109,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -1411,17 +2156,17 @@
             }
         },
         {
-            "folder": "Nd8Y4X5YuQ7zsaYv",
-            "name": "Elementalist",
+            "folder": "yJt8i5I9vrbamdyY",
+            "name": "Runechanter",
             "type": "feature",
-            "_id": "TNXvn2x06vF59FwR",
-            "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+            "_id": "OlV6v7UZ8DXzbmTP",
+            "img": "icons/skills/melee/sword-stuck-glowing-pink.webp",
             "system": {
-                "equipped": false,
-                "description": "<p>While standing on an elemental surface (see table below) the AP cost of your skills that utilize the corresponding school is reduced by one to a minimum of one.</p><p></p><p></p><table><tbody><tr><td><h3>Surface</h3></td><td><h3>School</h3></td></tr><tr><td><p>Fire</p></td><td><p>Flamespeaker</p></td></tr><tr><td><p>Spiritfire</p></td><td><p>Flamespeaker</p></td></tr><tr><td><p>Water</p></td><td><p>Tidecaller</p></td></tr><tr><td><p>Ice</p></td><td><p>Tidecaller</p></td></tr><tr><td><p>Oil</p></td><td><p>Duneshaper</p></td></tr><tr><td><p>Poison</p></td><td><p>Duneshaper</p></td></tr><tr><td><p>Blood</p></td><td><p>Deathbringer</p></td></tr><tr><td><p>Fog</p></td><td><p>Stormseeker</p></td></tr></tbody></table>",
+                "description": "<p><strong>Requires Spellblade talent and at least 4 points in one of the following abilities: Flamespeaker, Tidecaller, Stormseeker, Duneshaper, or Voidcantor.</strong></p><p>Your mastery of magical bladecraft has ever increased. When you bind a weapon you can also change that weapon's primary damage type to any of the following elements of your choice: Fire, Water, Air, Earth, or Psychic.</p>",
                 "price": 0,
                 "quantity": 1,
                 "weight": 0,
+                "equipped": true,
                 "type": "talent",
                 "slot": "none",
                 "efficiency": 1,
@@ -1441,7 +2186,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -1473,6 +2219,154 @@
                         "mag_armor": 0,
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
+                        "special": 0,
+                        "radiant": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [],
+            "sort": 100000,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1743701765783,
+                "modifiedTime": 1743716981189,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "Nd8Y4X5YuQ7zsaYv",
+            "name": "Elementalist",
+            "type": "feature",
+            "_id": "TNXvn2x06vF59FwR",
+            "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+            "system": {
+                "equipped": true,
+                "description": "<p>While standing on an elemental surface (see table below) the AP cost of your skills that utilize the corresponding school is reduced by one to a minimum of one.</p><p></p><p></p><table><tbody><tr><td><h3>Surface</h3></td><td><h3>School</h3></td></tr><tr><td><p>Fire</p></td><td><p>Flamespeaker</p></td></tr><tr><td><p>Spiritfire</p></td><td><p>Flamespeaker</p></td></tr><tr><td><p>Water</p></td><td><p>Tidecaller</p></td></tr><tr><td><p>Ice</p></td><td><p>Tidecaller</p></td></tr><tr><td><p>Oil</p></td><td><p>Duneshaper</p></td></tr><tr><td><p>Poison</p></td><td><p>Duneshaper</p></td></tr><tr><td><p>Blood</p></td><td><p>Deathbringer</p></td></tr><tr><td><p>Fog</p></td><td><p>Stormseeker</p></td></tr></tbody></table>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "type": "talent",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -1573,6 +2467,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -1614,7 +2509,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1738183829212,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704248807,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1625,7 +2520,7 @@
             "_id": "TyD8Ven8VHnyEBvE",
             "img": "icons/skills/ranged/cannon-barrel-firing-orange.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>You start every round with max AP but your physical armor and magic armor don't protect you from statuses.</p>",
                 "type": "talent",
                 "slot": "none",
@@ -1646,7 +2541,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -1678,6 +2574,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -1781,6 +2678,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -1828,7 +2726,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736356671888,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704242574,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -1839,7 +2737,7 @@
             "_id": "VKMh6QU08EFsqusi",
             "img": "icons/magic/perception/eye-ringed-glow-angry-large-red.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>The range of your magic skills is increased by 15 feet.</p>",
                 "type": "talent",
                 "slot": "none",
@@ -1860,7 +2758,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -1892,6 +2791,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -1995,6 +2895,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -2036,7 +2937,218 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736372067252,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704237192,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "nr63NY64DbejTRKC",
+            "name": "Lone Wolf",
+            "type": "feature",
+            "_id": "VYNLGzciZvA1guFY",
+            "img": "icons/creatures/abilities/wolf-howl-moon-purple.webp",
+            "system": {
+                "equipped": true,
+                "description": "<p>When playing with 2 or fewer members in a party, each character gains +2 starting AP, +30% max HP, and +60% max physical and magic armor.</p><p>Double all spent combat ability points and attribute points up to the normal maximum of 10 and 40 respectively. For example, if a character has spent 15 points in strength to a value of 25, they would have that increased to 40. Any further points spent would not increase their total strength score.</p>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "type": "feature",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "radiant": 0,
+                        "special": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [
+                {
+                    "name": "Lone Wolf",
+                    "img": "icons/creatures/abilities/wolf-howl-moon-purple.webp",
+                    "origin": "Compendium.celestus.talents.Item.VYNLGzciZvA1guFY",
+                    "duration": {
+                        "rounds": null,
+                        "startTime": null,
+                        "seconds": null,
+                        "combat": null,
+                        "turns": null,
+                        "startRound": null,
+                        "startTurn": null
+                    },
+                    "disabled": false,
+                    "type": "status",
+                    "_id": "uqzXhUstrN8am9Xy",
+                    "system": {
+                        "damage": [],
+                        "resistedBy": "none",
+                        "combines": [],
+                        "removes": [],
+                        "blocks": [],
+                        "triggers": [],
+                        "aura": {
+                            "has": false,
+                            "targetsSelf": true,
+                            "radius": 0,
+                            "targets": "any",
+                            "targetType": "humanoid",
+                            "clearOnLeave": true,
+                            "lingerDuration": 0,
+                            "children": []
+                        },
+                        "grantedSkills": [],
+                        "ownedItems": [],
+                        "damageFlatScalar": false,
+                        "damageRiders": []
+                    },
+                    "changes": [
+                        {
+                            "key": "flags.celestus.lone-wolf",
+                            "mode": 5,
+                            "value": "true",
+                            "priority": null
+                        }
+                    ],
+                    "description": "",
+                    "tint": "#ffffff",
+                    "transfer": false,
+                    "statuses": [],
+                    "sort": 0,
+                    "flags": {},
+                    "_stats": {
+                        "compendiumSource": null,
+                        "duplicateSource": null,
+                        "coreVersion": "12.331",
+                        "systemId": "celestus",
+                        "systemVersion": "0.0.1",
+                        "createdTime": 1737567796488,
+                        "modifiedTime": 1737567940636,
+                        "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+                    }
+                }
+            ],
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1737567481837,
+                "modifiedTime": 1737598843087,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2047,8 +3159,8 @@
             "_id": "Y9ZMsqlZd7Hr4UbF",
             "img": "icons/skills/movement/feet-winged-boots-brown.webp",
             "system": {
-                "equipped": false,
-                "description": "<p>On each of your turn, you can move up to 1 Action Point worth of movement for free.</p>",
+                "equipped": true,
+                "description": "<p>On each of your turn, you can move up to 1 Action Point worth of movement for free.</p><p>★ Incompatible with @UUID[Compendium.celestus.talents.eyjVC6njy1BeJcKO]{Executioner}</p>",
                 "type": "talent",
                 "slot": "none",
                 "efficiency": 1,
@@ -2068,7 +3180,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -2100,6 +3213,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -2203,6 +3317,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -2244,7 +3359,159 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736371556332,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704232406,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "nZctBb88FOKktz03",
+            "name": "Brutal",
+            "type": "feature",
+            "_id": "eOxInyR5MF4LgVJV",
+            "img": "icons/skills/melee/strike-flail-destructive-yellow.webp",
+            "system": {
+                "description": "<p><strong>Requires 20 Strength.</strong></p><p>You are a master of brutality, striking foes with unmatched strength. You gain the following benefits:</p><ul><li><p>You gain 10% critical chance.</p></li><li><p>You gain 10% critical damage.</p></li><li><p>You learn the skill @UUID[Compendium.celestus.skills.Ts2mjGfFAa0F1a5z]{Crush}. You always have it memorized, it doesn't count against your skills known or memorized and you don't need to meet it's memorization requirements.</p></li></ul>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "equipped": false,
+                "type": "feature",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "special": 0,
+                        "radiant": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0.1,
+                    "crit_chance": 0.1,
+                    "accuracy": 0,
+                    "evasion": 0,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [
+                    {
+                        "uuid": "Compendium.celestus.skills.Item.Ts2mjGfFAa0F1a5z",
+                        "name": "Crush"
+                    }
+                ],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [],
+            "sort": 175000,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1744238049234,
+                "modifiedTime": 1744238161192,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2255,8 +3522,8 @@
             "_id": "eyjVC6njy1BeJcKO",
             "img": "icons/skills/melee/strike-scythe-fire-green.webp",
             "system": {
-                "equipped": false,
-                "description": "<p>Whenever you reduce a creature to 0 Health you restore 2 Action Points. This only triggers once per round.</p>",
+                "equipped": true,
+                "description": "<p>Whenever you reduce a creature to 0 Health you restore 2 Action Points. This only triggers once per round.</p><p>★ Incompatible with @UUID[Compendium.celestus.talents.Y9ZMsqlZd7Hr4UbF]{Mobile}</p>",
                 "type": "talent",
                 "slot": "none",
                 "efficiency": 1,
@@ -2276,7 +3543,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -2308,6 +3576,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -2411,6 +3680,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -2452,7 +3722,159 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736373666925,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704246842,
+                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
+            }
+        },
+        {
+            "folder": "nZctBb88FOKktz03",
+            "name": "Deft",
+            "type": "feature",
+            "_id": "gjEESZUT6YfzxPoV",
+            "img": "icons/skills/melee/strike-dagger-white-orange.webp",
+            "system": {
+                "description": "<p><strong>Requires 40 Dexterity.</strong></p><p>You are a master of finesse, striking foes nimbly and evading oncoming attacks. You gain the following benefits:</p><ul><li><p>You gain 10% accuracy.</p></li><li><p>You gain 10% evasion.</p></li><li><p>You learn the skill @UUID[Compendium.celestus.skills.zwvvv6mPrBbV9gRh]{Flourish}. You always have it memorized, it doesn't count against your skills known or memorized and you don't need to meet it's memorization requirements.</p></li></ul>",
+                "price": 0,
+                "quantity": 1,
+                "weight": 0,
+                "equipped": false,
+                "type": "feature",
+                "slot": "none",
+                "efficiency": 1,
+                "bonuses": {
+                    "combat": {
+                        "onehand": 0,
+                        "dualwield": 0,
+                        "twohand": 0,
+                        "ranged": 0,
+                        "retributive": 0,
+                        "flamespeaker": 0,
+                        "tidecaller": 0,
+                        "stormseeker": 0,
+                        "duneshaper": 0,
+                        "voidcantor": 0,
+                        "deathbringer": 0,
+                        "shroudstalker": 0,
+                        "formshifter": 0,
+                        "huntmaster": 0,
+                        "warlord": 0,
+                        "lightbringer": 0
+                    },
+                    "civil": {
+                        "scoundrel": 0,
+                        "lore": 0,
+                        "nature": 0,
+                        "influence": 0,
+                        "religion": 0
+                    },
+                    "abilities": {
+                        "str": 0,
+                        "dex": 0,
+                        "con": 0,
+                        "int": 0,
+                        "mind": 0,
+                        "wit": 0
+                    },
+                    "resistance": {
+                        "physical": 0,
+                        "fire": 0,
+                        "water": 0,
+                        "air": 0,
+                        "earth": 0,
+                        "poison": 0,
+                        "psychic": 0,
+                        "shadow": 0,
+                        "piercing": 0,
+                        "healing": 0,
+                        "phys_armor": 0,
+                        "mag_armor": 0,
+                        "t_phys_armor": 0,
+                        "t_mag_armor": 0,
+                        "special": 0,
+                        "radiant": 0
+                    },
+                    "statusImmune": [],
+                    "crit_bonus": 0,
+                    "crit_chance": 0,
+                    "accuracy": 0.1,
+                    "evasion": 0.1,
+                    "initiative": 0
+                },
+                "prereqs": {
+                    "str": 0,
+                    "dex": 0,
+                    "con": 0,
+                    "int": 0,
+                    "mind": 0,
+                    "wit": 0
+                },
+                "ownedEffects": [],
+                "socketTypes": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "socketValues": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugIds": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "plugChanges": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "rarity": "Common",
+                "level": 1,
+                "grantedSkills": [
+                    {
+                        "uuid": "Compendium.celestus.skills.Item.zwvvv6mPrBbV9gRh",
+                        "name": "Flourish"
+                    }
+                ],
+                "ownedItems": [],
+                "canAlways": []
+            },
+            "effects": [],
+            "sort": 162500,
+            "ownership": {
+                "default": 0,
+                "ZJKmiL4ZAI5FH4eV": 3
+            },
+            "flags": {},
+            "_stats": {
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "coreVersion": "12.331",
+                "systemId": "celestus",
+                "systemVersion": "0.0.1",
+                "createdTime": 1744237179087,
+                "modifiedTime": 1744238051202,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2463,7 +3885,7 @@
             "_id": "h9En6oDUdUPX3Cge",
             "img": "icons/skills/movement/figure-running-gray.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>Your movement doesn't provoke @UUID[Compendium.celestus.skills.sMOJLlVWBNuVXzXt]{Opportunity Attack} and your attacks don't provoke @UUID[Compendium.celestus.skills.TTSollRswbZwxvie]{Counterattacks}.</p>",
                 "type": "talent",
                 "slot": "none",
@@ -2484,7 +3906,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -2516,6 +3939,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -2597,7 +4021,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361551118,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704260781,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2608,7 +4032,7 @@
             "_id": "hBiwxBA2pSCpjNHw",
             "img": "icons/magic/unholy/strike-beam-blood-large-red-purple.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>All your magic skills gain a chance to critically strike. This chance is equal to your critical hit chance. When you use a magic skill that deals damage, roll [[/r 1d100]] to determine if it is a critical hit.</p>",
                 "type": "talent",
                 "slot": "none",
@@ -2629,7 +4053,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -2661,6 +4086,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -2764,6 +4190,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -2805,7 +4232,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736372775394,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704258697,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -2815,7 +4242,7 @@
             "_id": "kYy2bLm1IDhXLZRd",
             "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>You gain +10% Max Health and +5% Evasion.</p><p>(Max health calculation is multiplicative)</p>",
                 "type": "talent",
                 "slot": "none",
@@ -2836,7 +4263,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -2868,6 +4296,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -2971,6 +4400,7 @@
                         },
                         "grantedSkills": [],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [
@@ -3019,7 +4449,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736375869338,
-                "modifiedTime": 1742954752215,
+                "modifiedTime": 1743704253458,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         },
@@ -3030,9 +4460,9 @@
             "_id": "yUvi8DJ73t6a5Ocr",
             "img": "icons/skills/melee/swords-parry-block-blue.webp",
             "system": {
-                "equipped": false,
+                "equipped": true,
                 "description": "<p>Whenever a creature hits you with a melee attack, you can Strike back at them with a counter. If they are outside your reach or you are not wielding a melee weapon you cannot make this attack.</p><p>★ Grants @UUID[Compendium.celestus.skills.TTSollRswbZwxvie]{Counterattack}</p>",
-                "type": "feature",
+                "type": "talent",
                 "slot": "none",
                 "efficiency": 1,
                 "bonuses": {
@@ -3051,7 +4481,8 @@
                         "shroudstalker": 0,
                         "formshifter": 0,
                         "huntmaster": 0,
-                        "warlord": 0
+                        "warlord": 0,
+                        "lightbringer": 0
                     },
                     "civil": {
                         "scoundrel": 0,
@@ -3083,6 +4514,7 @@
                         "t_phys_armor": 0,
                         "t_mag_armor": 0,
                         "shadow": 0,
+                        "radiant": 0,
                         "special": 0
                     },
                     "statusImmune": [],
@@ -3191,6 +4623,7 @@
                             }
                         ],
                         "ownedItems": [],
+                        "damageFlatScalar": false,
                         "damageRiders": []
                     },
                     "changes": [],
@@ -3225,210 +4658,7 @@
                 "systemId": "celestus",
                 "systemVersion": "0.0.1",
                 "createdTime": 1736361861999,
-                "modifiedTime": 1742954752215,
-                "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
-            }
-        },
-        {
-            "folder": "Nd8Y4X5YuQ7zsaYv",
-            "name": "Spellblade",
-            "type": "feature",
-            "_id": "KrPEt947A8Siir5m",
-            "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
-            "system": {
-                "description": "<p>You have mastered weaving sword and sorcery. Through performing a 1 hour ritual, or as part of a rest, you can magically bind a melee weapon you possess to your magic. While wielding the bound weapon, you may use intelligence when calculating damage. Additionally, while wielding the bound weapon, you cannot be disarmed or @UUID[Compendium.celestus.rules.ApravHaqi2H9tSn2]{atrophied}.</p><p>For 1 action point, you can temporarily shunt to or retrieve your weapon from a pocket dimension.</p><p>You can only have one weapon bound in this way at a time, and attempting to bind another weapon will cause all other weapon's you are bound to to unbind. If the bound weapon is ever not on your person or in the pocket dimension for more than 24 hours the bond ceases.</p>",
-                "price": 0,
-                "quantity": 1,
-                "weight": 0,
-                "equipped": true,
-                "type": "talent",
-                "slot": "none",
-                "efficiency": 1,
-                "bonuses": {
-                    "combat": {
-                        "onehand": 0,
-                        "dualwield": 0,
-                        "twohand": 0,
-                        "ranged": 0,
-                        "retributive": 0,
-                        "flamespeaker": 0,
-                        "tidecaller": 0,
-                        "stormseeker": 0,
-                        "duneshaper": 0,
-                        "voidcantor": 0,
-                        "deathbringer": 0,
-                        "shroudstalker": 0,
-                        "formshifter": 0,
-                        "huntmaster": 0,
-                        "warlord": 0
-                    },
-                    "civil": {
-                        "scoundrel": 0,
-                        "lore": 0,
-                        "nature": 0,
-                        "influence": 0,
-                        "religion": 0
-                    },
-                    "abilities": {
-                        "str": 0,
-                        "dex": 0,
-                        "con": 0,
-                        "int": 0,
-                        "mind": 0,
-                        "wit": 0
-                    },
-                    "resistance": {
-                        "physical": 0,
-                        "fire": 0,
-                        "water": 0,
-                        "air": 0,
-                        "earth": 0,
-                        "poison": 0,
-                        "psychic": 0,
-                        "shadow": 0,
-                        "piercing": 0,
-                        "healing": 0,
-                        "phys_armor": 0,
-                        "mag_armor": 0,
-                        "t_phys_armor": 0,
-                        "t_mag_armor": 0,
-                        "special": 0
-                    },
-                    "statusImmune": [],
-                    "crit_bonus": 0,
-                    "crit_chance": 0,
-                    "accuracy": 0,
-                    "evasion": 0,
-                    "initiative": 0
-                },
-                "prereqs": {
-                    "str": 0,
-                    "dex": 0,
-                    "con": 0,
-                    "int": 0,
-                    "mind": 0,
-                    "wit": 0
-                },
-                "ownedEffects": [],
-                "socketTypes": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "socketValues": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "plugIds": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "plugChanges": [
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {},
-                    {}
-                ],
-                "rarity": "Common",
-                "level": 1,
-                "grantedSkills": [],
-                "ownedItems": [],
-                "canAlways": []
-            },
-            "effects": [
-                {
-                    "name": "Bound Weapon",
-                    "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
-                    "origin": "Compendium.celestus.talents.Item.KrPEt947A8Siir5m",
-                    "duration": {
-                        "rounds": null,
-                        "startTime": null,
-                        "seconds": null,
-                        "combat": null,
-                        "turns": null,
-                        "startRound": null,
-                        "startTurn": null
-                    },
-                    "disabled": false,
-                    "type": "status",
-                    "_id": "kW2zpSDR0bu1TbE9",
-                    "system": {
-                        "damage": [],
-                        "damageRiders": [],
-                        "resistedBy": "none",
-                        "combines": [],
-                        "removes": [],
-                        "blocks": [
-                            "atrophy"
-                        ],
-                        "triggers": [],
-                        "aura": {
-                            "has": false,
-                            "targetsSelf": true,
-                            "radius": 0,
-                            "targets": "any",
-                            "targetType": "humanoid",
-                            "clearOnLeave": true,
-                            "lingerDuration": 0,
-                            "children": []
-                        },
-                        "grantedSkills": [],
-                        "ownedItems": []
-                    },
-                    "changes": [],
-                    "description": "",
-                    "tint": "#ffffff",
-                    "transfer": false,
-                    "statuses": [],
-                    "sort": 0,
-                    "flags": {},
-                    "_stats": {
-                        "compendiumSource": null,
-                        "duplicateSource": null,
-                        "coreVersion": "12.331",
-                        "systemId": "celestus",
-                        "systemVersion": "0.0.1",
-                        "createdTime": 1743090534505,
-                        "modifiedTime": 1743090752502,
-                        "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
-                    }
-                }
-            ],
-            "sort": 0,
-            "ownership": {
-                "default": 0,
-                "ZJKmiL4ZAI5FH4eV": 3
-            },
-            "flags": {},
-            "_stats": {
-                "compendiumSource": null,
-                "duplicateSource": null,
-                "coreVersion": "12.331",
-                "systemId": "celestus",
-                "systemVersion": "0.0.1",
-                "createdTime": 1743090468058,
-                "modifiedTime": 1743090738283,
+                "modifiedTime": 1743704244663,
                 "lastModifiedBy": "ZJKmiL4ZAI5FH4eV"
             }
         }
