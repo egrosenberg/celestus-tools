@@ -20,6 +20,7 @@ export default {
         poison: { label: "Poison", text: "poison", style: "magical", skill: "duneshaper", color: "#c9df86", glyph: "icon-chemical-bolt" },
         psychic: { label: "Psychic", text: "psychic", style: "magical", skill: "voidcantor", color: "#df86df", glyph: "icon-croissants-pupil" },
         shadow: { label: "Shadow", text: "shadow", style: "direct", skill: "shroudstalker", color: "#90a1d5", glyph: "icon-bloody-stash" },
+        radiant: { label: "Radiant", text: "radiant", style: "magical", skill: "lightbringer", color: "#ffe44d", glyph: "icon-sundial" },
         piercing: { label: "Piercing", text: "piercing", style: "direct", skill: "warlord", color: "#df8686", glyph: "icon-bloody-stash" },
         healing: { label: "Healing", text: "healing", style: "healing", skill: "tidecaller", color: "#92e298", glyph: "icon-nested-hearts" },
         phys_armor: { label: "Physical Armor", text: "phys_armor", style: "healing", skill: "duneshaper", color: "#ebccad", glyph: "icon-edged-shield" },
@@ -50,6 +51,7 @@ export default {
         voidcantor: { label: "Voidcantor", text: "voidcantor", damage: "psychic", glyph: "icon-psionics", type: "skill" },
         deathbringer: { label: "Deathbringer", text: "deathbringer", damage: "piercing", glyph: "icon-death-zone", type: "skill", modOverride: 0.1 },
         shroudstalker: { label: "Shroudstalker", text: "shroudstalker", damage: "shadow", glyph: "icon-nested-eclipses", type: "skill" },
+        lightbringer: { label: "Lightbringer", text: "lightbringer", damage: "radiant", glyph: "icon-barbed-sun", type: "skill" },
         formshifter: { label: "Formshifter", text: "formshifter", damage: "phys_armor", glyph: "icon-wolf-howl", type: "skill" },
         huntmaster: { label: "Huntmaster", text: "huntmaster", damage: "poison", glyph: "icon-pocket-bow", type: "skill" },
         warlord: { label: "Warlord", text: "warlord", damage: "physical", glyph: "icon-axe-sword", type: "skill" },
@@ -64,11 +66,12 @@ export default {
      * glyph: glyphter icon to use for display
      */
     civilSkills: {
-        scoundrel: { label: "Scoundrel", text: "scoundrel", color: "#f0f0f4", glyph: "icon-pay-money" },
-        lore: { label: "Lore", text: "lore", color: "#ff9999", glyph: "icon-book-cover" },
-        nature: { label: "Nature", text: "nature", color: "#b0e8b0", glyph: "icon-linden-leaf" },
-        influence: { label: "Influence", text: "influence", color: "#ffccf1", glyph: "icon-lyre" },
-        religion: { label: "Religion", text: "religion", color: "#fffbcd", glyph: "icon-angel-outfit" },
+        scoundrel: { label: "Scoundrel", text: "scoundrel", color: "#f0f0f4", color_dark: "#2D2D30", glyph: "icon-pay-money" },
+        lore: { label: "Lore", text: "lore", color: "#FFCACA", color_dark: "#640000", glyph: "icon-book-cover" },
+        nature: { label: "Nature", text: "nature", color: "#b0e8b0", color_dark: "#053405", glyph: "icon-linden-leaf" },
+        influence: { label: "Influence", text: "influence", color: "#ffccf1", color_dark: "#80005D", glyph: "icon-lyre" },
+        religion: { label: "Religion", text: "religion", color: "#fffbcd", color_dark: "#6A6100", glyph: "icon-angel-outfit" },
+        special: { label: "Special", text: "special", damage: "special", glyph: "icon-flower-twirl", type: "skill", ignore: true }
     },
     /**
      * bonuses
