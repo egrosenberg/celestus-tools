@@ -148,13 +148,14 @@
     top: 5px;
     right: 5px;
     font-size: 60px;
-    z-index: -1;
+    z-index: 0;
     opacity: 0.3;
 }
 
 .roll.description .name-stacked {
     font-family: "PT Serif", serif;
-    vertical-align: top;
+    position: relative;
+    z-index: 1;
 }
 
 .roll.description .title {
