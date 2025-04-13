@@ -33,7 +33,11 @@
 }
 
 .celestus .shadow {
-    background-color: var(--color-shadow-light);
+    background-color: var(--color-shadow-bg);
+}
+
+.celestus .radiant {
+    background-color: var(--color-radiant-bg);
 }
 
 .celestus .healing {
@@ -81,7 +85,11 @@
 }
 
 .celestus .shadow-dark {
-    background-color: var(--color-shadow-dark-light);
+    background-color: var(--color-shadow-dark-bg);
+}
+
+.celestus .radiant-dark {
+    background-color: var(--color-radiant-dark-bg);
 }
 
 .celestus .healing-dark {
