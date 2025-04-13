@@ -79,6 +79,25 @@ body {
     --color-rose-4: #FF99F0;
     --color-rose-5: #FFCCF7;
 
+    --color-physical-fg: rgb(166, 212, 255);
+    --color-fire-fg: rgb(255, 61, 26);
+    --color-water-fg: rgb(0, 166, 255);
+    --color-air-fg: rgb(150, 114, 255);
+    --color-earth-fg: rgb(255, 169, 83);
+    --color-poison-fg: rgb(191, 255, 0);
+    --color-psychic-fg: rgb(255, 0, 255);
+    --color-piercing-fg: rgb(255, 105, 105);
+    --color-shadow-fg: rgb(136, 156, 218);
+    --color-radiant-fg: rgb(255, 230, 0);
+    --color-healing-fg: rgb(0, 255, 76);
+    --color-phys_armor-fg: rgb(211, 105, 0);
+    --color-mag_armor-fg: rgb(0, 255, 255);
+    --color-scoundrel-fg: #f0f0ff;
+    --color-lore-fg: #ff3939;
+    --color-nature-fg: #5cff5c;
+    --color-influence-fg: #ff00bb;
+    --color-religion-fg: #ffea00;
+
     --color-physical-bg: rgb(179, 192, 204);
     --color-fire-bg: rgb(219, 139, 112);
     --color-water-bg: rgb(134, 192, 223);
@@ -92,6 +111,11 @@ body {
     --color-healing-bg: rgb(146, 226, 152);
     --color-phys_armor-bg: rgb(235, 204, 173);
     --color-mag_armor-bg: rgb(134, 223, 223);
+    --color-scoundrel-bg: #f0f0f4;
+    --color-lore-bg: #FFCACA;
+    --color-nature-bg: #b0e8b0;
+    --color-influence-bg: #ffccf1;
+    --color-religion-bg: #fffbcd;
 
     --color-physical-dark-bg: rgb(17, 18, 19);
     --color-fire-dark-bg: rgb(107, 0, 0);
@@ -666,7 +690,7 @@ h6 {
     font-size: var(--font-size-16);
 }
 
-.content ul.compressed {
+.content ul.compressed, .content .description ul {
     margin-top: -15px;
 }
 
@@ -741,7 +765,7 @@ table h3 {
     margin-bottom: -2px;
 }
 
-.content table p {
+.content table p, .content li p {
     margin: 0px;
 }
 
@@ -895,18 +919,18 @@ ul.list {
 }
 
 .browser-item:nth-child(odd) {
-    background: var(--color-dark-3);
+    background: var(--color-dark-1);
 }
 
 .browser-item.selected {
     font-weight: 700;
-    background-color: var(--color-dark-1);
+    background-color: var(--color-dark-3);
     border: 1px solid var(--color-light-1);
     padding: 2px;
 }
 
 .browser-item:hover {
-    background-color: var(--color-dark-1);
+    background-color: var(--color-dark-3);
 }
 
 .browser-item label {
@@ -916,6 +940,10 @@ ul.list {
 .browser .name {
     font-weight: 600;
     flex: 2;
+}
+
+.browser-item .school {
+    font-weight: bold;
 }
 
 #overlay {

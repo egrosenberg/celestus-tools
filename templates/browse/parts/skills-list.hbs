@@ -1,7 +1,6 @@
 {{#each data as |skill|}}
-<li class="browser-item" id="{{skill._id}}"
-    data-name="{{skill.name}}" data-tier="{{skill.system.tier}}" data-school="{{skill.system.school}}"
-    data-ap="{{skill.system.ap}}" data-fp="{{skill.system.fp}}">
+<li class="browser-item" id="{{skill._id}}" data-name="{{skill.name}}" data-tier="{{skill.system.tier}}"
+    data-school="{{skill.system.school}}" data-ap="{{skill.system.ap}}" data-fp="{{skill.system.fp}}">
     <label class="name">{{skill.name}}</label>
     <label class="thin">
         {{#if skill.system.ap}}
@@ -18,20 +17,24 @@
         {{/if}}
     </label>
     <label>
-        {{lookup ../celestus.skillTiers skill.system.tier}}
+        <div class="flexrow">
+            <div>
+                {{skill.system.tier}} &emsp; {{lookup ../celestus.skillTiers skill.system.tier}}
+            </div>
+        </div>
     </label>
-    <label class="school">
-    {{#if (eq skill.system.type "civil")}}
-    {{#with (lookup ../celestus.civilSkills skill.system.school)}}
-        <i class="{{glyph}}"></i>
+        {{#if (eq skill.system.type "civil")}}
+        {{#with (lookup ../celestus.civilSkills skill.system.school)}}
+    <label class="school" style="color:var(--color-{{text}}-bg)">
         {{label}}
-    {{/with}}
-    {{else}}
-    {{#with (lookup ../celestus.combatSkills skill.system.school)}}
-        <i class="{{glyph}}"></i>
-        {{label}}
-    {{/with}}
-    {{/if}}
     </label>
+        {{/with}}
+        {{else}}
+        {{#with (lookup ../celestus.combatSkills skill.system.school)}}
+    <label class="school" style="color:var(--color-{{damage}}-bg)">
+        {{label}}
+    </label>
+        {{/with}}
+        {{/if}}
 </li>
 {{/each}}
