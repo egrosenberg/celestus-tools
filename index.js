@@ -5,6 +5,10 @@ import Browser from "./modules/browser.mjs";
 import celestus from "./data/celestus.mjs";
 import Content from "./modules/content.mjs";
 import Index from "./modules/Index.mjs";
+import i18n from "./modules/import/i18n.mjs";
+
+const localize = i18n();
+console.log(localize("CELESTUS.attributes.str"));
 
 // create browsers map
 const browsers = new Map([

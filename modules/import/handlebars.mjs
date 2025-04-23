@@ -1,5 +1,7 @@
 import { loadTextFile } from "./files.mjs";
 import Handlebars from "handlebars";
+import i18n from "./i18n.mjs";
+const localize = i18n();
 
 const CONTENT_LINK_REG = /@UUID\[.+?\]?{.+?}/g;
 const LINK_UUID_REG = /(?<=\[).+?(?=\])/g;
@@ -94,7 +96,14 @@ function registerHelpers() {
             }
         }
         return empty;
-    })
+    });
+    // localize a string, optionally 
+    Handlebars.registerHelper("localize", (value, options) => {
+        if ( value instanceof Handlebars.SafeString ) value = value.toString();
+        const data = options.hash;
+        return Object.keys(data).length === 0 ? localize(value) : localize(value, data);
+      }
+    );
 }
 
 /**
