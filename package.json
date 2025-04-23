@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "ethan",
-  "license":" (MIT OR Apache-2.0)",
+  "license": " (MIT OR Apache-2.0)",
   "devDependencies": {
     "nodemon": "^3.1.9"
   },
@@ -19,6 +19,7 @@
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
     "handlebars": "^4.7.8",
+    "i18next": "^25.0.1",
     "jquery": "^3.7.1"
   }
 }
