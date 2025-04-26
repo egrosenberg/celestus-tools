@@ -1,0 +1,72 @@
+<header>
+    <h1>Filter</h1>
+    <button><i class="fa-solid fa-check"></i></button>
+</header>
+<div class="form-content">
+    <div class="form-section">
+        <h1>Type</h1>
+        {{!-- Base Item Types--}}
+        {{#each config.itemTypes as |type|}}
+        <input name="type.{{type}}" type="checkbox" id="type.{{type}}" class="hidden-check" data-value="{{type}}"
+            data-field="type"></input>
+        <label for="type.{{type}}" class="form-toggle">
+            {{localize (concat "CELESTUS.item.type." type)}}
+        </label>
+        {{/each}}
+        {{!-- Armor slots --}}
+        {{#each config.armor.slots as |slot|}}
+        <input name="system.slot.{{slot.text}}" type="checkbox" id="system.slot.{{slot.text}}" class="hidden-check" data-value="{{slot.text}}"
+            data-field="system.slot"></input>
+        <label for="system.slot.{{slot.text}}" class="form-toggle">
+            {{localize (concat "CELESTUS.item.subtype." slot.text)}}
+        </label>
+        {{/each}}
+        {{!-- Armor Types --}}
+        {{#each config.armor.types as |type|}}
+        <input name="system.spread.{{type}}" type="checkbox" id="system.spread.{{type}}" class="hidden-check" data-value="{{type}}"
+            data-field="system.spread"></input>
+        <label for="system.spread.{{type}}" class="form-toggle">
+            {{localize (concat "CELESTUS.item.armorType." type)}}
+        </label>
+        {{/each}}
+        {{!-- Weapon things --}}
+        {{!-- Ranged Weapon --}}
+        <input name="system.rangeType.Ranged" type="checkbox" id="system.rangeType.Ranged" class="hidden-check" data-value="Ranged"
+            data-field="system.rangeType"></input>
+        <label for="system.rangeType.Ranged" class="form-toggle">
+            {{localize "CELESTUS.item.subtype.ranged"}}
+        </label>
+        {{!-- Melee Weapon --}}
+        <input name="system.rangeType.Melee" type="checkbox" id="system.rangeType.Melee" class="hidden-check" data-value="Melee"
+            data-field="system.rangeType"></input>
+        <label for="system.rangeType.Melee" class="form-toggle">
+            {{localize "CELESTUS.item.subtype.melee"}}
+        </label>
+        {{!-- One-handed Weapon --}}
+        <input name="system.twoHanded.false" type="checkbox" id="system.twoHanded.false" class="hidden-check" data-value="false"
+            data-field="system.twoHanded"></input>
+        <label for="system.twoHanded.false" class="form-toggle">
+            {{localize "CELESTUS.item.subtype.onehanded"}}
+        </label>
+        {{!-- Two-handed Weapon --}}
+        <input name="system.twoHanded.true" type="checkbox" id="system.twoHanded.true" class="hidden-check" data-value="true"
+            data-field="system.twoHanded"></input>
+        <label for="system.twoHanded.true" class="form-toggle">
+            {{localize "CELESTUS.item.subtype.twohanded"}}
+        </label>
+    <div class="form-section">
+    </div>
+        {{!-- Item Rarity--}}
+        <h1>Rarity</h1>
+        {{#each config.itemRarities as |val rarity|}}
+        <input name="rarity.{{rarity}}" type="checkbox" id="rarity.{{rarity}}" class="hidden-check"
+            data-value="{{rarity}}" data-field="system.rarity"></input>
+        <label for="rarity.{{rarity}}" class="form-toggle">
+            {{rarity}}
+        </label>
+        {{/each}}
+    </div>
+</div>
+<footer class="form-submit">
+    <button>Submit</button>
+</footer>

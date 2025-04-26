@@ -15,9 +15,11 @@ export default class Browser {
     /**
      * @param {String} key for use in generating paths
      * @param {String} jsonPath path to JSON file containing list data
+     * @param {Boolean} overrideDescPath should it override description path
      * @returns this. this.err will be present if an error occurs
      */
-    constructor(key, jsonPath) {
+    constructor(key, jsonPath, overrideDescPath) {
+        this.overrideDescPath = overrideDescPath;
         if (!key) {
             throw new Error('INVALID KEY');
         }
@@ -80,7 +82,8 @@ export default class Browser {
             config: celestus,
         };
     
-        const content = await hbs.renderFromTemplate(this.paths.description, msgData);
+        const path = this.overrideDescPath ? this.paths.description : `templates/descriptions/${item.type}-description.hbs`;
+        const content = await hbs.renderFromTemplate(path, msgData);
     
         return content;
     }

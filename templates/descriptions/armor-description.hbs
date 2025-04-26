@@ -1,0 +1,54 @@
+<div class="dice-flavor celestus roll description">
+    <header class="summary">
+        <div class="name-stacked">
+            <div class="title">{{name}}</div>
+            <div class="subtitle">
+                {{lookup config.equipmentSlots system.slot}}
+                {{#with (lookup config.armor.spreads system.spread) as |type|}}
+                {{#unless (eq type.label (lookup ../config.equipmentSlots ../system.slot))}}
+                | {{type.label}}
+                {{/unless}}
+                {{/with}}
+            </div>
+        </div>
+    </header>
+    <div class="roll-tags">
+        {{> './templates/descriptions/parts/item-base-details.hbs'}}
+        
+        {{!-- Spread --}}
+        {{#with (lookup config.armor.spreads system.spread) as |type|}}
+        {{#unless (eq type.label (lookup ../config.equipmentSlots ../system.slot))}}
+        <div class="roll-tag">
+            <span class="name">
+                Armor Spread:
+            </span>
+            {{type.label}}
+            ({{../system.base.phys}} | {{../system.base.mag}})
+        </div>
+        {{/unless}}
+        {{/with}}
+        <div class="roll-tag">
+            <span class="name">
+                Efficiency:
+            </span>
+            {{system.efficiency}}
+        </div>
+
+        {{!-- Prerequisites --}}
+        {{#if item.system.hasPrereqs}}
+        <div class="roll-tag">
+            <span class="name">
+                Requires: 
+            </span>
+            {{#each system.prereqs as |value stat|}}
+            {{#if value}}
+            {{value}} {{localize (concat "CELESTUS.attributes." stat)}}
+            {{/if}}
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{> './templates/descriptions/parts/item-roll-tag-bonuses.hbs'}}
+    </div>
+    {{#if flavor}}{{{flavor}}}{{/if}}
+</div>

@@ -1,0 +1,15 @@
+<div class="dice-flavor celestus roll description">
+    <header class="summary">
+        <div class="name-stacked">
+            <div class="title">{{name}}</div>
+            <div class="subtitle">
+                Consumable
+            </div>
+        </div>
+    </header>
+    {{#repeat item.system.ap}}<i class="fa-solid fa-circle ap-icon"></i>{{/repeat}}
+    <div class="roll-tags">
+        {{> './templates/descriptions/parts/item-base-details.hbs'}}
+    </div>
+    {{#if flavor}}{{{flavor}}}{{/if}}
+</div>

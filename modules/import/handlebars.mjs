@@ -25,9 +25,9 @@ function registerHelpers() {
     Handlebars.registerHelper('and', (a, b) => a && b);
     Handlebars.registerHelper('not', (a) => !a);
     Handlebars.registerHelper('ifThen', function(arg1, arg2, arg3) {
-        return (arg1 ? arg2 : arg3??"");
+        return (arg1 ? arg2 : arg3||"");
     });
-    Handlebars.registerHelper('not', (a) => !a);
+    Handlebars.registerHelper('length', (a) => a?.length ?? "");
     /**
      * Other
      */
@@ -104,6 +104,12 @@ function registerHelpers() {
         return Object.keys(data).length === 0 ? localize(value) : localize(value, data);
       }
     );
+    // concat values
+    Handlebars.registerHelper("concat", (...values) => {
+        const options = values.pop();
+        const join = options.hash?.join || "";
+        return new Handlebars.SafeString(values.join(join));
+    });
 }
 
 /**

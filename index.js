@@ -5,10 +5,6 @@ import Browser from "./modules/browser.mjs";
 import celestus from "./data/celestus.mjs";
 import Content from "./modules/content.mjs";
 import Index from "./modules/Index.mjs";
-import i18n from "./modules/import/i18n.mjs";
-
-const localize = i18n();
-console.log(localize("CELESTUS.attributes.str"));
 
 // create browsers map
 const browsers = new Map([
@@ -17,7 +13,8 @@ const browsers = new Map([
     ['professions', new Browser("professions", "../data/professions.json")],
     ['ancestries', new Browser("ancestries", "../data/ancestries.json")],
     ['talents', new Browser("talents", "../data/talents.json")],
-    ['rules', new Browser("rules", "../data/rules.json")]
+    ['rules', new Browser("rules", "../data/rules.json", true)],
+    ['items', new Browser("items", "../data/items.json")]
 ]);
 // create content map
 const pages = new Map([
@@ -55,8 +52,11 @@ hbs.loadPartials([
     "./templates/browse/parts/ancestries-list.hbs",
     "./templates/browse/parts/talents-list.hbs",
     "./templates/browse/parts/rules-list.hbs",
+    "./templates/browse/parts/items-list.hbs",
     "./templates/parts/navigation.hbs",
     "./templates/parts/js-includes.hbs",
+    "./templates/descriptions/parts/item-roll-tag-bonuses.hbs",
+    "./templates/descriptions/parts/item-base-details.hbs",
 ]);
 
 const app = express();

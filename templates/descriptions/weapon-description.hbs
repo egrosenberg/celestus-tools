@@ -1,0 +1,91 @@
+<div class="dice-flavor celestus roll description">
+    <header class="summary">
+        <div class="name-stacked">
+            <div class="title">{{name}}</div>
+            <div class="subtitle">
+                {{ifThen system.twoHanded (localize "CELESTUS.item.subtype.twohanded") (localize "CELESTUS.item.subtype.onehanded")}} |
+                {{ifThen (gt system.range 0) "Ranged" "Melee"}}
+            </div>
+        </div>
+    </header>
+    <div class="roll-tags">
+        {{> './templates/descriptions/parts/item-base-details.hbs'}}
+
+        <div class="roll-tag">
+            <span class="name">
+                Efficiency:
+            </span>
+            {{system.efficiency}}
+        </div>
+
+        <div class="roll-tag">
+            <span class="name">
+                Range:
+            </span>
+            {{#if system.range}}
+            {{system.range}} ft.
+            {{else}}
+            Melee
+            {{ifThen system.reach "(reach)" ""}}
+            {{/if}}
+        </div>
+
+        {{!-- Prerequisites --}}
+        {{#if item.system.hasPrereqs}}
+        <div class="roll-tag">
+            <span class="name">
+                Requires:
+            </span>
+            {{#each system.prereqs as |value stat|}}
+            {{#if value}}
+            {{value}} {{localize (concat "CELESTUS.attributes." stat)}}
+            {{/if}}
+            {{/each}}
+        </div>
+        {{/if}}
+
+        <div class="roll-tag">
+            <span class="name">
+                Scales With:
+            </span>
+            {{localize (concat "CELESTUS.attributes." system.ability)}}
+        </div>
+
+        {{!-- Weapon Damage --}}
+        <div class="roll-tag">
+            <span class="name">
+                Damage Type:
+            </span>
+            {{localize (concat "CELESTUS.damageTypes." system.type)}}
+        </div>
+        {{!-- Bonus Damage --}}
+        {{#if (length item.system.bonusElements)}}
+        <div class="roll-tag">
+            <span class="name">
+                Bonus Damage:
+            </span>
+            {{#each item.system.bonusElements as |element|}}
+            {{percent element.value symbol=true}}
+            {{localize (concat "CELESTUS.damageTypes." element.type)}}{{ifThen @last "" ", "}}
+            {{/each}}
+        </div>
+        {{/if}}
+
+
+        {{!-- statuses --}}
+        {{#if (length item.system.statusApplyRolls)}}
+        <div class="roll-tag">
+            <span class="name">
+                Applies
+            </span>
+            {{#each item.system.statusApplyRolls as |status|}}
+            {{status.id}} {{status.chance}}%
+            {{ifThen @last "" ","}}
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{> './templates/descriptions/parts/item-roll-tag-bonuses.hbs'}}
+    </div>
+    {{#if flavor}}{{{flavor}}}{{/if}}
+</div>

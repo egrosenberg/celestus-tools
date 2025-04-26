@@ -1,0 +1,21 @@
+{{#each data as |item|}}
+<li class="browser-item" id="{{item._id}}" data-name="{{item.name}}" data-price="{{item.system.price}}"
+    data-weight="{{item.system.weight}}" data-rarity="{{lookup ../celestus.itemRarities item.system.rarity}}"
+    data-type="{{item.type}}">
+    <label class="name">
+        {{item.name}}
+    </label>
+    <label>
+        {{capitalize item.type}}
+    </label>
+    <label>
+        {{ifThen item.system.price (concat item.system.price " gp") "—"}}
+    </label>
+    <label>
+        {{ifThen item.system.weight (concat item.system.weight " lbs.") "—"}}
+    </label>
+    <label>
+        {{item.system.rarity}}
+    </label>
+</li>
+{{/each}}

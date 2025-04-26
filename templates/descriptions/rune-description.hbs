@@ -1,0 +1,21 @@
+<div class="dice-flavor celestus roll description">
+    <header class="summary">
+        <div class="name-stacked">
+            <div class="title">{{name}}</div>
+            <div class="subtitle">Rune</div>
+        </div>
+    </header>
+    {{> './templates/descriptions/parts/item-base-details.hbs'}}
+    {{#each item.system.plugs as |plugs type|}}
+    <div class="roll-tag">
+        <span class="name">
+            {{capitalize type}}:
+        </span>
+        {{#each plugs as |plug|}}
+        {{localize (concat "CELESTUS.runeDescriptions." plug)}}
+        {{ifThen @last "" ","}}
+        {{/each}}
+        {{{ifThen @last "" "<br />"}}}
+        {{/each}}
+    </div>
+</div>
