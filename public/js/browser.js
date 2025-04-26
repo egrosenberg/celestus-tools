@@ -1,4 +1,5 @@
-/*global $, byString, createForm linkTooltips */
+/*global $, byString, createForm, linkTooltips */
+/* exported logFilterEncoded */
 
 var domList;
 var listItems;
@@ -6,6 +7,15 @@ var items = new Map();
 
 let pathname, filtersID, orderKeyID, orderAscending;
 let pageIndex = "";
+
+/**
+ * Outputs the current filter for this page as an encoded url
+ * path that, when visited will automatically set the filter to 
+ * the one stored in this client's cookies
+ */
+function logFilterEncoded() {
+    console.info(window.location.pathname+'?filter='+encodeURIComponent(localStorage.getItem(filtersID)));
+}
 
 /**
  * Sets all variables needed in order to get the names for associated cookies with this page
@@ -80,6 +90,13 @@ async function initializeBrowser() {
     // get items list element
     domList = document.getElementById("item-list");
     listItems = $(domList).children("li").get();
+
+    // check if site was sent filter data
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get('filter');
+    if (filter) {
+        localStorage.setItem(filtersID, filter);
+    }
 
     // set selected filter as selected
     $(".list-header label").each((index, e) => {
@@ -193,6 +210,8 @@ $(document).ready(async () => {
             populateList();
         });
     });
+
+    $(document).on("click", ".log-filter", logFilterEncoded);
 });
 
 /**
