@@ -14,7 +14,7 @@ let pageIndex = "";
  * the one stored in this client's cookies
  */
 function logFilterEncoded() {
-    console.info(window.location.pathname+'?filter='+encodeURIComponent(localStorage.getItem(filtersID)));
+    console.info(window.location.pathname + '?filter=' + encodeURIComponent(localStorage.getItem(filtersID)));
 }
 
 /**
@@ -250,7 +250,6 @@ function filterByText(text) {
     });
 }
 
-filterByParams([{ mode: "or", keys: [{ id: "system.tier", value: 1 }] }]);
 /**
  * Filters by an array of fields and values
  * @param {Object[]} filters array of field and filter options
@@ -302,7 +301,12 @@ function filterByParams(filters) {
 function populateList(textFilter = null) {
     textFilter ??= document.getElementById("list-input").value
     orderSkills(localStorage.getItem(orderKeyID), localStorage.getItem(orderAscending) === 'true');
-    const filters = JSON.parse(localStorage.getItem(filtersID)).data ?? [];;
+    const filters = JSON.parse(localStorage.getItem(filtersID)).data ?? [];
+    // record total number of browser items
+    const totalItems = $('#item-list li').length;
     filterByParams(filters);
     filterByText(textFilter);
+    // record number of post-filtered items
+    const filteredItems = $('#item-list li').length;
+    $(".filter-total").html(`${filteredItems}/${totalItems}`);
 }
