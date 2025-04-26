@@ -159,13 +159,16 @@
 }
 
 .roll.description .title {
-    font-size: var(--font-size-32);
+    font-size: var(--font-size-28);
     font-weight: bold;
     color: var(--color-light-3);
+    line-height: 100%;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
 }
 
 .roll.description .subtitle {
-    font-size: var(--font-size-20);
+    font-size: var(--font-size-18);
     font-style: italic;
     margin-top: -5px;
 }

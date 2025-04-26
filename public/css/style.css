@@ -826,6 +826,7 @@ ul.list {
     list-style-type: none;
     border-left: thin solid var(--color-dark-6);
     border-right: thin solid var(--color-dark-6);
+    border-bottom: thin solid var(--color-dark-6);
 }
 
 .list-input {
@@ -867,7 +868,6 @@ ul.list {
 
 .list-header {
     font-family: "PT Serif", serif;
-    width: 100%;
     background-color: var(--color-dark-3);
     border: none;
     font-size: var(--font-size-14);
