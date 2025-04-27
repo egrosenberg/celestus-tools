@@ -129,6 +129,41 @@ async function initializeBrowser() {
     linkTooltips();
 }
 
+/**
+ * Displays list of filters in filters
+ * @param {Object} filters to display
+ */
+function displayFilters(filters) {
+    let html = "";
+    if (!filters.length) return $(".filter-items").css({display: "none"});
+    for (const filter of filters) {
+        for (const value of filter.values) {
+            html += `<li class="filter-item" data-id="${value.id}" data-value=${value.value}>${value.label}</li>`;
+        }
+    }
+    $(".filter-items").html(html);
+    $(".filter-items").css({display: ""});
+}
+
+function removeFilterItem(id, value) {
+    if (typeof (id ?? value) === "undefined") return;
+    const filters = JSON.parse(localStorage.getItem(filtersID)).data;
+    if (!filters) return;
+    for (const filter of filters) {
+        let i = 0;
+        for (const v of filter.values) {
+            if (v.id === id && String(v.value) == String(value)) {
+                filter.values.splice(i, 1);
+                localStorage.setItem(filtersID, JSON.stringify({ data: filters }));
+
+                return;
+            }
+            i++;
+        }
+    }
+    console.warn("Could not find filter to remove");
+}
+
 $(document).ready(async () => {
     // initialize browser data
     await initializeBrowser();
@@ -223,6 +258,11 @@ $(document).ready(async () => {
             localStorage.setItem(filtersID, JSON.stringify({ data: filters }));
             populateList();
         });
+    });
+
+    $(document).on("click", ".filter-item", (ev) => {
+        removeFilterItem($(ev.currentTarget).data("id"), $(ev.currentTarget).data("value"));
+        populateList();
     });
 
     $(document).on("click", ".log-filter", logFilterEncoded);
@@ -328,6 +368,7 @@ function populateList(textFilter = null) {
     // record total number of browser items
     const totalItems = $('#item-list li').length;
     filterByParams(filters);
+    displayFilters(filters);
     filterByText(textFilter);
     // record number of post-filtered items
     const filteredItems = $('#item-list li').length;

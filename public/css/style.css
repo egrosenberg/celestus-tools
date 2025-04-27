@@ -847,7 +847,6 @@ ul.list {
     flex-direction: row;
     position: relative;
     margin: 0px;
-    margin-bottom: 10px;
 }
 
 .input .filter-button {
@@ -878,6 +877,39 @@ ul.list {
     color: lightgray;
     font-weight: bold;
     opacity: 0.7;
+}
+
+.content ul.filter-items {
+    padding: 5px;
+    padding-left: 5px;
+    font-size: var(--font-size-12);
+    min-height: var(--font-size-12);
+    margin: 0px;
+    list-style: none;
+    color: white;
+    background-color: var(--color-dark-2);
+    border-width: 0px 1px;
+    border-style: solid;
+    border-color: var(--color-dark-6);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.15em;
+}
+
+.content ul.filter-items li {
+    padding: 0.1em 0.5em;
+    border-radius: 0.25em;
+    border: thin solid var(--color-dark-6);
+    background-color: var(--color-rose-1);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content ul.filter-items li:hover {
+    text-decoration: line-through;
+    text-decoration-color: red;
 }
 
 .list-header {
