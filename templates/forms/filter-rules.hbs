@@ -3,22 +3,24 @@
     <button><i class="fa-solid fa-check"></i></button>
 </header>
 <div class="form-content">
-    <h1>Type</h1>
-    <input name="type.Rule" type="checkbox" id="type.Rule" class="hidden-check"
-        data-value="Rule" data-field="type"></input>
-    <label for="type.Rule" class="form-toggle">
-        Rule
-    </label>
-    <input name="type.Status" type="checkbox" id="type.Status" class="hidden-check"
-        data-value="Status" data-field="type"></input>
-    <label for="type.Status" class="form-toggle">
-        Status
-    </label>
-    <input name="type.Table" type="checkbox" id="type.Table" class="hidden-check"
-        data-value="Table" data-field="type"></input>
-    <label for="type.Table" class="form-toggle">
-        Table
-    </label>
+    <div class="form-section" name="type">
+        <h1>Type</h1>
+        <input name="type.Rule" type="checkbox" id="type.Rule" class="hidden-check" data-value="Rule" data-field="type"
+            data-name="Rule"></input>
+        <label for="type.Rule" class="form-toggle">
+            Rule
+        </label>
+        <input name="type.Status" type="checkbox" id="type.Status" class="hidden-check" data-value="Status"
+            data-field="type" data-name="Status"></input>
+        <label for="type.Status" class="form-toggle">
+            Status
+        </label>
+        <input name="type.Table" type="checkbox" id="type.Table" class="hidden-check" data-value="Table"
+            data-field="type" data-name="Table"></input>
+        <label for="type.Table" class="form-toggle">
+            Table
+        </label>
+    </div>
 </div>
 <footer class="form-submit">
     <button>Submit</button>

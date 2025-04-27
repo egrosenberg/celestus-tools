@@ -5,7 +5,9 @@ var domList;
 var listItems;
 var items = new Map();
 
-let pathname, filtersID, orderKeyID, orderAscending;
+const FILTER_VERSION = "1.0";
+
+let pathname, filtersID, orderKeyID, orderAscending, filterVersion;
 let pageIndex = "";
 
 /**
@@ -29,6 +31,7 @@ function prepCookieParams() {
     filtersID = `${pageIndex}-searchFilters`;
     orderKeyID = `${pageIndex}-orderKey`;
     orderAscending = `${pageIndex}-orderAscending`;
+    filterVersion = `${pageIndex}-filterVersion`;
 }
 
 /**
@@ -70,7 +73,11 @@ async function initializeBrowser() {
     prepCookieParams();
 
     if (!localStorage.getItem(filtersID)) {
-        localStorage.setItem(filtersID, "[]")
+        localStorage.setItem(filtersID, "[]");
+    }
+    if (localStorage.getItem(filterVersion) !== FILTER_VERSION) {
+        localStorage.setItem(filtersID, "[]");
+        localStorage.setItem(filterVersion, FILTER_VERSION);
     }
     if (!localStorage.getItem(orderKeyID)) localStorage.setItem(orderKeyID, "name");
     if (!localStorage.getItem(orderAscending)) localStorage.setItem(orderAscending, true);
@@ -173,15 +180,15 @@ $(document).ready(async () => {
                 const controls = form.elements;
                 const filters = JSON.parse(localStorage.getItem(filtersID)).data ?? [];
                 for (const control of controls) {
-                    const filter = filters.find(f => f.id === control.dataset.field);
-                    if (filter?.values.find(v => v === control.dataset.value)) {
+                    const filter = filters.find(f => f.values.find(v => v.id === control.dataset.field));
+                    if (filter?.values.find(v => v.value === control.dataset.value)) {
                         control.checked = true;
                     }
                 }
             }
         }, (b, f) => {
             const filters = [];
-
+            let i = 0;
             // merge fields
             for (const field of f) {
                 const name = field.dataset.field;
@@ -193,15 +200,22 @@ $(document).ready(async () => {
                     value = field.dataset.value;
                 }
                 if (!value) continue;
-                const filter = filters.find(f => f.id === name);
+                const groupName = $(field).parents('.form-section').first().attr('name') ?? i++;
+                const filterData = {
+                    id: name,
+                    value: value,
+                    inverted: false,
+                    label: $(field).data('name')
+                };
+                const filter = filters.find(f => f.name === groupName);
                 if (filter) {
-                    filter.values.push(value);
+                    filter.values.push(filterData);
                 }
                 else {
                     filters.push({
-                        id: name,
+                        name: groupName,
                         mode: "or",
-                        values: [value]
+                        values: [filterData]
                     });
                 }
             }
@@ -264,22 +278,31 @@ function filterByParams(filters) {
         let valid = true;
         const item = items.get($(itm).attr("id"));
         for (const filter of filters) {
-            if (filter.values?.length && filter.id) {
+            if (filter.values?.length) {
                 let currentValid = true;
                 if (filter.mode === "and") {
                     for (const value of filter.values) {
-                        currentValid = String((byString(item, filter.id))) == value;
+                        currentValid = (String((byString(item, value.id))) == value.value) === !value.inverted;
                         if (!currentValid) break;
                     }
                 }
                 else if (filter.mode === "or") {
-                    currentValid = Boolean(filter.values.find(f => {
-                        const val = byString(item, filter.id);
-                        if (Array.isArray(val)) {
-                            return val.includes(f)
+                    for (const value of filter.values) {
+                        const v = byString(item, value.id);
+                        currentValid = false;
+                        if (Array.isArray(v)) {
+                            if (v.includes(value.value) === !value.inverted) {
+                                currentValid = true;
+                                break;
+                            }
                         }
-                        return f == String(val);
-                    }));
+                        else {
+                            if ((value.value == String(v)) === !value.inverted) {
+                                currentValid = true;
+                                break;
+                            }
+                        }
+                    }
                 }
                 if (!currentValid) {
                     valid = false;

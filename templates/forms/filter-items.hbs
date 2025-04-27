@@ -3,12 +3,12 @@
     <button><i class="fa-solid fa-check"></i></button>
 </header>
 <div class="form-content">
-    <div class="form-section">
+    <div class="form-section" name="type">
         <h1>Type</h1>
         {{!-- Base Item Types--}}
         {{#each config.itemTypes as |type|}}
         <input name="type.{{type}}" type="checkbox" id="type.{{type}}" class="hidden-check" data-value="{{type}}"
-            data-field="type"></input>
+            data-field="type" data-name="{{localize (concat "CELESTUS.item.type." type)}}"></input>
         <label for="type.{{type}}" class="form-toggle">
             {{localize (concat "CELESTUS.item.type." type)}}
         </label>
@@ -16,7 +16,7 @@
         {{!-- Armor slots --}}
         {{#each config.armor.slots as |slot|}}
         <input name="system.slot.{{slot.text}}" type="checkbox" id="system.slot.{{slot.text}}" class="hidden-check" data-value="{{slot.text}}"
-            data-field="system.slot"></input>
+            data-field="system.slot" data-name="{{localize (concat "CELESTUS.item.subtype." slot.text)}}"></input>
         <label for="system.slot.{{slot.text}}" class="form-toggle">
             {{localize (concat "CELESTUS.item.subtype." slot.text)}}
         </label>
@@ -24,7 +24,7 @@
         {{!-- Armor Types --}}
         {{#each config.armor.types as |type|}}
         <input name="system.spread.{{type}}" type="checkbox" id="system.spread.{{type}}" class="hidden-check" data-value="{{type}}"
-            data-field="system.spread"></input>
+            data-field="system.spread" data-name="{{localize (concat "CELESTUS.item.armorType." type)}}"></input>
         <label for="system.spread.{{type}}" class="form-toggle">
             {{localize (concat "CELESTUS.item.armorType." type)}}
         </label>
@@ -32,35 +32,35 @@
         {{!-- Weapon things --}}
         {{!-- Ranged Weapon --}}
         <input name="system.rangeType.Ranged" type="checkbox" id="system.rangeType.Ranged" class="hidden-check" data-value="Ranged"
-            data-field="system.rangeType"></input>
+            data-field="system.rangeType" data-name="{{localize "CELESTUS.item.subtype.ranged"}}"></input>
         <label for="system.rangeType.Ranged" class="form-toggle">
             {{localize "CELESTUS.item.subtype.ranged"}}
         </label>
         {{!-- Melee Weapon --}}
         <input name="system.rangeType.Melee" type="checkbox" id="system.rangeType.Melee" class="hidden-check" data-value="Melee"
-            data-field="system.rangeType"></input>
+            data-field="system.rangeType" data-name="{{localize "CELESTUS.item.subtype.melee"}}"></input>
         <label for="system.rangeType.Melee" class="form-toggle">
             {{localize "CELESTUS.item.subtype.melee"}}
         </label>
         {{!-- One-handed Weapon --}}
         <input name="system.twoHanded.false" type="checkbox" id="system.twoHanded.false" class="hidden-check" data-value="false"
-            data-field="system.twoHanded"></input>
+            data-field="system.twoHanded" data-name="{{localize "CELESTUS.item.subtype.onehanded"}}"></input>
         <label for="system.twoHanded.false" class="form-toggle">
             {{localize "CELESTUS.item.subtype.onehanded"}}
         </label>
         {{!-- Two-handed Weapon --}}
         <input name="system.twoHanded.true" type="checkbox" id="system.twoHanded.true" class="hidden-check" data-value="true"
-            data-field="system.twoHanded"></input>
+            data-field="system.twoHanded" data-name="{{localize "CELESTUS.item.subtype.twohanded"}}"></input>
         <label for="system.twoHanded.true" class="form-toggle">
             {{localize "CELESTUS.item.subtype.twohanded"}}
         </label>
-    <div class="form-section">
     </div>
+    <div class="form-section" name="rarity">
         {{!-- Item Rarity--}}
         <h1>Rarity</h1>
         {{#each config.itemRarities as |val rarity|}}
         <input name="rarity.{{rarity}}" type="checkbox" id="rarity.{{rarity}}" class="hidden-check"
-            data-value="{{rarity}}" data-field="system.rarity"></input>
+            data-value="{{rarity}}" data-field="system.rarity" data-name="{{rarity}}"></input>
         <label for="rarity.{{rarity}}" class="form-toggle">
             {{rarity}}
         </label>

@@ -3,21 +3,21 @@
     <button><i class="fa-solid fa-check"></i></button>
 </header>
 <div class="form-content">
-    <div class="form-section">
+    <div class="form-section" name="type">
         <h1>Skill Type</h1>
         {{#each config.skillTypes as |type text|}}
         <input name="system.type.{{text}}" type="checkbox" id="system.type.{{text}}" class="hidden-check"
-            data-value="{{text}}" data-field="system.type"></input>
+            data-value="{{text}}" data-field="system.type" data-name="{{type}}"></input>
         <label for="system.type.{{text}}" class="form-toggle">
             {{type}}
         </label>
         {{/each}}
     </div>
-    <div class="form-section">
+    <div class="form-section" name="school">
         <h1>Skill School</h1>
         {{#each config.combatSkills}}
         <input name="system.school.{{text}}" type="checkbox" id="system.school.{{text}}" class="hidden-check"
-            data-value="{{text}}" data-field="system.school"></input>
+            data-value="{{text}}" data-field="system.school" data-name="{{label}}"></input>
         <label for="system.school.{{text}}" class="form-toggle">
             <i class="{{glyph}}"></i> {{label}}
         </label>
@@ -25,43 +25,45 @@
         <br/>
         {{#each config.civilSkills}}
         <input name="system.school.{{text}}" type="checkbox" id="system.school.{{text}}" class="hidden-check"
-            data-value="{{text}}" data-field="system.school"></input>
+            data-value="{{text}}" data-field="system.school" data-name="{{label}}"></input>
         <label for="system.school.{{text}}" class="form-toggle">
             <i class="{{glyph}}"></i> {{label}}
         </label>
         {{/each}}
     </div>
-    <div class="form-section">
+    <div class="form-section" name="tier">
         <h1>Skill Tier</h1>
         {{#each config.skillTiers as |name tier|}}
         <input name="system.tier.{{tier}}" type="checkbox" id="system.tier.{{tier}}" class="hidden-check"
-            data-value="{{tier}}" data-field="system.tier"></input>
+            data-value="{{tier}}" data-field="system.tier" data-name="{{name}}"></input>
         <label for="system.tier.{{tier}}" class="form-toggle">
             {{name}} ({{lookup ../config.skillLevels tier}})
         </label>
         {{/each}}
     </div>
-    <div class="form-section">
+    <div class="form-section" name="ap">
         <h1>Action Points</h1>
         {{#for -1 4 1}}
         <input name="system.ap.{{.}}" type="checkbox" id="system.ap.{{.}}" class="hidden-check"
-            data-value="{{.}}" data-field="system.ap"></input>
+            data-value="{{.}}" data-field="system.ap" data-name="{{.}} AP"></input>
         <label for="system.ap.{{.}}" class="form-toggle">
             {{.}}
         </label>
         {{/for}}
+    <div class="form-section" name="fp">
+    </div>
         <h1>Focus Points</h1>
         {{#for 0 3 1}}
         <input name="system.fp.{{.}}" type="checkbox" id="system.fp.{{.}}" class="hidden-check"
-            data-value="{{.}}" data-field="system.fp"></input>
+            data-value="{{.}}" data-field="system.fp" data-name="{{.}} FP"></input>
         <label for="system.fp.{{.}}" class="form-toggle">
             {{.}}
         </label>
         {{/for}}
     </div>
-    <div class="form-section">
+    <div class="form-section" name="granted">
         <input name="inherited" type="checkbox" id="inherited" class="hidden-check"
-            data-value="false" data-field="inherited"></input>
+            data-value="false" data-field="inherited" data-name="Not Granted"></input>
         <label for="inherited" class="form-toggle">Ignore Granted Skills</label>
     </div>
 </div>

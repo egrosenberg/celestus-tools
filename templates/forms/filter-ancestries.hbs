@@ -3,14 +3,16 @@
     <button><i class="fa-solid fa-check"></i></button>
 </header>
 <div class="form-content">
-    <h1>Civil Ability Bonus</h1>
-    {{#each config.civilSkills}}
-    <input name="civilAbilities.{{text}}" type="checkbox" id="civilAbilities.{{text}}" class="hidden-check"
-        data-value="{{text}}" data-field="civilAbilities"></input>
-    <label for="civilAbilities.{{text}}" class="form-toggle">
-        <i class="{{glyph}}"></i> {{label}}
-    </label>
-    {{/each}}
+    <div class="form-section" name="type">
+        <h1>Civil Ability Bonus</h1>
+        {{#each config.civilSkills}}
+        <input name="civilAbilities.{{text}}" type="checkbox" id="civilAbilities.{{text}}" class="hidden-check"
+            data-value="{{text}}" data-field="civilAbilities" data-name="{{label}}"></input>
+        <label for="civilAbilities.{{text}}" class="form-toggle">
+            <i class="{{glyph}}"></i> {{label}}
+        </label>
+        {{/each}}
+    </div>
 </div>
 <footer class="form-submit">
     <button>Submit</button>
