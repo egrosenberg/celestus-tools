@@ -1233,8 +1233,75 @@ body .ui-tooltip {
     line-height: 150%;
 }
 
+/* Die roll display */
+.dice-roll {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.roll-total {
+    display: none;
+    position: fixed;
+    text-shadow: var(--text-outline-1);
+    color: white;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    font-size: var(--font-size-80);
+    text-align: center;
+    background-color: #000e;
+    box-shadow: 0 0 15px black;
+    font-weight: bold;
+}
+
+.roll-total .dice-results {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.roll-total .die-result {
+    width: var(--font-size-80);
+    height: 100%;
+    font-size: var(--font-size-64);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.roll-total .die-result.d4 {
+    background-image: url(../img/svg/d4-grey.svg);
+}
+
+.roll-total .die-result.d6 {
+    background-image: url(../img/svg/d6-grey.svg);
+}
+
+.roll-total .die-result.d8 {
+    background-image: url(../img/svg/d8-grey.svg);
+}
+
+.roll-total .die-result.d10 {
+    background-image: url(../img/svg/d10-grey.svg);
+}
+
+.roll-total .die-result.d12 {
+    background-image: url(../img/svg/d12-grey.svg);
+}
+
+.roll-total .die-result.d20 {
+    background-image: url(../img/svg/d20-grey.svg);
+}
+
 /* Mobile Overrides */
 @media screen and (max-width:1100px) {
+
+    /* Hide dice rolling on mobile*/
+    .roll {
+        display: none;
+    }
 
     .content {
         position: fixed;
