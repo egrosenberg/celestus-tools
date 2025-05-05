@@ -200,6 +200,22 @@ a.content-link:hover {
     text-decoration: underline;
 }
 
+a.roll-formula {
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    outline: thin solid lightgray;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: var(--color-dark-1);
+    line-height: calc(100% + 4px);
+}
+
+a.roll-formula:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .roll.description .flavor {
     font-size: var(--font-size-14);
 }

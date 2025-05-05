@@ -7,6 +7,8 @@ const CONTENT_LINK_REG = /@UUID\[.+?\]?{.+?}/g;
 const LINK_UUID_REG = /(?<=\[).+?(?=\])/g;
 const LINK_ID_REG = /(?<=\.(?=[^.]*$)).+/g;
 const LINK_LABEL_REG = /(?<=\{).+?(?=\})/g;
+const DIE_ROLL_REG = /\[\[\/r.*\]\]/g;
+const ROLL_FORMULA_REG = /(?<=\/r).*(?=\]\])/g;
 
 /**
  * Registers system-wide handlebars helpers
@@ -152,6 +154,14 @@ function enrichHtml(text) {
         const label = link.match(LINK_LABEL_REG)?.[0] ?? link;
         return `<a class="content-link" data-uuid="${uuid}"
             data-id="${id}"> ${label} </a>`;
+    });
+    text = text.replace(DIE_ROLL_REG, (text) => {
+        const formula = text.match(ROLL_FORMULA_REG)?.[0].trim();
+        if (!formula) return "[INVALID FORMULA]";
+        return `<a class="roll-formula" data-formula="${formula}">
+            <i class="fa-solid fa-dice-d20"></i>
+            ${formula}
+        </a>`;
     });
     return text;
 }
