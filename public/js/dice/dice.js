@@ -30,6 +30,7 @@
  * - Added options param to DICE initialization
  * - Fixed ambiguous variable declarations that were made with var
  * - Exposed scene and world in pre_roll and post_roll hooks
+ * - Added original formula to notation that pre and post roll hooks see
  */
 
 /**
@@ -475,6 +476,7 @@ function DICE(options = {}) {
         const dr0 = /\s*(\d*)([a-z]+)(\d+)(\s*(\+|-)\s*(\d+)){0,1}\s*(\+|$)/gi;
         const dr1 = /(\b)*(\d+)(\b)*/gi;
         let ret = {
+            formula: notation, // formula inputted
             set: [], //set of dice to roll
             constant: 0, //modifier to add to result
             result: [], //array of results of each die
