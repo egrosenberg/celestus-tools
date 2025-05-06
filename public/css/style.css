@@ -1305,10 +1305,14 @@ body .ui-tooltip {
     position: fixed;
     position: fixed;
     right: 20px;
-    bottom: 10px;
+    bottom: 0;
     width: 400px;
     border: thin solid var(--color-dark-1);
     background-color: var(--color-dark-2);
+}
+
+.chat-log:not(.active) {
+    width: auto;
 }
 
 .chat-log .chat-log-head {
@@ -1336,6 +1340,10 @@ body .ui-tooltip {
     color: white;
 }
 
+.chat-log:not(.active) .chat-log-head label {
+    display: none;
+}
+
 .chat-log .chat-log-body {
     height: 200px;
     scrollbar-width: thin;
@@ -1347,18 +1355,32 @@ body .ui-tooltip {
     flex-direction: column;
     margin: 0;
     font-size: var(--font-size-14);
-    gap: 5px;
-    display: none;
+    gap: 10px;
+    display: flex;
 }
 
-.chat-log.active .chat-log-body {
-    display: block;
+.chat-log:not(.active) .chat-log-body {
+    display: none;
 }
 
 .chat-log .chat-log-body li {
     background-color: var(--color-dark-3);
     padding: 10px;
     border-radius: 5px;
+}
+
+.chat-log .roll-input {
+    padding: 0.6em;
+    background-color: var(--color-dark-3);
+    border: none;
+    outline: none;
+    color: lightgray;
+    overflow: none;
+    font-size: var(--font-size-14);
+}
+
+.chat-log:not(.active) .roll-input {
+    display: none;
 }
 
 /* Mobile Overrides */

@@ -5,6 +5,15 @@ const DICE_OPTS = {
 }
 
 /**
+ * Rolls dice and clears input field
+ * @param {Event} ev event that triggered submission
+ */
+function submitRoll(ev) {
+    roll($(ev.currentTarget).val());
+    $(ev.currentTarget).val('');
+}
+
+/**
  * Creates a roll/message log element in the page (if it doesn't exist)
  * @returns {Promise}
  */
@@ -13,6 +22,9 @@ async function initializeLog() {
     const promise = new Promise((resolve) => {
         $.get("/templates/log.html", (data) => {
             $("body").append(data);
+            $(".roll-input").pressEnter(submitRoll);
+            // roll dice on submit of roll input
+            $(document).on("pressEnter", ".roll-input", () => console.info("submit!"));
             resolve(true);
         });
     });
@@ -104,6 +116,9 @@ $(document).ready(() => {
     $(document).on("click", ".dice-roll", function () {
         $(this).remove();
     });
+
+    // initialize log as hidden
+    initializeLog();
 
     // hide/show log
     $(document).on("click", ".chat-log-head", () => {
