@@ -5,6 +5,33 @@ const DICE_OPTS = {
 }
 
 /**
+ * Creates a roll/message log element in the page (if it doesn't exist)
+ * @returns {Promise}
+ */
+async function initializeLog() {
+    if (document.getElementById("log")) return;
+    const promise = new Promise((resolve) => {
+        $.get("/templates/log.html", (data) => {
+            $("body").append(data);
+            resolve(true);
+        });
+    });
+    return promise;
+}
+
+/**
+ * Logs a message in the chat/roll log
+ * @param {String} message to log
+ */
+async function logMessage(message) {
+    await initializeLog();
+    const item = $(`<li>${message}</li>`);
+    $("#log-entries").append(item);
+    $("#log").addClass("active");
+    $("#log").find(".hide-show").html('<i class="fa-solid fa-square-xmark"></i>');
+}
+
+/**
  * Creates a string to display 
  * @param {Object} notation notation object from dice roll
  * @returns {String}
@@ -19,10 +46,10 @@ function stringifyRoll(notation) {
         }
     }
     if (notation.constant) {
-        res = res.concat(" + " + notation.constant)
+        res = res.concat(`<span>+</span><span>${notation.constant}</span>`);
     }
     if (l > 1 || notation.constant) {
-        res = res.concat(" = " + notation.resultTotal);
+        res = res.concat(`<span>=</span><span>${notation.resultTotal}</span>`);
     }
     res = res.concat("</span>");
     return res;
@@ -37,16 +64,17 @@ function preRoll() { }
 
 /**
  * Post-process die roll
+ * Display results
  * @param {Object} notation object from DICE
  * @param {Object} info info about scene and world
  * @param {HTMLElement} e element that die are displayed on
  * @param {Int} duration millisecond duration to show total for
  */
 async function postRoll(notation, info, element, duration) {
-    console.log(notation);
     const total = $(`<div class="roll-total">${stringifyRoll(notation)}</div>`);
     $(element).append(total);
     total.fadeIn();
+    logMessage(`<b>${notation.formula}:</b> ${notation.resultTotal}`);
     await sleep(duration);
     $(element).fadeOut("600").remove();
     total.fadeOut("600").remove();
@@ -75,5 +103,18 @@ $(document).ready(() => {
 
     $(document).on("click", ".dice-roll", function () {
         $(this).remove();
+    });
+
+    // hide/show log
+    $(document).on("click", ".chat-log-head", () => {
+        const log = $("#log");
+        if (log.hasClass("active")) {
+            log.removeClass("active");
+            log.find(".hide-show").html('<i class="fa-solid fa-square-caret-up"></i>');
+        }
+        else {
+            log.addClass("active");
+            log.find(".hide-show").html('<i class="fa-solid fa-square-xmark"></i>');
+        }
     });
 });

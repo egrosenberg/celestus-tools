@@ -1298,6 +1298,69 @@ body .ui-tooltip {
     background-image: url(../img/svg/d20-grey.svg);
 }
 
+/* Roll log */
+.chat-log {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    width: 400px;
+    border: thin solid var(--color-dark-1);
+    background-color: var(--color-dark-2);
+}
+
+.chat-log .chat-log-head {
+    background-color: var(--color-dark-1);
+    padding: 0.1em 0.3em;
+    cursor: pointer;
+    color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.chat-log .chat-log-head:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.chat-log .chat-log-head a {
+    cursor: pointer;
+    font-size: var(--font-size-20);
+}
+
+.chat-log .chat-log-head a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.chat-log .chat-log-body {
+    height: 200px;
+    scrollbar-width: thin;
+    overflow-y: auto;
+    padding: 0.4em;
+    list-style: none;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: var(--font-size-14);
+    gap: 5px;
+    display: none;
+}
+
+.chat-log.active .chat-log-body {
+    display: block;
+}
+
+.chat-log .chat-log-body li {
+    background-color: var(--color-dark-3);
+    padding: 10px;
+    border-radius: 5px;
+}
+
 /* Mobile Overrides */
 @media screen and (max-width:1100px) {
 
@@ -1350,4 +1413,6 @@ body .ui-tooltip {
         top: 0;
     }
 
+    /* Hide log on mobile */
+    .chat-log { display: none }
 }
